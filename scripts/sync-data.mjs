@@ -144,6 +144,12 @@ async function main() {
   const data = await res.json();
   const apiMatches = data.matches ?? [];
 
+  // Static venue map (built by scripts/build-venues.mjs), keyed by API match id.
+  const venuesPath = join(dataDir, "venues.json");
+  const venues = existsSync(venuesPath)
+    ? JSON.parse(readFileSync(venuesPath, "utf8"))
+    : {};
+
   // --- Teams (from group-stage participants) ---
   const teamMap = new Map();
   for (const m of apiMatches) {
@@ -186,6 +192,12 @@ async function main() {
       const g = groupLetter(m.group);
       if (g) match.group = g;
       if (m.matchday && m.stage === "GROUP_STAGE") match.matchday = m.matchday;
+
+      const v = venues[m.id];
+      if (v) {
+        match.venue = v.venue;
+        if (v.city) match.city = v.city;
+      }
       return match;
     })
     .sort((a, b) => Date.parse(a.datetime) - Date.parse(b.datetime));

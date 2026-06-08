@@ -13,7 +13,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "A",
-    "matchday": 1
+    "matchday": 1,
+    "venue": "Estadio Azteca",
+    "city": "Mexico City"
   },
   {
     "id": "WC-537328",
@@ -29,7 +31,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "A",
-    "matchday": 1
+    "matchday": 1,
+    "venue": "Estadio Akron",
+    "city": "Guadalajara"
   },
   {
     "id": "WC-537333",
@@ -45,7 +49,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "B",
-    "matchday": 1
+    "matchday": 1,
+    "venue": "BMO Field",
+    "city": "Toronto"
   },
   {
     "id": "WC-537345",
@@ -61,7 +67,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "D",
-    "matchday": 1
+    "matchday": 1,
+    "venue": "SoFi Stadium",
+    "city": "Los Angeles"
   },
   {
     "id": "WC-537334",
@@ -77,7 +85,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "B",
-    "matchday": 1
+    "matchday": 1,
+    "venue": "Levi's Stadium",
+    "city": "San Francisco Bay Area"
   },
   {
     "id": "WC-537339",
@@ -93,7 +103,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "C",
-    "matchday": 1
+    "matchday": 1,
+    "venue": "MetLife Stadium",
+    "city": "New York/New Jersey"
   },
   {
     "id": "WC-537340",
@@ -109,7 +121,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "C",
-    "matchday": 1
+    "matchday": 1,
+    "venue": "Gillette Stadium",
+    "city": "Boston"
   },
   {
     "id": "WC-537346",
@@ -125,7 +139,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "D",
-    "matchday": 1
+    "matchday": 1,
+    "venue": "BC Place",
+    "city": "Vancouver"
   },
   {
     "id": "WC-537351",
@@ -141,7 +157,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "E",
-    "matchday": 1
+    "matchday": 1,
+    "venue": "NRG Stadium",
+    "city": "Houston"
   },
   {
     "id": "WC-537357",
@@ -157,7 +175,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "F",
-    "matchday": 1
+    "matchday": 1,
+    "venue": "AT&T Stadium",
+    "city": "Dallas"
   },
   {
     "id": "WC-537352",
@@ -173,7 +193,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "E",
-    "matchday": 1
+    "matchday": 1,
+    "venue": "Lincoln Financial Field",
+    "city": "Philadelphia"
   },
   {
     "id": "WC-537358",
@@ -189,7 +211,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "F",
-    "matchday": 1
+    "matchday": 1,
+    "venue": "Estadio BBVA",
+    "city": "Monterrey"
   },
   {
     "id": "WC-537369",
@@ -205,7 +229,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "H",
-    "matchday": 1
+    "matchday": 1,
+    "venue": "Mercedes-Benz Stadium",
+    "city": "Atlanta"
   },
   {
     "id": "WC-537363",
@@ -221,7 +247,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "G",
-    "matchday": 1
+    "matchday": 1,
+    "venue": "Lumen Field",
+    "city": "Seattle"
   },
   {
     "id": "WC-537370",
@@ -237,7 +265,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "H",
-    "matchday": 1
+    "matchday": 1,
+    "venue": "Hard Rock Stadium",
+    "city": "Miami"
   },
   {
     "id": "WC-537364",
@@ -253,7 +283,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "G",
-    "matchday": 1
+    "matchday": 1,
+    "venue": "SoFi Stadium",
+    "city": "Los Angeles"
   },
   {
     "id": "WC-537391",
@@ -269,7 +301,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "I",
-    "matchday": 1
+    "matchday": 1,
+    "venue": "MetLife Stadium",
+    "city": "New York/New Jersey"
   },
   {
     "id": "WC-537392",
@@ -285,7 +319,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "I",
-    "matchday": 1
+    "matchday": 1,
+    "venue": "Gillette Stadium",
+    "city": "Boston"
   },
   {
     "id": "WC-537397",
@@ -301,7 +337,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "J",
-    "matchday": 1
+    "matchday": 1,
+    "venue": "Arrowhead Stadium",
+    "city": "Kansas City"
   },
   {
     "id": "WC-537398",
@@ -317,7 +355,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "J",
-    "matchday": 1
+    "matchday": 1,
+    "venue": "Levi's Stadium",
+    "city": "San Francisco Bay Area"
   },
   {
     "id": "WC-537403",
@@ -333,7 +373,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "K",
-    "matchday": 1
+    "matchday": 1,
+    "venue": "NRG Stadium",
+    "city": "Houston"
   },
   {
     "id": "WC-537409",
@@ -349,7 +391,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "L",
-    "matchday": 1
+    "matchday": 1,
+    "venue": "AT&T Stadium",
+    "city": "Dallas"
   },
   {
     "id": "WC-537410",
@@ -365,7 +409,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "L",
-    "matchday": 1
+    "matchday": 1,
+    "venue": "BMO Field",
+    "city": "Toronto"
   },
   {
     "id": "WC-537404",
@@ -381,7 +427,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "K",
-    "matchday": 1
+    "matchday": 1,
+    "venue": "Estadio Azteca",
+    "city": "Mexico City"
   },
   {
     "id": "WC-537329",
@@ -397,7 +445,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "A",
-    "matchday": 2
+    "matchday": 2,
+    "venue": "Mercedes-Benz Stadium",
+    "city": "Atlanta"
   },
   {
     "id": "WC-537335",
@@ -413,7 +463,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "B",
-    "matchday": 2
+    "matchday": 2,
+    "venue": "SoFi Stadium",
+    "city": "Los Angeles"
   },
   {
     "id": "WC-537336",
@@ -429,7 +481,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "B",
-    "matchday": 2
+    "matchday": 2,
+    "venue": "BC Place",
+    "city": "Vancouver"
   },
   {
     "id": "WC-537330",
@@ -445,7 +499,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "A",
-    "matchday": 2
+    "matchday": 2,
+    "venue": "Estadio Akron",
+    "city": "Guadalajara"
   },
   {
     "id": "WC-537348",
@@ -461,7 +517,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "D",
-    "matchday": 2
+    "matchday": 2,
+    "venue": "Lumen Field",
+    "city": "Seattle"
   },
   {
     "id": "WC-537342",
@@ -477,7 +535,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "C",
-    "matchday": 2
+    "matchday": 2,
+    "venue": "Gillette Stadium",
+    "city": "Boston"
   },
   {
     "id": "WC-537341",
@@ -493,7 +553,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "C",
-    "matchday": 2
+    "matchday": 2,
+    "venue": "Lincoln Financial Field",
+    "city": "Philadelphia"
   },
   {
     "id": "WC-537347",
@@ -509,7 +571,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "D",
-    "matchday": 2
+    "matchday": 2,
+    "venue": "Levi's Stadium",
+    "city": "San Francisco Bay Area"
   },
   {
     "id": "WC-537359",
@@ -525,7 +589,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "F",
-    "matchday": 2
+    "matchday": 2,
+    "venue": "NRG Stadium",
+    "city": "Houston"
   },
   {
     "id": "WC-537353",
@@ -541,7 +607,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "E",
-    "matchday": 2
+    "matchday": 2,
+    "venue": "BMO Field",
+    "city": "Toronto"
   },
   {
     "id": "WC-537354",
@@ -557,7 +625,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "E",
-    "matchday": 2
+    "matchday": 2,
+    "venue": "Arrowhead Stadium",
+    "city": "Kansas City"
   },
   {
     "id": "WC-537360",
@@ -573,7 +643,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "F",
-    "matchday": 2
+    "matchday": 2,
+    "venue": "Estadio BBVA",
+    "city": "Monterrey"
   },
   {
     "id": "WC-537371",
@@ -589,7 +661,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "H",
-    "matchday": 2
+    "matchday": 2,
+    "venue": "Mercedes-Benz Stadium",
+    "city": "Atlanta"
   },
   {
     "id": "WC-537365",
@@ -605,7 +679,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "G",
-    "matchday": 2
+    "matchday": 2,
+    "venue": "SoFi Stadium",
+    "city": "Los Angeles"
   },
   {
     "id": "WC-537372",
@@ -621,7 +697,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "H",
-    "matchday": 2
+    "matchday": 2,
+    "venue": "Hard Rock Stadium",
+    "city": "Miami"
   },
   {
     "id": "WC-537366",
@@ -637,7 +715,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "G",
-    "matchday": 2
+    "matchday": 2,
+    "venue": "BC Place",
+    "city": "Vancouver"
   },
   {
     "id": "WC-537399",
@@ -653,7 +733,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "J",
-    "matchday": 2
+    "matchday": 2,
+    "venue": "AT&T Stadium",
+    "city": "Dallas"
   },
   {
     "id": "WC-537393",
@@ -669,7 +751,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "I",
-    "matchday": 2
+    "matchday": 2,
+    "venue": "Lincoln Financial Field",
+    "city": "Philadelphia"
   },
   {
     "id": "WC-537394",
@@ -685,7 +769,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "I",
-    "matchday": 2
+    "matchday": 2,
+    "venue": "MetLife Stadium",
+    "city": "New York/New Jersey"
   },
   {
     "id": "WC-537400",
@@ -701,7 +787,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "J",
-    "matchday": 2
+    "matchday": 2,
+    "venue": "Levi's Stadium",
+    "city": "San Francisco Bay Area"
   },
   {
     "id": "WC-537405",
@@ -717,7 +805,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "K",
-    "matchday": 2
+    "matchday": 2,
+    "venue": "NRG Stadium",
+    "city": "Houston"
   },
   {
     "id": "WC-537411",
@@ -733,7 +823,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "L",
-    "matchday": 2
+    "matchday": 2,
+    "venue": "Gillette Stadium",
+    "city": "Boston"
   },
   {
     "id": "WC-537412",
@@ -749,7 +841,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "L",
-    "matchday": 2
+    "matchday": 2,
+    "venue": "BMO Field",
+    "city": "Toronto"
   },
   {
     "id": "WC-537406",
@@ -765,7 +859,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "K",
-    "matchday": 2
+    "matchday": 2,
+    "venue": "Estadio Akron",
+    "city": "Guadalajara"
   },
   {
     "id": "WC-537337",
@@ -781,7 +877,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "B",
-    "matchday": 3
+    "matchday": 3,
+    "venue": "BC Place",
+    "city": "Vancouver"
   },
   {
     "id": "WC-537338",
@@ -797,7 +895,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "B",
-    "matchday": 3
+    "matchday": 3,
+    "venue": "Lumen Field",
+    "city": "Seattle"
   },
   {
     "id": "WC-537344",
@@ -813,7 +913,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "C",
-    "matchday": 3
+    "matchday": 3,
+    "venue": "Mercedes-Benz Stadium",
+    "city": "Atlanta"
   },
   {
     "id": "WC-537343",
@@ -829,7 +931,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "C",
-    "matchday": 3
+    "matchday": 3,
+    "venue": "Hard Rock Stadium",
+    "city": "Miami"
   },
   {
     "id": "WC-537331",
@@ -845,7 +949,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "A",
-    "matchday": 3
+    "matchday": 3,
+    "venue": "Estadio Azteca",
+    "city": "Mexico City"
   },
   {
     "id": "WC-537332",
@@ -861,7 +967,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "A",
-    "matchday": 3
+    "matchday": 3,
+    "venue": "Estadio BBVA",
+    "city": "Monterrey"
   },
   {
     "id": "WC-537355",
@@ -877,7 +985,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "E",
-    "matchday": 3
+    "matchday": 3,
+    "venue": "MetLife Stadium",
+    "city": "New York/New Jersey"
   },
   {
     "id": "WC-537356",
@@ -893,7 +1003,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "E",
-    "matchday": 3
+    "matchday": 3,
+    "venue": "Lincoln Financial Field",
+    "city": "Philadelphia"
   },
   {
     "id": "WC-537361",
@@ -909,7 +1021,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "F",
-    "matchday": 3
+    "matchday": 3,
+    "venue": "Arrowhead Stadium",
+    "city": "Kansas City"
   },
   {
     "id": "WC-537362",
@@ -925,7 +1039,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "F",
-    "matchday": 3
+    "matchday": 3,
+    "venue": "AT&T Stadium",
+    "city": "Dallas"
   },
   {
     "id": "WC-537349",
@@ -941,7 +1057,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "D",
-    "matchday": 3
+    "matchday": 3,
+    "venue": "SoFi Stadium",
+    "city": "Los Angeles"
   },
   {
     "id": "WC-537350",
@@ -957,7 +1075,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "D",
-    "matchday": 3
+    "matchday": 3,
+    "venue": "Levi's Stadium",
+    "city": "San Francisco Bay Area"
   },
   {
     "id": "WC-537395",
@@ -973,7 +1093,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "I",
-    "matchday": 3
+    "matchday": 3,
+    "venue": "Gillette Stadium",
+    "city": "Boston"
   },
   {
     "id": "WC-537396",
@@ -989,7 +1111,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "I",
-    "matchday": 3
+    "matchday": 3,
+    "venue": "BMO Field",
+    "city": "Toronto"
   },
   {
     "id": "WC-537373",
@@ -1005,7 +1129,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "H",
-    "matchday": 3
+    "matchday": 3,
+    "venue": "Estadio Akron",
+    "city": "Guadalajara"
   },
   {
     "id": "WC-537374",
@@ -1021,7 +1147,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "H",
-    "matchday": 3
+    "matchday": 3,
+    "venue": "NRG Stadium",
+    "city": "Houston"
   },
   {
     "id": "WC-537367",
@@ -1037,7 +1165,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "G",
-    "matchday": 3
+    "matchday": 3,
+    "venue": "BC Place",
+    "city": "Vancouver"
   },
   {
     "id": "WC-537368",
@@ -1053,7 +1183,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "G",
-    "matchday": 3
+    "matchday": 3,
+    "venue": "Lumen Field",
+    "city": "Seattle"
   },
   {
     "id": "WC-537413",
@@ -1069,7 +1201,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "L",
-    "matchday": 3
+    "matchday": 3,
+    "venue": "MetLife Stadium",
+    "city": "New York/New Jersey"
   },
   {
     "id": "WC-537414",
@@ -1085,7 +1219,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "L",
-    "matchday": 3
+    "matchday": 3,
+    "venue": "Lincoln Financial Field",
+    "city": "Philadelphia"
   },
   {
     "id": "WC-537407",
@@ -1101,7 +1237,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "K",
-    "matchday": 3
+    "matchday": 3,
+    "venue": "Hard Rock Stadium",
+    "city": "Miami"
   },
   {
     "id": "WC-537408",
@@ -1117,7 +1255,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "K",
-    "matchday": 3
+    "matchday": 3,
+    "venue": "Mercedes-Benz Stadium",
+    "city": "Atlanta"
   },
   {
     "id": "WC-537401",
@@ -1133,7 +1273,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "J",
-    "matchday": 3
+    "matchday": 3,
+    "venue": "AT&T Stadium",
+    "city": "Dallas"
   },
   {
     "id": "WC-537402",
@@ -1149,7 +1291,9 @@
     "winner": null,
     "status": "scheduled",
     "group": "J",
-    "matchday": 3
+    "matchday": 3,
+    "venue": "Arrowhead Stadium",
+    "city": "Kansas City"
   },
   {
     "id": "WC-537417",
@@ -1163,7 +1307,9 @@
       "away": null
     },
     "winner": null,
-    "status": "scheduled"
+    "status": "scheduled",
+    "venue": "SoFi Stadium",
+    "city": "Los Angeles"
   },
   {
     "id": "WC-537423",
@@ -1177,7 +1323,9 @@
       "away": null
     },
     "winner": null,
-    "status": "scheduled"
+    "status": "scheduled",
+    "venue": "NRG Stadium",
+    "city": "Houston"
   },
   {
     "id": "WC-537415",
@@ -1191,7 +1339,9 @@
       "away": null
     },
     "winner": null,
-    "status": "scheduled"
+    "status": "scheduled",
+    "venue": "Gillette Stadium",
+    "city": "Boston"
   },
   {
     "id": "WC-537418",
@@ -1205,7 +1355,9 @@
       "away": null
     },
     "winner": null,
-    "status": "scheduled"
+    "status": "scheduled",
+    "venue": "Estadio BBVA",
+    "city": "Monterrey"
   },
   {
     "id": "WC-537424",
@@ -1219,7 +1371,9 @@
       "away": null
     },
     "winner": null,
-    "status": "scheduled"
+    "status": "scheduled",
+    "venue": "AT&T Stadium",
+    "city": "Dallas"
   },
   {
     "id": "WC-537416",
@@ -1233,7 +1387,9 @@
       "away": null
     },
     "winner": null,
-    "status": "scheduled"
+    "status": "scheduled",
+    "venue": "MetLife Stadium",
+    "city": "New York/New Jersey"
   },
   {
     "id": "WC-537425",
@@ -1247,7 +1403,9 @@
       "away": null
     },
     "winner": null,
-    "status": "scheduled"
+    "status": "scheduled",
+    "venue": "Estadio Azteca",
+    "city": "Mexico City"
   },
   {
     "id": "WC-537426",
@@ -1261,7 +1419,9 @@
       "away": null
     },
     "winner": null,
-    "status": "scheduled"
+    "status": "scheduled",
+    "venue": "Mercedes-Benz Stadium",
+    "city": "Atlanta"
   },
   {
     "id": "WC-537422",
@@ -1275,7 +1435,9 @@
       "away": null
     },
     "winner": null,
-    "status": "scheduled"
+    "status": "scheduled",
+    "venue": "Lumen Field",
+    "city": "Seattle"
   },
   {
     "id": "WC-537421",
@@ -1289,7 +1451,9 @@
       "away": null
     },
     "winner": null,
-    "status": "scheduled"
+    "status": "scheduled",
+    "venue": "Levi's Stadium",
+    "city": "San Francisco Bay Area"
   },
   {
     "id": "WC-537420",
@@ -1303,7 +1467,9 @@
       "away": null
     },
     "winner": null,
-    "status": "scheduled"
+    "status": "scheduled",
+    "venue": "SoFi Stadium",
+    "city": "Los Angeles"
   },
   {
     "id": "WC-537419",
@@ -1317,7 +1483,9 @@
       "away": null
     },
     "winner": null,
-    "status": "scheduled"
+    "status": "scheduled",
+    "venue": "BMO Field",
+    "city": "Toronto"
   },
   {
     "id": "WC-537429",
@@ -1331,7 +1499,9 @@
       "away": null
     },
     "winner": null,
-    "status": "scheduled"
+    "status": "scheduled",
+    "venue": "BC Place",
+    "city": "Vancouver"
   },
   {
     "id": "WC-537428",
@@ -1345,7 +1515,9 @@
       "away": null
     },
     "winner": null,
-    "status": "scheduled"
+    "status": "scheduled",
+    "venue": "AT&T Stadium",
+    "city": "Dallas"
   },
   {
     "id": "WC-537427",
@@ -1359,7 +1531,9 @@
       "away": null
     },
     "winner": null,
-    "status": "scheduled"
+    "status": "scheduled",
+    "venue": "Hard Rock Stadium",
+    "city": "Miami"
   },
   {
     "id": "WC-537430",
@@ -1373,7 +1547,9 @@
       "away": null
     },
     "winner": null,
-    "status": "scheduled"
+    "status": "scheduled",
+    "venue": "Arrowhead Stadium",
+    "city": "Kansas City"
   },
   {
     "id": "WC-537376",
@@ -1387,7 +1563,9 @@
       "away": null
     },
     "winner": null,
-    "status": "scheduled"
+    "status": "scheduled",
+    "venue": "NRG Stadium",
+    "city": "Houston"
   },
   {
     "id": "WC-537375",
@@ -1401,7 +1579,9 @@
       "away": null
     },
     "winner": null,
-    "status": "scheduled"
+    "status": "scheduled",
+    "venue": "Lincoln Financial Field",
+    "city": "Philadelphia"
   },
   {
     "id": "WC-537377",
@@ -1415,7 +1595,9 @@
       "away": null
     },
     "winner": null,
-    "status": "scheduled"
+    "status": "scheduled",
+    "venue": "MetLife Stadium",
+    "city": "New York/New Jersey"
   },
   {
     "id": "WC-537378",
@@ -1429,7 +1611,9 @@
       "away": null
     },
     "winner": null,
-    "status": "scheduled"
+    "status": "scheduled",
+    "venue": "Estadio Azteca",
+    "city": "Mexico City"
   },
   {
     "id": "WC-537379",
@@ -1443,7 +1627,9 @@
       "away": null
     },
     "winner": null,
-    "status": "scheduled"
+    "status": "scheduled",
+    "venue": "AT&T Stadium",
+    "city": "Dallas"
   },
   {
     "id": "WC-537380",
@@ -1457,7 +1643,9 @@
       "away": null
     },
     "winner": null,
-    "status": "scheduled"
+    "status": "scheduled",
+    "venue": "Lumen Field",
+    "city": "Seattle"
   },
   {
     "id": "WC-537381",
@@ -1471,7 +1659,9 @@
       "away": null
     },
     "winner": null,
-    "status": "scheduled"
+    "status": "scheduled",
+    "venue": "Mercedes-Benz Stadium",
+    "city": "Atlanta"
   },
   {
     "id": "WC-537382",
@@ -1485,7 +1675,9 @@
       "away": null
     },
     "winner": null,
-    "status": "scheduled"
+    "status": "scheduled",
+    "venue": "BC Place",
+    "city": "Vancouver"
   },
   {
     "id": "WC-537383",
@@ -1499,7 +1691,9 @@
       "away": null
     },
     "winner": null,
-    "status": "scheduled"
+    "status": "scheduled",
+    "venue": "Gillette Stadium",
+    "city": "Boston"
   },
   {
     "id": "WC-537384",
@@ -1513,7 +1707,9 @@
       "away": null
     },
     "winner": null,
-    "status": "scheduled"
+    "status": "scheduled",
+    "venue": "SoFi Stadium",
+    "city": "Los Angeles"
   },
   {
     "id": "WC-537385",
@@ -1527,7 +1723,9 @@
       "away": null
     },
     "winner": null,
-    "status": "scheduled"
+    "status": "scheduled",
+    "venue": "Hard Rock Stadium",
+    "city": "Miami"
   },
   {
     "id": "WC-537386",
@@ -1541,7 +1739,9 @@
       "away": null
     },
     "winner": null,
-    "status": "scheduled"
+    "status": "scheduled",
+    "venue": "Arrowhead Stadium",
+    "city": "Kansas City"
   },
   {
     "id": "WC-537387",
@@ -1555,7 +1755,9 @@
       "away": null
     },
     "winner": null,
-    "status": "scheduled"
+    "status": "scheduled",
+    "venue": "AT&T Stadium",
+    "city": "Dallas"
   },
   {
     "id": "WC-537388",
@@ -1569,7 +1771,9 @@
       "away": null
     },
     "winner": null,
-    "status": "scheduled"
+    "status": "scheduled",
+    "venue": "Mercedes-Benz Stadium",
+    "city": "Atlanta"
   },
   {
     "id": "WC-537389",
@@ -1583,7 +1787,9 @@
       "away": null
     },
     "winner": null,
-    "status": "scheduled"
+    "status": "scheduled",
+    "venue": "Hard Rock Stadium",
+    "city": "Miami"
   },
   {
     "id": "WC-537390",
@@ -1597,6 +1803,8 @@
       "away": null
     },
     "winner": null,
-    "status": "scheduled"
+    "status": "scheduled",
+    "venue": "MetLife Stadium",
+    "city": "New York/New Jersey"
   }
 ]

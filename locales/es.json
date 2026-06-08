@@ -101,7 +101,7 @@
     "local": "Local"
   },
   "footer": {
-    "dataSource": "Fuente de datos: football-data.org",
+    "dataSource": "Datos: football-data.org · Sedes: fixturedownload.com",
     "disclaimer": "No afiliado ni respaldado por la FIFA.",
     "madeWith": "Calendario del Mundial 2026"
   },

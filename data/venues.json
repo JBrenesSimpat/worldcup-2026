@@ -1,0 +1,418 @@
+{
+  "537327": {
+    "venue": "Estadio Azteca",
+    "city": "Mexico City"
+  },
+  "537328": {
+    "venue": "Estadio Akron",
+    "city": "Guadalajara"
+  },
+  "537329": {
+    "venue": "Mercedes-Benz Stadium",
+    "city": "Atlanta"
+  },
+  "537330": {
+    "venue": "Estadio Akron",
+    "city": "Guadalajara"
+  },
+  "537331": {
+    "venue": "Estadio Azteca",
+    "city": "Mexico City"
+  },
+  "537332": {
+    "venue": "Estadio BBVA",
+    "city": "Monterrey"
+  },
+  "537333": {
+    "venue": "BMO Field",
+    "city": "Toronto"
+  },
+  "537334": {
+    "venue": "Levi's Stadium",
+    "city": "San Francisco Bay Area"
+  },
+  "537335": {
+    "venue": "SoFi Stadium",
+    "city": "Los Angeles"
+  },
+  "537336": {
+    "venue": "BC Place",
+    "city": "Vancouver"
+  },
+  "537337": {
+    "venue": "BC Place",
+    "city": "Vancouver"
+  },
+  "537338": {
+    "venue": "Lumen Field",
+    "city": "Seattle"
+  },
+  "537339": {
+    "venue": "MetLife Stadium",
+    "city": "New York/New Jersey"
+  },
+  "537340": {
+    "venue": "Gillette Stadium",
+    "city": "Boston"
+  },
+  "537341": {
+    "venue": "Lincoln Financial Field",
+    "city": "Philadelphia"
+  },
+  "537342": {
+    "venue": "Gillette Stadium",
+    "city": "Boston"
+  },
+  "537343": {
+    "venue": "Hard Rock Stadium",
+    "city": "Miami"
+  },
+  "537344": {
+    "venue": "Mercedes-Benz Stadium",
+    "city": "Atlanta"
+  },
+  "537345": {
+    "venue": "SoFi Stadium",
+    "city": "Los Angeles"
+  },
+  "537346": {
+    "venue": "BC Place",
+    "city": "Vancouver"
+  },
+  "537347": {
+    "venue": "Levi's Stadium",
+    "city": "San Francisco Bay Area"
+  },
+  "537348": {
+    "venue": "Lumen Field",
+    "city": "Seattle"
+  },
+  "537349": {
+    "venue": "SoFi Stadium",
+    "city": "Los Angeles"
+  },
+  "537350": {
+    "venue": "Levi's Stadium",
+    "city": "San Francisco Bay Area"
+  },
+  "537351": {
+    "venue": "NRG Stadium",
+    "city": "Houston"
+  },
+  "537352": {
+    "venue": "Lincoln Financial Field",
+    "city": "Philadelphia"
+  },
+  "537353": {
+    "venue": "BMO Field",
+    "city": "Toronto"
+  },
+  "537354": {
+    "venue": "Arrowhead Stadium",
+    "city": "Kansas City"
+  },
+  "537355": {
+    "venue": "MetLife Stadium",
+    "city": "New York/New Jersey"
+  },
+  "537356": {
+    "venue": "Lincoln Financial Field",
+    "city": "Philadelphia"
+  },
+  "537357": {
+    "venue": "AT&T Stadium",
+    "city": "Dallas"
+  },
+  "537358": {
+    "venue": "Estadio BBVA",
+    "city": "Monterrey"
+  },
+  "537359": {
+    "venue": "NRG Stadium",
+    "city": "Houston"
+  },
+  "537360": {
+    "venue": "Estadio BBVA",
+    "city": "Monterrey"
+  },
+  "537361": {
+    "venue": "Arrowhead Stadium",
+    "city": "Kansas City"
+  },
+  "537362": {
+    "venue": "AT&T Stadium",
+    "city": "Dallas"
+  },
+  "537363": {
+    "venue": "Lumen Field",
+    "city": "Seattle"
+  },
+  "537364": {
+    "venue": "SoFi Stadium",
+    "city": "Los Angeles"
+  },
+  "537365": {
+    "venue": "SoFi Stadium",
+    "city": "Los Angeles"
+  },
+  "537366": {
+    "venue": "BC Place",
+    "city": "Vancouver"
+  },
+  "537367": {
+    "venue": "BC Place",
+    "city": "Vancouver"
+  },
+  "537368": {
+    "venue": "Lumen Field",
+    "city": "Seattle"
+  },
+  "537369": {
+    "venue": "Mercedes-Benz Stadium",
+    "city": "Atlanta"
+  },
+  "537370": {
+    "venue": "Hard Rock Stadium",
+    "city": "Miami"
+  },
+  "537371": {
+    "venue": "Mercedes-Benz Stadium",
+    "city": "Atlanta"
+  },
+  "537372": {
+    "venue": "Hard Rock Stadium",
+    "city": "Miami"
+  },
+  "537373": {
+    "venue": "Estadio Akron",
+    "city": "Guadalajara"
+  },
+  "537374": {
+    "venue": "NRG Stadium",
+    "city": "Houston"
+  },
+  "537375": {
+    "venue": "Lincoln Financial Field",
+    "city": "Philadelphia"
+  },
+  "537376": {
+    "venue": "NRG Stadium",
+    "city": "Houston"
+  },
+  "537377": {
+    "venue": "MetLife Stadium",
+    "city": "New York/New Jersey"
+  },
+  "537378": {
+    "venue": "Estadio Azteca",
+    "city": "Mexico City"
+  },
+  "537379": {
+    "venue": "AT&T Stadium",
+    "city": "Dallas"
+  },
+  "537380": {
+    "venue": "Lumen Field",
+    "city": "Seattle"
+  },
+  "537381": {
+    "venue": "Mercedes-Benz Stadium",
+    "city": "Atlanta"
+  },
+  "537382": {
+    "venue": "BC Place",
+    "city": "Vancouver"
+  },
+  "537383": {
+    "venue": "Gillette Stadium",
+    "city": "Boston"
+  },
+  "537384": {
+    "venue": "SoFi Stadium",
+    "city": "Los Angeles"
+  },
+  "537385": {
+    "venue": "Hard Rock Stadium",
+    "city": "Miami"
+  },
+  "537386": {
+    "venue": "Arrowhead Stadium",
+    "city": "Kansas City"
+  },
+  "537387": {
+    "venue": "AT&T Stadium",
+    "city": "Dallas"
+  },
+  "537388": {
+    "venue": "Mercedes-Benz Stadium",
+    "city": "Atlanta"
+  },
+  "537389": {
+    "venue": "Hard Rock Stadium",
+    "city": "Miami"
+  },
+  "537390": {
+    "venue": "MetLife Stadium",
+    "city": "New York/New Jersey"
+  },
+  "537391": {
+    "venue": "MetLife Stadium",
+    "city": "New York/New Jersey"
+  },
+  "537392": {
+    "venue": "Gillette Stadium",
+    "city": "Boston"
+  },
+  "537393": {
+    "venue": "Lincoln Financial Field",
+    "city": "Philadelphia"
+  },
+  "537394": {
+    "venue": "MetLife Stadium",
+    "city": "New York/New Jersey"
+  },
+  "537395": {
+    "venue": "Gillette Stadium",
+    "city": "Boston"
+  },
+  "537396": {
+    "venue": "BMO Field",
+    "city": "Toronto"
+  },
+  "537397": {
+    "venue": "Arrowhead Stadium",
+    "city": "Kansas City"
+  },
+  "537398": {
+    "venue": "Levi's Stadium",
+    "city": "San Francisco Bay Area"
+  },
+  "537399": {
+    "venue": "AT&T Stadium",
+    "city": "Dallas"
+  },
+  "537400": {
+    "venue": "Levi's Stadium",
+    "city": "San Francisco Bay Area"
+  },
+  "537401": {
+    "venue": "AT&T Stadium",
+    "city": "Dallas"
+  },
+  "537402": {
+    "venue": "Arrowhead Stadium",
+    "city": "Kansas City"
+  },
+  "537403": {
+    "venue": "NRG Stadium",
+    "city": "Houston"
+  },
+  "537404": {
+    "venue": "Estadio Azteca",
+    "city": "Mexico City"
+  },
+  "537405": {
+    "venue": "NRG Stadium",
+    "city": "Houston"
+  },
+  "537406": {
+    "venue": "Estadio Akron",
+    "city": "Guadalajara"
+  },
+  "537407": {
+    "venue": "Hard Rock Stadium",
+    "city": "Miami"
+  },
+  "537408": {
+    "venue": "Mercedes-Benz Stadium",
+    "city": "Atlanta"
+  },
+  "537409": {
+    "venue": "AT&T Stadium",
+    "city": "Dallas"
+  },
+  "537410": {
+    "venue": "BMO Field",
+    "city": "Toronto"
+  },
+  "537411": {
+    "venue": "Gillette Stadium",
+    "city": "Boston"
+  },
+  "537412": {
+    "venue": "BMO Field",
+    "city": "Toronto"
+  },
+  "537413": {
+    "venue": "MetLife Stadium",
+    "city": "New York/New Jersey"
+  },
+  "537414": {
+    "venue": "Lincoln Financial Field",
+    "city": "Philadelphia"
+  },
+  "537415": {
+    "venue": "Gillette Stadium",
+    "city": "Boston"
+  },
+  "537416": {
+    "venue": "MetLife Stadium",
+    "city": "New York/New Jersey"
+  },
+  "537417": {
+    "venue": "SoFi Stadium",
+    "city": "Los Angeles"
+  },
+  "537418": {
+    "venue": "Estadio BBVA",
+    "city": "Monterrey"
+  },
+  "537419": {
+    "venue": "BMO Field",
+    "city": "Toronto"
+  },
+  "537420": {
+    "venue": "SoFi Stadium",
+    "city": "Los Angeles"
+  },
+  "537421": {
+    "venue": "Levi's Stadium",
+    "city": "San Francisco Bay Area"
+  },
+  "537422": {
+    "venue": "Lumen Field",
+    "city": "Seattle"
+  },
+  "537423": {
+    "venue": "NRG Stadium",
+    "city": "Houston"
+  },
+  "537424": {
+    "venue": "AT&T Stadium",
+    "city": "Dallas"
+  },
+  "537425": {
+    "venue": "Estadio Azteca",
+    "city": "Mexico City"
+  },
+  "537426": {
+    "venue": "Mercedes-Benz Stadium",
+    "city": "Atlanta"
+  },
+  "537427": {
+    "venue": "Hard Rock Stadium",
+    "city": "Miami"
+  },
+  "537428": {
+    "venue": "AT&T Stadium",
+    "city": "Dallas"
+  },
+  "537429": {
+    "venue": "BC Place",
+    "city": "Vancouver"
+  },
+  "537430": {
+    "venue": "Arrowhead Stadium",
+    "city": "Kansas City"
+  }
+}
