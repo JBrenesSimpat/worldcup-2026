@@ -1,12 +1,14 @@
 "use client";
 
 import { useI18n } from "@/lib/i18n";
+import { useTimezone } from "@/lib/timezone";
 import { dayKey, formatDateHeading } from "@/lib/time";
 import type { Match } from "@/lib/types";
 import MatchCard from "./MatchCard";
 
 export default function MatchDayList({ matches }: { matches: Match[] }) {
   const { locale, t } = useI18n();
+  const { tz } = useTimezone();
 
   if (matches.length === 0) {
     return (
@@ -19,7 +21,7 @@ export default function MatchDayList({ matches }: { matches: Match[] }) {
   // Group matches by their Mexico-City calendar day, preserving order.
   const days: { key: string; matches: Match[] }[] = [];
   for (const m of matches) {
-    const key = dayKey(m.datetime);
+    const key = dayKey(m.datetime, tz);
     let bucket = days.find((d) => d.key === key);
     if (!bucket) {
       bucket = { key, matches: [] };
@@ -33,7 +35,7 @@ export default function MatchDayList({ matches }: { matches: Match[] }) {
       {days.map((day) => (
         <section key={day.key}>
           <h2 className="mb-2 text-xs font-bold uppercase tracking-wide text-muted">
-            {formatDateHeading(day.matches[0].datetime, locale)}
+            {formatDateHeading(day.matches[0].datetime, locale, tz)}
           </h2>
           <div className="space-y-2.5">
             {day.matches.map((m) => (

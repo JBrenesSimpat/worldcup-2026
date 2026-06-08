@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useI18n } from "@/lib/i18n";
 import LanguageSwitcher from "./LanguageSwitcher";
+import TimezoneToggle from "./TimezoneToggle";
 
 const NAV = [
   { href: "/", key: "nav.today" },
@@ -34,7 +35,10 @@ export default function Header() {
               </span>
             </span>
           </Link>
-          <LanguageSwitcher />
+          <div className="flex flex-col items-end gap-1.5">
+            <LanguageSwitcher />
+            <TimezoneToggle />
+          </div>
         </div>
         <p className="mt-1 text-sm opacity-90">{t("app.tagline")}</p>
 

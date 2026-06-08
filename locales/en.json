@@ -92,7 +92,13 @@
     "venue": "Venue",
     "group": "Group",
     "matchday": "Matchday",
-    "tzNote": "Mexico City time"
+    "tzNote": "Mexico City time",
+    "tzLocal": "Your local time"
+  },
+  "tz": {
+    "label": "Timezone",
+    "mexico": "Mexico",
+    "local": "Local"
   },
   "footer": {
     "dataSource": "Data source: football-data.org",

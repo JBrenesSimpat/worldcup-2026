@@ -1,6 +1,7 @@
 "use client";
 
 import { useI18n } from "@/lib/i18n";
+import { useTimezone } from "@/lib/timezone";
 import { formatTime } from "@/lib/time";
 import type { Match } from "@/lib/types";
 import TeamBadge from "./TeamBadge";
@@ -15,6 +16,7 @@ function StageLabel({ match }: { match: Match }) {
 
 export default function MatchCard({ match }: { match: Match }) {
   const { locale, t } = useI18n();
+  const { tz } = useTimezone();
   const { score, status } = match;
   const hasScore = score.home !== null && score.away !== null;
 
@@ -41,7 +43,7 @@ export default function MatchCard({ match }: { match: Match }) {
           </div>
         ) : (
           <div className="text-lg font-bold text-ink">
-            {formatTime(match.datetime, locale)}
+            {formatTime(match.datetime, locale, tz)}
           </div>
         )}
 

@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { useI18n } from "@/lib/i18n";
+import { useTimezone } from "@/lib/timezone";
 import { sortedMatches, teamByCode, teamName, teams } from "@/lib/data";
 import { GROUP_IDS } from "@/lib/standings";
 import type { Match, Stage } from "@/lib/types";
@@ -11,6 +12,7 @@ const STAGES: Stage[] = ["group", "r32", "r16", "qf", "sf", "third", "final"];
 
 export default function SchedulePage() {
   const { locale, t } = useI18n();
+  const { mode } = useTimezone();
   const all = useMemo(() => sortedMatches(), []);
 
   const [group, setGroup] = useState("");
@@ -60,7 +62,8 @@ export default function SchedulePage() {
       <div>
         <h1 className="text-xl font-bold">{t("schedule.title")}</h1>
         <p className="text-sm text-muted">
-          {t("schedule.subtitle")} · 🕒 {t("common.tzNote")}
+          {t("schedule.subtitle")} · 🕒{" "}
+          {t(mode === "mexico" ? "common.tzNote" : "common.tzLocal")}
         </p>
       </div>
 

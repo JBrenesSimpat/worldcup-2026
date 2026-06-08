@@ -2,38 +2,40 @@
 
 import { useMemo, useSyncExternalStore } from "react";
 import { useI18n } from "@/lib/i18n";
+import { useTimezone } from "@/lib/timezone";
 import { sortedMatches } from "@/lib/data";
 import { dayKey, todayKey } from "@/lib/time";
 import MatchDayList from "@/components/MatchDayList";
 
 // "Today" depends on the visitor's clock — read it client-side without hydration
-// drift: the server renders null, the client fills in the real Mexico-City date.
+// drift: the server renders null, the client fills in the real date.
 const NOOP_SUBSCRIBE = () => () => {};
 
 export default function HomePage() {
   const { t } = useI18n();
+  const { tz, mode } = useTimezone();
   const all = useMemo(() => sortedMatches(), []);
 
   const today = useSyncExternalStore(
     NOOP_SUBSCRIBE,
-    () => todayKey(),
+    () => todayKey(tz),
     () => null,
   );
 
   const { heading, list } = useMemo(() => {
     if (!today) return { heading: "today.title", list: [] };
 
-    const todays = all.filter((m) => dayKey(m.datetime) === today);
+    const todays = all.filter((m) => dayKey(m.datetime, tz) === today);
     if (todays.length > 0) return { heading: "today.title", list: todays };
 
     // No matches today — show the next day that has matches.
-    const nextDay = all.find((m) => dayKey(m.datetime) > today);
-    const nextKey = nextDay ? dayKey(nextDay.datetime) : null;
+    const nextDay = all.find((m) => dayKey(m.datetime, tz) > today);
+    const nextKey = nextDay ? dayKey(nextDay.datetime, tz) : null;
     const upcoming = nextKey
-      ? all.filter((m) => dayKey(m.datetime) === nextKey)
+      ? all.filter((m) => dayKey(m.datetime, tz) === nextKey)
       : [];
     return { heading: "today.nextTitle", list: upcoming };
-  }, [all, today]);
+  }, [all, today, tz]);
 
   return (
     <div className="space-y-6">
@@ -48,7 +50,9 @@ export default function HomePage() {
 
       <div className="flex items-baseline justify-between">
         <h2 className="text-lg font-bold">{t(heading)}</h2>
-        <span className="text-xs text-muted">🕒 {t("common.tzNote")}</span>
+        <span className="text-xs text-muted">
+          🕒 {t(mode === "mexico" ? "common.tzNote" : "common.tzLocal")}
+        </span>
       </div>
 
       {today === null ? (

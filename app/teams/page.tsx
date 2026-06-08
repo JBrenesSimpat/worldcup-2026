@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { useI18n } from "@/lib/i18n";
+import { useTimezone } from "@/lib/timezone";
 import { sortedMatches, teamByCode, teamName, teams } from "@/lib/data";
 import type { Team } from "@/lib/types";
 import MatchDayList from "@/components/MatchDayList";
@@ -9,6 +10,7 @@ import GroupTable from "@/components/GroupTable";
 
 export default function TeamsPage() {
   const { locale, t } = useI18n();
+  const { mode } = useTimezone();
   const [selected, setSelected] = useState<string | null>(null);
   const [query, setQuery] = useState("");
 
@@ -98,7 +100,8 @@ export default function TeamsPage() {
 
           <div>
             <h3 className="mb-2 text-sm font-bold">
-              {t("teams.matches")} · 🕒 {t("common.tzNote")}
+              {t("teams.matches")} · 🕒{" "}
+              {t(mode === "mexico" ? "common.tzNote" : "common.tzLocal")}
             </h3>
             <MatchDayList matches={teamMatches} />
           </div>

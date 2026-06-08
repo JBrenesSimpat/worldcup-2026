@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
 import { I18nProvider } from "@/lib/i18n";
+import { TimezoneProvider } from "@/lib/timezone";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
@@ -40,11 +41,13 @@ export default function RootLayout({
     <html lang="es" className={`${geistSans.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col">
         <I18nProvider>
-          <Header />
-          <main className="mx-auto w-full max-w-5xl flex-1 px-5 py-6">
-            {children}
-          </main>
-          <Footer />
+          <TimezoneProvider>
+            <Header />
+            <main className="mx-auto w-full max-w-5xl flex-1 px-5 py-6">
+              {children}
+            </main>
+            <Footer />
+          </TimezoneProvider>
         </I18nProvider>
         <ServiceWorkerRegister />
       </body>
