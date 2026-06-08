@@ -103,7 +103,8 @@
   "footer": {
     "dataSource": "Datos: football-data.org · Sedes: fixturedownload.com",
     "disclaimer": "No afiliado ni respaldado por la FIFA.",
-    "madeWith": "Calendario del Mundial 2026"
+    "madeWith": "Calendario del Mundial 2026",
+    "madeBy": "Por: Johnny Brenes"
   },
   "lang": {
     "label": "Idioma",

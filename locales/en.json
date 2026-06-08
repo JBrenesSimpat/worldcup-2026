@@ -103,7 +103,8 @@
   "footer": {
     "dataSource": "Data: football-data.org · Venues: fixturedownload.com",
     "disclaimer": "Not affiliated with or endorsed by FIFA.",
-    "madeWith": "World Cup 2026 Schedule"
+    "madeWith": "World Cup 2026 Schedule",
+    "madeBy": "By: Johnny Brenes"
   },
   "lang": {
     "label": "Language",

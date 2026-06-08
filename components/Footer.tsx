@@ -11,6 +11,7 @@ export default function Footer() {
         {t("footer.dataSource")} · {t("footer.disclaimer")}
       </p>
       <p className="mt-1.5">{t("footer.madeWith")}</p>
+      <p className="mt-1.5">{t("footer.madeBy")}</p>
     </footer>
   );
 }
