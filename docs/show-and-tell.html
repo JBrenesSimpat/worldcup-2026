@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>World Cup 2026 — How We Built It</title>
+<style>
+  :root{
+    --green:#0a7d52; --green-dark:#055f3d; --gold:#f4c430; --gold-dark:#e0a800;
+    --ink:#0f2417; --muted:#5b6b62; --bg:#0b1f16; --card:#ffffff; --line:#e3ebe5;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{
+    font-family:'Segoe UI',system-ui,-apple-system,sans-serif;
+    background:radial-gradient(circle at 30% 20%, #10402b, var(--bg));
+    color:var(--ink); overflow:hidden;
+  }
+
+  .stage{height:100vh;display:flex;align-items:center;justify-content:center;padding:40px}
+  .slide{
+    display:none; width:min(980px,94vw); max-height:88vh; overflow:auto;
+    background:var(--card); border-radius:24px; padding:52px 60px;
+    box-shadow:0 30px 80px rgba(0,0,0,.45); animation:in .35s ease;
+  }
+  .slide.active{display:block}
+  @keyframes in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+  .kicker{display:inline-block;font-size:.78rem;font-weight:800;letter-spacing:1.5px;
+    text-transform:uppercase;color:var(--green);background:#e7f3ec;padding:6px 12px;border-radius:999px}
+  h1{font-size:2.8rem;line-height:1.05;letter-spacing:-1px;margin:18px 0 10px}
+  h2{font-size:2rem;line-height:1.1;letter-spacing:-.5px;margin:14px 0 18px}
+  p.lead{font-size:1.15rem;color:var(--muted);max-width:52ch}
+  ul{margin:10px 0 0 0;list-style:none}
+  li{font-size:1.1rem;padding:9px 0 9px 34px;position:relative}
+  li::before{content:"⚽";position:absolute;left:0;top:8px;font-size:1rem}
+  .big{font-size:1.2rem}
+  .muted{color:var(--muted)}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:14px 34px}
+  .pill{display:inline-block;background:#f0f6f2;color:var(--green-dark);font-weight:700;
+    padding:6px 12px;border-radius:10px;font-size:.95rem;margin:4px 4px 0 0}
+
+  .qa{margin-top:8px}
+  .qa .row{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:12px 0;border-bottom:1px solid var(--line)}
+  .qa .you{font-weight:700}
+  .qa .you::before{content:"🗣️ ";}
+  .qa .did{color:var(--green-dark)}
+  .qa .did::before{content:"✅ ";}
+
+  table{width:100%;border-collapse:collapse;margin-top:12px;font-size:1.02rem}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
+  th{font-size:.75rem;text-transform:uppercase;letter-spacing:.5px;color:var(--muted)}
+  td.good{color:var(--green-dark);font-weight:700}
+
+  .diagram{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;
+    margin-top:18px;font-size:.95rem}
+  .box{background:#f0f6f2;border:2px solid #cfe3d7;border-radius:14px;padding:14px 16px;
+    text-align:center;font-weight:700;color:var(--green-dark);min-width:130px}
+  .box small{display:block;font-weight:500;color:var(--muted);margin-top:3px;font-size:.78rem}
+  .arrow{font-size:1.5rem;color:var(--gold-dark)}
+
+  .steps{margin-top:14px;display:grid;grid-template-columns:1fr 1fr;gap:8px 28px}
+  .steps div{font-size:1.05rem;padding:7px 0 7px 30px;position:relative}
+  .steps div::before{content:"✓";position:absolute;left:0;top:6px;color:var(--green);font-weight:800}
+
+  .stat{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:20px}
+  .stat .n{font-size:2.6rem;font-weight:800;color:var(--green);line-height:1}
+  .stat .l{color:var(--muted);font-size:.95rem;margin-top:4px}
+
+  .title-slide{background:linear-gradient(135deg,var(--green),var(--green-dark));color:#fff;text-align:center}
+  .title-slide .kicker{background:rgba(255,255,255,.18);color:#fff}
+  .title-slide h1{font-size:3.2rem}
+  .title-slide p.lead{color:rgba(255,255,255,.92);margin:0 auto}
+  .ball{font-size:4rem}
+  .gold{color:var(--gold)}
+  a{color:var(--green-dark);font-weight:700}
+
+  .hud{position:fixed;bottom:18px;left:0;right:0;display:flex;justify-content:center;
+    align-items:center;gap:16px;color:rgba(255,255,255,.85);font-size:.85rem;z-index:5}
+  .hud button{background:rgba(255,255,255,.14);border:none;color:#fff;width:38px;height:38px;
+    border-radius:50%;font-size:1.1rem;cursor:pointer;transition:.15s}
+  .hud button:hover{background:rgba(255,255,255,.3)}
+  .count{min-width:54px;text-align:center;font-variant-numeric:tabular-nums}
+  .progress{position:fixed;top:0;left:0;height:4px;background:var(--gold);transition:width .3s;z-index:6}
+  .hint{position:fixed;top:14px;right:18px;color:rgba(255,255,255,.6);font-size:.78rem;z-index:5}
+</style>
+</head>
+<body>
+<div class="progress" id="bar"></div>
+<div class="hint">← → or Space to navigate</div>
+
+<div class="stage">
+
+  <!-- 1 — Title -->
+  <section class="slide active title-slide">
+    <div class="ball">⚽</div>
+    <span class="kicker">Show &amp; Tell</span>
+    <h1>World Cup 2026<br><span class="gold">How we built it together</span></h1>
+    <p class="lead">A real web app — designed, built, and shipped step-by-step through a conversation with an AI coding assistant.</p>
+  </section>
+
+  <!-- 2 — How we worked -->
+  <section class="slide">
+    <span class="kicker">The way we worked</span>
+    <h2>A conversation, not a spec</h2>
+    <div class="diagram">
+      <div class="box">🗣️ I ask &amp; decide<small>goals, preferences</small></div>
+      <span class="arrow">→</span>
+      <div class="box">🤖 It explains &amp; recommends<small>options + trade-offs</small></div>
+      <span class="arrow">→</span>
+      <div class="box">🛠️ It builds &amp; verifies<small>code, lint, deploy</small></div>
+      <span class="arrow">↺</span>
+    </div>
+    <p class="lead" style="margin-top:22px">I never wrote code. I asked questions, made choices, and reviewed each step. The loop repeated until it was done.</p>
+  </section>
+
+  <!-- 3 — It started with questions -->
+  <section class="slide">
+    <span class="kicker">It started with my questions</span>
+    <h2>Six questions on my mind</h2>
+    <div class="two big">
+      <div>“Is it OK to use <strong>React</strong>?”</div>
+      <div>“Do we need a <strong>backend</strong> (C#)?”</div>
+      <div>“Do we need a <strong>database</strong>?”</div>
+      <div>“Where do we <strong>publish</strong>?”</div>
+      <div>“Are we breaking any <strong>rules</strong>?”</div>
+      <div>“Do we need a <strong>login</strong>?”</div>
+    </div>
+    <p class="lead" style="margin-top:20px">Each got a plain-English answer with trade-offs — and became a decision before any code was written.</p>
+  </section>
+
+  <!-- 4 — Plan first -->
+  <section class="slide">
+    <span class="kicker">Step 0</span>
+    <h2>We planned before building</h2>
+    <p class="lead">I asked it to “plan first.” We wrote it down, then built in phases — reviewing after each one.</p>
+    <div class="steps" style="margin-top:18px">
+      <div>See a mockup of the UI first</div>
+      <div>Scaffold the app + 2 languages</div>
+      <div>Build the match data</div>
+      <div>Schedule, filters &amp; standings</div>
+      <div>Knockout bracket</div>
+      <div>Live auto-updates</div>
+      <div>Make it installable (PWA)</div>
+      <div>Ship to GitHub + Vercel</div>
+    </div>
+  </section>
+
+  <!-- 5 — Decisions made together -->
+  <section class="slide">
+    <span class="kicker">Decisions, made together</span>
+    <h2>What I asked → what we chose</h2>
+    <div class="qa">
+      <div class="row"><div class="you">React? Backend? Database?</div><div class="did">Next.js, no server, no DB — keep it static</div></div>
+      <div class="row"><div class="you">Where to publish — free?</div><div class="did">Vercel + GitHub, $0</div></div>
+      <div class="row"><div class="you">Make it multi-language</div><div class="did">Spanish default + English toggle</div></div>
+      <div class="row"><div class="you">Show times in Mexico time</div><div class="did">Mexico default, with a local-time switch</div></div>
+      <div class="row"><div class="you">Update after every game?</div><div class="did">Auto-poll during matches, free</div></div>
+    </div>
+  </section>
+
+  <!-- 6 — Where the data comes from -->
+  <section class="slide">
+    <span class="kicker">“Where does the data come from?”</span>
+    <h2>Two official feeds, stitched together</h2>
+    <div class="diagram">
+      <div class="box">football-data.org<small>teams · fixtures · scores · winners</small></div>
+      <div class="box">fixturedownload.com<small>stadium per match</small></div>
+    </div>
+    <p class="lead" style="margin-top:18px">We matched them on <strong>exact kickoff time + teams</strong> — 104/104 venues mapped.</p>
+    <ul style="margin-top:8px">
+      <li>The API lacked flags &amp; Spanish names, so we added those ourselves</li>
+      <li>Stored as plain JSON in the repo — no database needed</li>
+    </ul>
+  </section>
+
+  <!-- 7 — Built in steps, verified each one -->
+  <section class="slide">
+    <span class="kicker">Step-by-step</span>
+    <h2>Build a piece, check it, move on</h2>
+    <p class="lead">After every step it ran the build + linter, and after deploy we opened the <em>live</em> site to confirm.</p>
+    <div class="steps" style="margin-top:16px">
+      <div>Scaffold → build passes</div>
+      <div>104 matches → data verified</div>
+      <div>Schedule UI → opens correctly</div>
+      <div>Bracket → advances on results</div>
+      <div>Real data → synced from API</div>
+      <div>Auto-update → tested in CI</div>
+      <div>PWA → installs on phone</div>
+      <div>Deployed → checked live URL</div>
+    </div>
+  </section>
+
+  <!-- 8 — Questions that shaped it mid-build -->
+  <section class="slide">
+    <span class="kicker">Questions that shaped it</span>
+    <h2>I kept asking — it kept adapting</h2>
+    <div class="qa">
+      <div class="row"><div class="you">“Is the auto-update really free?”</div><div class="did">Yes — unlimited on a public repo</div></div>
+      <div class="row"><div class="you">“How often can it update?”</div><div class="did">Every 10 min during games, still $0</div></div>
+      <div class="row"><div class="you">“Why flags on iPhone, not my PC?”</div><div class="did">A Windows quirk — added a flag font</div></div>
+      <div class="row"><div class="you">“Can we add stadium names?”</div><div class="did">Pulled a 2nd feed and joined it</div></div>
+      <div class="row"><div class="you">“Can it use my browser's timezone?”</div><div class="did">Added a Mexico ↔ local toggle</div></div>
+    </div>
+  </section>
+
+  <!-- 9 — Verify, don't assume -->
+  <section class="slide">
+    <span class="kicker">A habit that paid off</span>
+    <h2>“It’s not filtering” → let’s check</h2>
+    <ul>
+      <li>I noticed a team filter looked off on my phone</li>
+      <li>Instead of guessing, it <strong>checked the real data</strong> — the logic was correct (Portugal → 3 games)</li>
+      <li>Turned out to be a display quirk, re-verified on the live site</li>
+    </ul>
+    <p class="lead" style="margin-top:18px">The pattern throughout: <strong>verify against real data and the live app</strong> — don’t assume.</p>
+  </section>
+
+  <!-- 10 — Result -->
+  <section class="slide">
+    <span class="kicker">The result</span>
+    <h2>What we shipped — for $0</h2>
+    <div class="stat">
+      <div><div class="n">104</div><div class="l">matches</div></div>
+      <div><div class="n">48</div><div class="l">teams · 12 groups</div></div>
+      <div><div class="n">16</div><div class="l">stadiums</div></div>
+      <div><div class="n">2</div><div class="l">languages</div></div>
+      <div><div class="n">10 min</div><div class="l">live update latency</div></div>
+      <div><div class="n">$0</div><div class="l">running cost</div></div>
+    </div>
+  </section>
+
+  <!-- 11 — Takeaways -->
+  <section class="slide">
+    <span class="kicker">What made it work</span>
+    <h2>Lessons from the build</h2>
+    <ul>
+      <li><strong>Ask, then decide</strong> — clear questions up front avoided rework</li>
+      <li><strong>Plan first</strong> — a phased roadmap kept it on track</li>
+      <li><strong>Keep it simple</strong> — static + no DB made it free and reliable</li>
+      <li><strong>Verify every step</strong> — build, deploy, and check the live app</li>
+      <li><strong>Let automation do the boring part</strong> — results update themselves</li>
+    </ul>
+  </section>
+
+  <!-- 12 — Closing -->
+  <section class="slide title-slide">
+    <div class="ball">🏆</div>
+    <span class="kicker">It's live</span>
+    <h1>¡Gracias!</h1>
+    <p class="lead">
+      App: <strong>worldcup-2026-ten.vercel.app</strong><br>
+      Code: <strong>github.com/JBrenesSimpat/worldcup-2026</strong>
+    </p>
+    <p class="lead" style="margin-top:14px">A conversation → a plan → real data → a live, self-updating app.</p>
+  </section>
+
+</div>
+
+<div class="hud">
+  <button id="prev" aria-label="Previous">‹</button>
+  <span class="count"><span id="cur">1</span> / <span id="total">12</span></span>
+  <button id="next" aria-label="Next">›</button>
+</div>
+
+<script>
+  const slides = [...document.querySelectorAll('.slide')];
+  let i = 0;
+  const bar = document.getElementById('bar');
+  const cur = document.getElementById('cur');
+  document.getElementById('total').textContent = slides.length;
+
+  function show(n){
+    i = Math.max(0, Math.min(slides.length - 1, n));
+    slides.forEach((s, idx) => s.classList.toggle('active', idx === i));
+    cur.textContent = i + 1;
+    bar.style.width = ((i + 1) / slides.length * 100) + '%';
+  }
+  function next(){ show(i + 1); }
+  function prev(){ show(i - 1); }
+
+  document.getElementById('next').onclick = next;
+  document.getElementById('prev').onclick = prev;
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown'){ e.preventDefault(); next(); }
+    if (e.key === 'ArrowLeft' || e.key === 'PageUp'){ e.preventDefault(); prev(); }
+    if (e.key === 'Home'){ show(0); }
+    if (e.key === 'End'){ show(slides.length - 1); }
+  });
+  document.querySelector('.stage').addEventListener('click', (e) => {
+    if (e.target.closest('a')) return;
+    (e.clientX > window.innerWidth / 2 ? next : prev)();
+  });
+  show(0);
+</script>
+</body>
+</html>

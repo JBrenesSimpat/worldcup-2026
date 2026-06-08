@@ -10,6 +10,7 @@
     "sync": "node scripts/sync-data.mjs"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "country-flag-emoji-polyfill": "^0.1.8",
     "next": "16.2.7",
     "react": "19.2.4",
