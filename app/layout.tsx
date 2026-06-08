@@ -6,6 +6,7 @@ import { TimezoneProvider } from "@/lib/timezone";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
+import FlagFont from "@/components/FlagFont";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -50,6 +51,7 @@ export default function RootLayout({
           </TimezoneProvider>
         </I18nProvider>
         <ServiceWorkerRegister />
+        <FlagFont />
       </body>
     </html>
   );
