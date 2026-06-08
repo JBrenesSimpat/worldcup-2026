@@ -1,0 +1,140 @@
+# World Cup 2026 Schedule App — Implementation Plan
+
+## Goal
+A friendly, mobile-friendly public web app showing all 104 fixtures of the 2026 FIFA World Cup, plus a knockout bracket through to the final, with optional daily auto-updates of results. **Hybrid data approach**: ships working immediately with static data, with API auto-update wired in afterward. Built as an **installable PWA** so it works great on iPhone and Android. **Multi-language**, defaulting to **Spanish** (English included; easily extensible).
+
+## Decisions answered (architecture Q&A)
+1. **React for frontend?** Yes — using Next.js (React framework) + TypeScript + Tailwind CSS.
+2. **Separate backend (C#/other)?** No standalone server needed. Serverless / scheduled job only.
+3. **Database?** No — fixtures/results stored as a static JSON file in the repo.
+4. **Hosting?** Vercel free tier, auto-deploy from GitHub.
+5. **Regulations?** Use factual schedule/score data within an API's Terms of Service; avoid FIFA trademarks/logos; add data-source attribution. No personal data collected.
+6. **User/password?** Not needed — public, read-only site. API keys kept in environment variables only.
+
+## Tech stack
+- **Next.js (App Router) + TypeScript + Tailwind CSS** — frontend & build
+- **Static `schedule.json`** in the repo as the source of truth (no database)
+- **GitHub Actions** cron for the optional daily update (added in Phase 5)
+- **Vercel** free hosting, auto-deploy from GitHub
+- **PWA** (web app manifest + service worker) — installable on phones, works offline
+- **i18n** (next-intl / next i18n) — multi-language UI, **Spanish default** + English
+- No backend server, no database, no authentication
+
+## Internationalization (i18n)
+- **Default language: Spanish (`es`)**, with **English (`en`)** included. Adding more later (Portuguese, French…) is just another JSON file.
+- UI strings stored in per-language files: `locales/es.json`, `locales/en.json`.
+- **Language switcher** (🌐 ES / EN) in the header; user's choice is remembered; phone language auto-detected with Spanish fallback.
+- Translated: all UI labels, dates (e.g., "jueves 11 de junio"), stage names (Fase de grupos, Octavos, Cuartos, Semifinal, Final), statuses (EN VIVO, Finalizado, Próximo), and localized country names.
+- Team venues kept as proper nouns.
+
+## Mobile / cross-device support
+- It is a **web application** (runs in any browser) — NOT a native app and NOT in the App Store / Google Play.
+- **Responsive design**: adapts to phone, tablet, and desktop screens automatically.
+- **Accessible on any device** via the public Vercel URL (open in Safari on iPhone, Chrome on Android, etc.).
+- **PWA / "Add to Home Screen"**: users can save a home-screen icon that launches the site fullscreen (no browser bars), with offline caching of the schedule. Same website, no install/download, no app-store fees. Fully optional for the user — the site also works normally in the browser.
+
+## Project structure
+```
+worldcup-2026/
+├── data/
+│   ├── teams.json          # 48 teams: name, code, flag, group
+│   └── schedule.json       # 104 matches: id, date, venue, group/stage, teams, score, status
+├── locales/
+│   ├── es.json             # Spanish UI strings (default)
+│   └── en.json             # English UI strings
+├── app/
+│   ├── layout.tsx          # shell, header, footer w/ data attribution
+│   ├── page.tsx            # home: "Today" + upcoming matches
+│   ├── schedule/page.tsx   # all fixtures, filter by group/date/team
+│   ├── bracket/page.tsx    # knockout tree R32 → R16 → QF → SF → Final
+│   └── globals.css
+├── components/
+│   ├── MatchCard.tsx       # one fixture (teams, flags, kickoff, score)
+│   ├── GroupTable.tsx      # standings per group (auto-computed from results)
+│   ├── Bracket.tsx         # responsive knockout bracket
+│   ├── TeamBadge.tsx       # flag + name
+│   └── Filters.tsx
+├── lib/
+│   ├── matches.ts          # load + sort + group fixtures
+│   ├── standings.ts        # compute group tables from played matches
+│   ├── bracket.ts          # build bracket, advance winners
+│   └── time.ts             # timezone-aware kickoff display
+├── scripts/
+│   └── update-results.ts   # (Phase 5) fetch finished scores, update schedule.json
+├── public/
+│   ├── manifest.json       # PWA manifest (name, icons, theme color, fullscreen)
+│   ├── sw.js               # service worker (offline caching)
+│   └── icons/              # app icons (192px, 512px) for home-screen install
+├── .github/workflows/
+│   └── daily-update.yml    # (Phase 5) cron job
+└── ...config files
+```
+
+## Build phases
+
+### Phase 1 — Scaffold
+Create Next.js + TS + Tailwind project, base layout, header/footer with data-source attribution, clean theme (football-friendly palette, responsive, mobile-first). Set up i18n with **Spanish as default** + English, and add the language switcher in the header.
+
+### Phase 2 — Data foundation ✅ (now REAL data)
+`teams.json` (48 teams, 12 groups A–L) and `schedule.json` (104 matches) are generated by `scripts/sync-data.mjs` from the **football-data.org** API — real draw, real teams, real dates, scores, and winners. A flag-emoji + Spanish-name reference map supplies what the API lacks. **Note:** the free tier does not expose venues, so stadium/city are omitted.
+
+### Phase 3 — Schedule UI
+- Home page: today's matches + next upcoming
+- Schedule page: all fixtures grouped by date and by group, with filters (group / team / stage)
+- `MatchCard` with flags, kickoff time (timezone-aware), and score/status
+- Auto-computed group standings tables
+
+### Phase 4 — Knockout bracket
+Responsive bracket view (Round of 32 → 16 → QF → SF → Final + 3rd place). Winners auto-advance based on results in the data; "TBD" shown until decided.
+
+### Phase 5 — Results auto-update ✅ (implemented)
+- **Strategy: Hybrid scheduling.** `.github/workflows/update-results.yml` polls every 30 min during the daily match window (UTC). `scripts/sync-data.mjs` runs with `MATCH_WINDOW_ONLY=1`, so it only calls the API when a match is actually in progress (kickoff − 15 min … kickoff + 3 h); otherwise it's a no-op. A daily 12:00 UTC run does a full sync to catch schedule changes. Manual `workflow_dispatch` also available.
+- The script re-syncs teams + matches, including scores and decided winners (extra time / penalties via the API `winner` field); the bracket advances automatically. **Commits only when `data/` actually changes** → triggers a Vercel redeploy.
+- Free on a **public** repo (unlimited GitHub Actions minutes).
+- **Token** stored as GitHub Actions secret `FOOTBALL_DATA_TOKEN` (never in frontend; locally in git-ignored `.env.local`).
+- Note: GitHub cron is UTC-only and may be delayed 5–30 min — handled by the polling cadence rather than firing once per match.
+
+#### Phase 6 setup checklist for the token
+1. In the GitHub repo: **Settings → Secrets and variables → Actions → New repository secret**.
+2. Name: `FOOTBALL_DATA_TOKEN`, value: your football-data.org token.
+3. Recommended: **regenerate** the token first (since it was shared in chat) and use the fresh value.
+
+### Phase 5.5 — PWA / installable mobile support
+- Add `manifest.json`, app icons, and a service worker for offline caching.
+- Enable "Add to Home Screen" on iPhone/Android (fullscreen launch, app icon).
+- Test install flow on a phone.
+
+### Phase 6 — Ship
+Initialize git, push to a new repo on GitHub, connect to Vercel for auto-deploy. Verify on mobile + desktop (including PWA install on a real phone).
+
+## Legal/compliance built in
+- Generic naming ("World Cup 2026 Schedule"), **no FIFA logos/emblem/trademarks**
+- Flags via open-licensed icons or emoji
+- Data-source attribution in the footer
+- No personal data, no login → no GDPR concerns
+
+## Recommended stack summary
+
+| Piece        | Choice                                      | Cost |
+|--------------|---------------------------------------------|------|
+| Frontend     | Next.js + React + TypeScript + Tailwind     | Free |
+| Data         | `schedule.json` in repo + free football API | Free |
+| Daily update | GitHub Actions cron                         | Free |
+| Hosting      | Vercel (auto-deploy from GitHub)            | Free |
+| Database     | None needed                                 | —    |
+| Auth         | None needed                                 | —    |
+
+## What's needed (not blocking — can come later)
+1. A **free football-data.org API key** for Phase 5 (auto-update). Phases 1–4 work without it.
+   - Note: this account is **independent of GitHub** — register with any email; no linking required.
+2. **GitHub repo**: will live under https://github.com/JBrenesSimpat (Phase 6).
+3. **Timezone: DECIDED — all kickoff times display in Mexico time** (America/Mexico_City, UTC−06:00, no DST in summer 2026). Data stores each match with its venue offset; the UI formats everything to Mexico time consistently.
+
+## Open notes
+- Work happens in `C:\Temp\worldcup-2026\`.
+- Any fixture data that can't be fully verified will be flagged for cross-checking against the official schedule before launch.
+
+## Key facts
+- 2026 FIFA World Cup: 48 teams, 104 matches, 12 groups (A–L).
+- Hosts: USA, Canada, Mexico.
+- Tournament window: opens ~June 11, 2026; final ~July 19, 2026.

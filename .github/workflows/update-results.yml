@@ -1,0 +1,55 @@
+name: Update World Cup results
+
+# Hybrid schedule:
+#  - Frequent polling during the daily match window (UTC), but the script only
+#    calls the API when a match is actually in progress (MATCH_WINDOW_ONLY=1).
+#  - One full daily sync to pick up any schedule/fixture changes.
+#  - Manual trigger available any time.
+# A commit (and therefore a Vercel redeploy) only happens when data changes.
+
+on:
+  schedule:
+    # Every 30 min, 16:00–23:30 UTC (afternoon/evening matches in the Americas)
+    - cron: "*/30 16-23 * * *"
+    # Every 30 min, 00:00–06:00 UTC (late games + post-match settling)
+    - cron: "*/30 0-6 * * *"
+    # Daily full sync at 12:00 UTC (catches schedule/fixture changes)
+    - cron: "0 12 * * *"
+  workflow_dispatch: {}
+
+concurrency:
+  group: update-results
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Sync data from football-data.org
+        env:
+          FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
+          # Windowed only for the frequent polling crons; the daily 12:00 UTC
+          # run and manual dispatches do a full sync.
+          MATCH_WINDOW_ONLY: ${{ github.event_name == 'schedule' && github.event.schedule != '0 12 * * *' && '1' || '0' }}
+        run: node scripts/sync-data.mjs
+
+      - name: Commit & push if data changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- data/; then
+            echo "No data changes."
+          else
+            git add data/
+            git commit -m "chore: update results ($(date -u +'%Y-%m-%d %H:%M UTC'))"
+            git push
+          fi

@@ -1,0 +1,107 @@
+{
+  "app": {
+    "title": "World Cup 2026",
+    "subtitle": "Schedule & Bracket",
+    "hosts": "USA · Canada · Mexico",
+    "tagline": "48 teams · 104 matches · Jun 11 – Jul 19, 2026"
+  },
+  "nav": {
+    "today": "Today",
+    "schedule": "Schedule",
+    "teams": "Teams",
+    "groups": "Groups",
+    "bracket": "Bracket"
+  },
+  "teams": {
+    "title": "Teams",
+    "subtitle": "Pick a team to see all their matches: results and upcoming games",
+    "pick": "Pick a team",
+    "search": "🔎 Search team",
+    "matches": "Matches",
+    "noneFound": "No teams found",
+    "groupTable": "Group standings"
+  },
+  "home": {
+    "heroTitle": "The 2026 World Cup, all in one place",
+    "heroText": "Follow all 104 matches, the group stage, and the road to the final.",
+    "comingSoon": "Full schedule coming soon",
+    "comingSoonText": "We're putting together every match and team. Check back soon!"
+  },
+  "today": {
+    "title": "Today's matches",
+    "none": "No matches today",
+    "nextTitle": "Upcoming matches"
+  },
+  "schedule": {
+    "title": "Full schedule",
+    "subtitle": "All 104 matches, grouped by date",
+    "empty": "No matches match the current filters."
+  },
+  "groups": {
+    "title": "Group stage",
+    "subtitle": "Standings computed from results · top 2 (+ best thirds) advance"
+  },
+  "bracket": {
+    "title": "Knockout bracket",
+    "subtitle": "Round of 32 to the final · winners advance automatically",
+    "champion": "Champion",
+    "scrollHint": "Scroll sideways to see all rounds"
+  },
+  "filters": {
+    "allGroups": "All groups",
+    "allTeams": "All teams",
+    "allStages": "All stages",
+    "search": "🔎 Search team or venue"
+  },
+  "status": {
+    "live": "LIVE",
+    "finished": "Finished",
+    "upcoming": "Upcoming",
+    "ft": "FT"
+  },
+  "stage": {
+    "group": "Group stage",
+    "r32": "Round of 32",
+    "r16": "Round of 16",
+    "qf": "Quarter-finals",
+    "sf": "Semi-finals",
+    "third": "Third place",
+    "final": "Final"
+  },
+  "standings": {
+    "team": "Team",
+    "p": "P",
+    "w": "W",
+    "d": "D",
+    "l": "L",
+    "gf": "GF",
+    "ga": "GA",
+    "gd": "GD",
+    "pts": "Pts"
+  },
+  "label": {
+    "winner": "Winner",
+    "loser": "Loser",
+    "rank1": "1st",
+    "rank2": "2nd",
+    "rank3": "3rd"
+  },
+  "common": {
+    "tbd": "TBD",
+    "vs": "vs",
+    "venue": "Venue",
+    "group": "Group",
+    "matchday": "Matchday",
+    "tzNote": "Mexico City time"
+  },
+  "footer": {
+    "dataSource": "Data source: football-data.org",
+    "disclaimer": "Not affiliated with or endorsed by FIFA.",
+    "madeWith": "World Cup 2026 Schedule"
+  },
+  "lang": {
+    "label": "Language",
+    "es": "Español",
+    "en": "English"
+  }
+}

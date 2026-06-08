@@ -1,0 +1,1602 @@
+[
+  {
+    "id": "WC-537327",
+    "apiId": 537327,
+    "stage": "group",
+    "datetime": "2026-06-11T19:00:00Z",
+    "home": "MEX",
+    "away": "RSA",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "A",
+    "matchday": 1
+  },
+  {
+    "id": "WC-537328",
+    "apiId": 537328,
+    "stage": "group",
+    "datetime": "2026-06-12T02:00:00Z",
+    "home": "KOR",
+    "away": "CZE",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "A",
+    "matchday": 1
+  },
+  {
+    "id": "WC-537333",
+    "apiId": 537333,
+    "stage": "group",
+    "datetime": "2026-06-12T19:00:00Z",
+    "home": "CAN",
+    "away": "BIH",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "B",
+    "matchday": 1
+  },
+  {
+    "id": "WC-537345",
+    "apiId": 537345,
+    "stage": "group",
+    "datetime": "2026-06-13T01:00:00Z",
+    "home": "USA",
+    "away": "PAR",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "D",
+    "matchday": 1
+  },
+  {
+    "id": "WC-537334",
+    "apiId": 537334,
+    "stage": "group",
+    "datetime": "2026-06-13T19:00:00Z",
+    "home": "QAT",
+    "away": "SUI",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "B",
+    "matchday": 1
+  },
+  {
+    "id": "WC-537339",
+    "apiId": 537339,
+    "stage": "group",
+    "datetime": "2026-06-13T22:00:00Z",
+    "home": "BRA",
+    "away": "MAR",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "C",
+    "matchday": 1
+  },
+  {
+    "id": "WC-537340",
+    "apiId": 537340,
+    "stage": "group",
+    "datetime": "2026-06-14T01:00:00Z",
+    "home": "HAI",
+    "away": "SCO",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "C",
+    "matchday": 1
+  },
+  {
+    "id": "WC-537346",
+    "apiId": 537346,
+    "stage": "group",
+    "datetime": "2026-06-14T04:00:00Z",
+    "home": "AUS",
+    "away": "TUR",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "D",
+    "matchday": 1
+  },
+  {
+    "id": "WC-537351",
+    "apiId": 537351,
+    "stage": "group",
+    "datetime": "2026-06-14T17:00:00Z",
+    "home": "GER",
+    "away": "CUW",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "E",
+    "matchday": 1
+  },
+  {
+    "id": "WC-537357",
+    "apiId": 537357,
+    "stage": "group",
+    "datetime": "2026-06-14T20:00:00Z",
+    "home": "NED",
+    "away": "JPN",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "F",
+    "matchday": 1
+  },
+  {
+    "id": "WC-537352",
+    "apiId": 537352,
+    "stage": "group",
+    "datetime": "2026-06-14T23:00:00Z",
+    "home": "CIV",
+    "away": "ECU",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "E",
+    "matchday": 1
+  },
+  {
+    "id": "WC-537358",
+    "apiId": 537358,
+    "stage": "group",
+    "datetime": "2026-06-15T02:00:00Z",
+    "home": "SWE",
+    "away": "TUN",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "F",
+    "matchday": 1
+  },
+  {
+    "id": "WC-537369",
+    "apiId": 537369,
+    "stage": "group",
+    "datetime": "2026-06-15T16:00:00Z",
+    "home": "ESP",
+    "away": "CPV",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "H",
+    "matchday": 1
+  },
+  {
+    "id": "WC-537363",
+    "apiId": 537363,
+    "stage": "group",
+    "datetime": "2026-06-15T19:00:00Z",
+    "home": "BEL",
+    "away": "EGY",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "G",
+    "matchday": 1
+  },
+  {
+    "id": "WC-537370",
+    "apiId": 537370,
+    "stage": "group",
+    "datetime": "2026-06-15T22:00:00Z",
+    "home": "KSA",
+    "away": "URY",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "H",
+    "matchday": 1
+  },
+  {
+    "id": "WC-537364",
+    "apiId": 537364,
+    "stage": "group",
+    "datetime": "2026-06-16T01:00:00Z",
+    "home": "IRN",
+    "away": "NZL",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "G",
+    "matchday": 1
+  },
+  {
+    "id": "WC-537391",
+    "apiId": 537391,
+    "stage": "group",
+    "datetime": "2026-06-16T19:00:00Z",
+    "home": "FRA",
+    "away": "SEN",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "I",
+    "matchday": 1
+  },
+  {
+    "id": "WC-537392",
+    "apiId": 537392,
+    "stage": "group",
+    "datetime": "2026-06-16T22:00:00Z",
+    "home": "IRQ",
+    "away": "NOR",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "I",
+    "matchday": 1
+  },
+  {
+    "id": "WC-537397",
+    "apiId": 537397,
+    "stage": "group",
+    "datetime": "2026-06-17T01:00:00Z",
+    "home": "ARG",
+    "away": "ALG",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "J",
+    "matchday": 1
+  },
+  {
+    "id": "WC-537398",
+    "apiId": 537398,
+    "stage": "group",
+    "datetime": "2026-06-17T04:00:00Z",
+    "home": "AUT",
+    "away": "JOR",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "J",
+    "matchday": 1
+  },
+  {
+    "id": "WC-537403",
+    "apiId": 537403,
+    "stage": "group",
+    "datetime": "2026-06-17T17:00:00Z",
+    "home": "POR",
+    "away": "COD",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "K",
+    "matchday": 1
+  },
+  {
+    "id": "WC-537409",
+    "apiId": 537409,
+    "stage": "group",
+    "datetime": "2026-06-17T20:00:00Z",
+    "home": "ENG",
+    "away": "CRO",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "L",
+    "matchday": 1
+  },
+  {
+    "id": "WC-537410",
+    "apiId": 537410,
+    "stage": "group",
+    "datetime": "2026-06-17T23:00:00Z",
+    "home": "GHA",
+    "away": "PAN",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "L",
+    "matchday": 1
+  },
+  {
+    "id": "WC-537404",
+    "apiId": 537404,
+    "stage": "group",
+    "datetime": "2026-06-18T02:00:00Z",
+    "home": "UZB",
+    "away": "COL",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "K",
+    "matchday": 1
+  },
+  {
+    "id": "WC-537329",
+    "apiId": 537329,
+    "stage": "group",
+    "datetime": "2026-06-18T16:00:00Z",
+    "home": "CZE",
+    "away": "RSA",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "A",
+    "matchday": 2
+  },
+  {
+    "id": "WC-537335",
+    "apiId": 537335,
+    "stage": "group",
+    "datetime": "2026-06-18T19:00:00Z",
+    "home": "SUI",
+    "away": "BIH",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "B",
+    "matchday": 2
+  },
+  {
+    "id": "WC-537336",
+    "apiId": 537336,
+    "stage": "group",
+    "datetime": "2026-06-18T22:00:00Z",
+    "home": "CAN",
+    "away": "QAT",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "B",
+    "matchday": 2
+  },
+  {
+    "id": "WC-537330",
+    "apiId": 537330,
+    "stage": "group",
+    "datetime": "2026-06-19T01:00:00Z",
+    "home": "MEX",
+    "away": "KOR",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "A",
+    "matchday": 2
+  },
+  {
+    "id": "WC-537348",
+    "apiId": 537348,
+    "stage": "group",
+    "datetime": "2026-06-19T19:00:00Z",
+    "home": "USA",
+    "away": "AUS",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "D",
+    "matchday": 2
+  },
+  {
+    "id": "WC-537342",
+    "apiId": 537342,
+    "stage": "group",
+    "datetime": "2026-06-19T22:00:00Z",
+    "home": "SCO",
+    "away": "MAR",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "C",
+    "matchday": 2
+  },
+  {
+    "id": "WC-537341",
+    "apiId": 537341,
+    "stage": "group",
+    "datetime": "2026-06-20T00:30:00Z",
+    "home": "BRA",
+    "away": "HAI",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "C",
+    "matchday": 2
+  },
+  {
+    "id": "WC-537347",
+    "apiId": 537347,
+    "stage": "group",
+    "datetime": "2026-06-20T03:00:00Z",
+    "home": "TUR",
+    "away": "PAR",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "D",
+    "matchday": 2
+  },
+  {
+    "id": "WC-537359",
+    "apiId": 537359,
+    "stage": "group",
+    "datetime": "2026-06-20T17:00:00Z",
+    "home": "NED",
+    "away": "SWE",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "F",
+    "matchday": 2
+  },
+  {
+    "id": "WC-537353",
+    "apiId": 537353,
+    "stage": "group",
+    "datetime": "2026-06-20T20:00:00Z",
+    "home": "GER",
+    "away": "CIV",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "E",
+    "matchday": 2
+  },
+  {
+    "id": "WC-537354",
+    "apiId": 537354,
+    "stage": "group",
+    "datetime": "2026-06-21T00:00:00Z",
+    "home": "ECU",
+    "away": "CUW",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "E",
+    "matchday": 2
+  },
+  {
+    "id": "WC-537360",
+    "apiId": 537360,
+    "stage": "group",
+    "datetime": "2026-06-21T04:00:00Z",
+    "home": "TUN",
+    "away": "JPN",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "F",
+    "matchday": 2
+  },
+  {
+    "id": "WC-537371",
+    "apiId": 537371,
+    "stage": "group",
+    "datetime": "2026-06-21T16:00:00Z",
+    "home": "ESP",
+    "away": "KSA",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "H",
+    "matchday": 2
+  },
+  {
+    "id": "WC-537365",
+    "apiId": 537365,
+    "stage": "group",
+    "datetime": "2026-06-21T19:00:00Z",
+    "home": "BEL",
+    "away": "IRN",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "G",
+    "matchday": 2
+  },
+  {
+    "id": "WC-537372",
+    "apiId": 537372,
+    "stage": "group",
+    "datetime": "2026-06-21T22:00:00Z",
+    "home": "URY",
+    "away": "CPV",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "H",
+    "matchday": 2
+  },
+  {
+    "id": "WC-537366",
+    "apiId": 537366,
+    "stage": "group",
+    "datetime": "2026-06-22T01:00:00Z",
+    "home": "NZL",
+    "away": "EGY",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "G",
+    "matchday": 2
+  },
+  {
+    "id": "WC-537399",
+    "apiId": 537399,
+    "stage": "group",
+    "datetime": "2026-06-22T17:00:00Z",
+    "home": "ARG",
+    "away": "AUT",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "J",
+    "matchday": 2
+  },
+  {
+    "id": "WC-537393",
+    "apiId": 537393,
+    "stage": "group",
+    "datetime": "2026-06-22T21:00:00Z",
+    "home": "FRA",
+    "away": "IRQ",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "I",
+    "matchday": 2
+  },
+  {
+    "id": "WC-537394",
+    "apiId": 537394,
+    "stage": "group",
+    "datetime": "2026-06-23T00:00:00Z",
+    "home": "NOR",
+    "away": "SEN",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "I",
+    "matchday": 2
+  },
+  {
+    "id": "WC-537400",
+    "apiId": 537400,
+    "stage": "group",
+    "datetime": "2026-06-23T03:00:00Z",
+    "home": "JOR",
+    "away": "ALG",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "J",
+    "matchday": 2
+  },
+  {
+    "id": "WC-537405",
+    "apiId": 537405,
+    "stage": "group",
+    "datetime": "2026-06-23T17:00:00Z",
+    "home": "POR",
+    "away": "UZB",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "K",
+    "matchday": 2
+  },
+  {
+    "id": "WC-537411",
+    "apiId": 537411,
+    "stage": "group",
+    "datetime": "2026-06-23T20:00:00Z",
+    "home": "ENG",
+    "away": "GHA",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "L",
+    "matchday": 2
+  },
+  {
+    "id": "WC-537412",
+    "apiId": 537412,
+    "stage": "group",
+    "datetime": "2026-06-23T23:00:00Z",
+    "home": "PAN",
+    "away": "CRO",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "L",
+    "matchday": 2
+  },
+  {
+    "id": "WC-537406",
+    "apiId": 537406,
+    "stage": "group",
+    "datetime": "2026-06-24T02:00:00Z",
+    "home": "COL",
+    "away": "COD",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "K",
+    "matchday": 2
+  },
+  {
+    "id": "WC-537337",
+    "apiId": 537337,
+    "stage": "group",
+    "datetime": "2026-06-24T19:00:00Z",
+    "home": "SUI",
+    "away": "CAN",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "B",
+    "matchday": 3
+  },
+  {
+    "id": "WC-537338",
+    "apiId": 537338,
+    "stage": "group",
+    "datetime": "2026-06-24T19:00:00Z",
+    "home": "BIH",
+    "away": "QAT",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "B",
+    "matchday": 3
+  },
+  {
+    "id": "WC-537344",
+    "apiId": 537344,
+    "stage": "group",
+    "datetime": "2026-06-24T22:00:00Z",
+    "home": "MAR",
+    "away": "HAI",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "C",
+    "matchday": 3
+  },
+  {
+    "id": "WC-537343",
+    "apiId": 537343,
+    "stage": "group",
+    "datetime": "2026-06-24T22:00:00Z",
+    "home": "SCO",
+    "away": "BRA",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "C",
+    "matchday": 3
+  },
+  {
+    "id": "WC-537331",
+    "apiId": 537331,
+    "stage": "group",
+    "datetime": "2026-06-25T01:00:00Z",
+    "home": "CZE",
+    "away": "MEX",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "A",
+    "matchday": 3
+  },
+  {
+    "id": "WC-537332",
+    "apiId": 537332,
+    "stage": "group",
+    "datetime": "2026-06-25T01:00:00Z",
+    "home": "RSA",
+    "away": "KOR",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "A",
+    "matchday": 3
+  },
+  {
+    "id": "WC-537355",
+    "apiId": 537355,
+    "stage": "group",
+    "datetime": "2026-06-25T20:00:00Z",
+    "home": "ECU",
+    "away": "GER",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "E",
+    "matchday": 3
+  },
+  {
+    "id": "WC-537356",
+    "apiId": 537356,
+    "stage": "group",
+    "datetime": "2026-06-25T20:00:00Z",
+    "home": "CUW",
+    "away": "CIV",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "E",
+    "matchday": 3
+  },
+  {
+    "id": "WC-537361",
+    "apiId": 537361,
+    "stage": "group",
+    "datetime": "2026-06-25T23:00:00Z",
+    "home": "TUN",
+    "away": "NED",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "F",
+    "matchday": 3
+  },
+  {
+    "id": "WC-537362",
+    "apiId": 537362,
+    "stage": "group",
+    "datetime": "2026-06-25T23:00:00Z",
+    "home": "JPN",
+    "away": "SWE",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "F",
+    "matchday": 3
+  },
+  {
+    "id": "WC-537349",
+    "apiId": 537349,
+    "stage": "group",
+    "datetime": "2026-06-26T02:00:00Z",
+    "home": "TUR",
+    "away": "USA",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "D",
+    "matchday": 3
+  },
+  {
+    "id": "WC-537350",
+    "apiId": 537350,
+    "stage": "group",
+    "datetime": "2026-06-26T02:00:00Z",
+    "home": "PAR",
+    "away": "AUS",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "D",
+    "matchday": 3
+  },
+  {
+    "id": "WC-537395",
+    "apiId": 537395,
+    "stage": "group",
+    "datetime": "2026-06-26T19:00:00Z",
+    "home": "NOR",
+    "away": "FRA",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "I",
+    "matchday": 3
+  },
+  {
+    "id": "WC-537396",
+    "apiId": 537396,
+    "stage": "group",
+    "datetime": "2026-06-26T19:00:00Z",
+    "home": "SEN",
+    "away": "IRQ",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "I",
+    "matchday": 3
+  },
+  {
+    "id": "WC-537373",
+    "apiId": 537373,
+    "stage": "group",
+    "datetime": "2026-06-27T00:00:00Z",
+    "home": "URY",
+    "away": "ESP",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "H",
+    "matchday": 3
+  },
+  {
+    "id": "WC-537374",
+    "apiId": 537374,
+    "stage": "group",
+    "datetime": "2026-06-27T00:00:00Z",
+    "home": "CPV",
+    "away": "KSA",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "H",
+    "matchday": 3
+  },
+  {
+    "id": "WC-537367",
+    "apiId": 537367,
+    "stage": "group",
+    "datetime": "2026-06-27T03:00:00Z",
+    "home": "NZL",
+    "away": "BEL",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "G",
+    "matchday": 3
+  },
+  {
+    "id": "WC-537368",
+    "apiId": 537368,
+    "stage": "group",
+    "datetime": "2026-06-27T03:00:00Z",
+    "home": "EGY",
+    "away": "IRN",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "G",
+    "matchday": 3
+  },
+  {
+    "id": "WC-537413",
+    "apiId": 537413,
+    "stage": "group",
+    "datetime": "2026-06-27T21:00:00Z",
+    "home": "PAN",
+    "away": "ENG",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "L",
+    "matchday": 3
+  },
+  {
+    "id": "WC-537414",
+    "apiId": 537414,
+    "stage": "group",
+    "datetime": "2026-06-27T21:00:00Z",
+    "home": "CRO",
+    "away": "GHA",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "L",
+    "matchday": 3
+  },
+  {
+    "id": "WC-537407",
+    "apiId": 537407,
+    "stage": "group",
+    "datetime": "2026-06-27T23:30:00Z",
+    "home": "COL",
+    "away": "POR",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "K",
+    "matchday": 3
+  },
+  {
+    "id": "WC-537408",
+    "apiId": 537408,
+    "stage": "group",
+    "datetime": "2026-06-27T23:30:00Z",
+    "home": "COD",
+    "away": "UZB",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "K",
+    "matchday": 3
+  },
+  {
+    "id": "WC-537401",
+    "apiId": 537401,
+    "stage": "group",
+    "datetime": "2026-06-28T02:00:00Z",
+    "home": "JOR",
+    "away": "ARG",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "J",
+    "matchday": 3
+  },
+  {
+    "id": "WC-537402",
+    "apiId": 537402,
+    "stage": "group",
+    "datetime": "2026-06-28T02:00:00Z",
+    "home": "ALG",
+    "away": "AUT",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled",
+    "group": "J",
+    "matchday": 3
+  },
+  {
+    "id": "WC-537417",
+    "apiId": 537417,
+    "stage": "r32",
+    "datetime": "2026-06-28T19:00:00Z",
+    "home": null,
+    "away": null,
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled"
+  },
+  {
+    "id": "WC-537423",
+    "apiId": 537423,
+    "stage": "r32",
+    "datetime": "2026-06-29T17:00:00Z",
+    "home": null,
+    "away": null,
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled"
+  },
+  {
+    "id": "WC-537415",
+    "apiId": 537415,
+    "stage": "r32",
+    "datetime": "2026-06-29T20:30:00Z",
+    "home": null,
+    "away": null,
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled"
+  },
+  {
+    "id": "WC-537418",
+    "apiId": 537418,
+    "stage": "r32",
+    "datetime": "2026-06-30T01:00:00Z",
+    "home": null,
+    "away": null,
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled"
+  },
+  {
+    "id": "WC-537424",
+    "apiId": 537424,
+    "stage": "r32",
+    "datetime": "2026-06-30T17:00:00Z",
+    "home": null,
+    "away": null,
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled"
+  },
+  {
+    "id": "WC-537416",
+    "apiId": 537416,
+    "stage": "r32",
+    "datetime": "2026-06-30T21:00:00Z",
+    "home": null,
+    "away": null,
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled"
+  },
+  {
+    "id": "WC-537425",
+    "apiId": 537425,
+    "stage": "r32",
+    "datetime": "2026-07-01T01:00:00Z",
+    "home": null,
+    "away": null,
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled"
+  },
+  {
+    "id": "WC-537426",
+    "apiId": 537426,
+    "stage": "r32",
+    "datetime": "2026-07-01T16:00:00Z",
+    "home": null,
+    "away": null,
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled"
+  },
+  {
+    "id": "WC-537422",
+    "apiId": 537422,
+    "stage": "r32",
+    "datetime": "2026-07-01T20:00:00Z",
+    "home": null,
+    "away": null,
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled"
+  },
+  {
+    "id": "WC-537421",
+    "apiId": 537421,
+    "stage": "r32",
+    "datetime": "2026-07-02T00:00:00Z",
+    "home": null,
+    "away": null,
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled"
+  },
+  {
+    "id": "WC-537420",
+    "apiId": 537420,
+    "stage": "r32",
+    "datetime": "2026-07-02T19:00:00Z",
+    "home": null,
+    "away": null,
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled"
+  },
+  {
+    "id": "WC-537419",
+    "apiId": 537419,
+    "stage": "r32",
+    "datetime": "2026-07-02T23:00:00Z",
+    "home": null,
+    "away": null,
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled"
+  },
+  {
+    "id": "WC-537429",
+    "apiId": 537429,
+    "stage": "r32",
+    "datetime": "2026-07-03T03:00:00Z",
+    "home": null,
+    "away": null,
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled"
+  },
+  {
+    "id": "WC-537428",
+    "apiId": 537428,
+    "stage": "r32",
+    "datetime": "2026-07-03T18:00:00Z",
+    "home": null,
+    "away": null,
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled"
+  },
+  {
+    "id": "WC-537427",
+    "apiId": 537427,
+    "stage": "r32",
+    "datetime": "2026-07-03T22:00:00Z",
+    "home": null,
+    "away": null,
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled"
+  },
+  {
+    "id": "WC-537430",
+    "apiId": 537430,
+    "stage": "r32",
+    "datetime": "2026-07-04T01:30:00Z",
+    "home": null,
+    "away": null,
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled"
+  },
+  {
+    "id": "WC-537376",
+    "apiId": 537376,
+    "stage": "r16",
+    "datetime": "2026-07-04T17:00:00Z",
+    "home": null,
+    "away": null,
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled"
+  },
+  {
+    "id": "WC-537375",
+    "apiId": 537375,
+    "stage": "r16",
+    "datetime": "2026-07-04T21:00:00Z",
+    "home": null,
+    "away": null,
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled"
+  },
+  {
+    "id": "WC-537377",
+    "apiId": 537377,
+    "stage": "r16",
+    "datetime": "2026-07-05T20:00:00Z",
+    "home": null,
+    "away": null,
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled"
+  },
+  {
+    "id": "WC-537378",
+    "apiId": 537378,
+    "stage": "r16",
+    "datetime": "2026-07-06T00:00:00Z",
+    "home": null,
+    "away": null,
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled"
+  },
+  {
+    "id": "WC-537379",
+    "apiId": 537379,
+    "stage": "r16",
+    "datetime": "2026-07-06T19:00:00Z",
+    "home": null,
+    "away": null,
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled"
+  },
+  {
+    "id": "WC-537380",
+    "apiId": 537380,
+    "stage": "r16",
+    "datetime": "2026-07-07T00:00:00Z",
+    "home": null,
+    "away": null,
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled"
+  },
+  {
+    "id": "WC-537381",
+    "apiId": 537381,
+    "stage": "r16",
+    "datetime": "2026-07-07T16:00:00Z",
+    "home": null,
+    "away": null,
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled"
+  },
+  {
+    "id": "WC-537382",
+    "apiId": 537382,
+    "stage": "r16",
+    "datetime": "2026-07-07T20:00:00Z",
+    "home": null,
+    "away": null,
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled"
+  },
+  {
+    "id": "WC-537383",
+    "apiId": 537383,
+    "stage": "qf",
+    "datetime": "2026-07-09T20:00:00Z",
+    "home": null,
+    "away": null,
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled"
+  },
+  {
+    "id": "WC-537384",
+    "apiId": 537384,
+    "stage": "qf",
+    "datetime": "2026-07-10T19:00:00Z",
+    "home": null,
+    "away": null,
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled"
+  },
+  {
+    "id": "WC-537385",
+    "apiId": 537385,
+    "stage": "qf",
+    "datetime": "2026-07-11T21:00:00Z",
+    "home": null,
+    "away": null,
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled"
+  },
+  {
+    "id": "WC-537386",
+    "apiId": 537386,
+    "stage": "qf",
+    "datetime": "2026-07-12T01:00:00Z",
+    "home": null,
+    "away": null,
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled"
+  },
+  {
+    "id": "WC-537387",
+    "apiId": 537387,
+    "stage": "sf",
+    "datetime": "2026-07-14T19:00:00Z",
+    "home": null,
+    "away": null,
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled"
+  },
+  {
+    "id": "WC-537388",
+    "apiId": 537388,
+    "stage": "sf",
+    "datetime": "2026-07-15T19:00:00Z",
+    "home": null,
+    "away": null,
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled"
+  },
+  {
+    "id": "WC-537389",
+    "apiId": 537389,
+    "stage": "third",
+    "datetime": "2026-07-18T21:00:00Z",
+    "home": null,
+    "away": null,
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled"
+  },
+  {
+    "id": "WC-537390",
+    "apiId": 537390,
+    "stage": "final",
+    "datetime": "2026-07-19T19:00:00Z",
+    "home": null,
+    "away": null,
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "winner": null,
+    "status": "scheduled"
+  }
+]

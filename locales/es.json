@@ -1,0 +1,107 @@
+{
+  "app": {
+    "title": "Mundial 2026",
+    "subtitle": "Calendario y Eliminatorias",
+    "hosts": "EE. UU. · Canadá · México",
+    "tagline": "48 selecciones · 104 partidos · 11 jun – 19 jul, 2026"
+  },
+  "nav": {
+    "today": "Hoy",
+    "schedule": "Calendario",
+    "teams": "Selecciones",
+    "groups": "Grupos",
+    "bracket": "Eliminatorias"
+  },
+  "teams": {
+    "title": "Selecciones",
+    "subtitle": "Elige una selección para ver todos sus partidos: resultados y próximos encuentros",
+    "pick": "Elige una selección",
+    "search": "🔎 Buscar selección",
+    "matches": "Partidos",
+    "noneFound": "No se encontraron selecciones",
+    "groupTable": "Posiciones del grupo"
+  },
+  "home": {
+    "heroTitle": "El Mundial 2026, en un solo lugar",
+    "heroText": "Sigue los 104 partidos, las fases de grupos y el camino a la final.",
+    "comingSoon": "Calendario completo próximamente",
+    "comingSoonText": "Estamos preparando todos los partidos y selecciones. ¡Vuelve pronto!"
+  },
+  "today": {
+    "title": "Partidos de hoy",
+    "none": "No hay partidos hoy",
+    "nextTitle": "Próximos partidos"
+  },
+  "schedule": {
+    "title": "Calendario completo",
+    "subtitle": "Los 104 partidos, agrupados por fecha",
+    "empty": "No hay partidos que coincidan con los filtros."
+  },
+  "groups": {
+    "title": "Fase de grupos",
+    "subtitle": "Posiciones calculadas según los resultados · clasifican los 2 primeros (+ mejores terceros)"
+  },
+  "bracket": {
+    "title": "Eliminatorias",
+    "subtitle": "De dieciseisavos a la final · los ganadores avanzan automáticamente",
+    "champion": "Campeón",
+    "scrollHint": "Desliza horizontalmente para ver todas las rondas"
+  },
+  "filters": {
+    "allGroups": "Todos los grupos",
+    "allTeams": "Todas las selecciones",
+    "allStages": "Todas las fases",
+    "search": "🔎 Buscar selección o sede"
+  },
+  "status": {
+    "live": "EN VIVO",
+    "finished": "Finalizado",
+    "upcoming": "Próximo",
+    "ft": "FIN"
+  },
+  "stage": {
+    "group": "Fase de grupos",
+    "r32": "Dieciseisavos",
+    "r16": "Octavos",
+    "qf": "Cuartos de final",
+    "sf": "Semifinal",
+    "third": "Tercer lugar",
+    "final": "Final"
+  },
+  "standings": {
+    "team": "Selección",
+    "p": "PJ",
+    "w": "G",
+    "d": "E",
+    "l": "P",
+    "gf": "GF",
+    "ga": "GC",
+    "gd": "DIF",
+    "pts": "Pts"
+  },
+  "label": {
+    "winner": "Ganador",
+    "loser": "Perdedor",
+    "rank1": "1.º",
+    "rank2": "2.º",
+    "rank3": "3.º"
+  },
+  "common": {
+    "tbd": "Por definir",
+    "vs": "vs",
+    "venue": "Sede",
+    "group": "Grupo",
+    "matchday": "Jornada",
+    "tzNote": "Horario del centro de México"
+  },
+  "footer": {
+    "dataSource": "Fuente de datos: football-data.org",
+    "disclaimer": "No afiliado ni respaldado por la FIFA.",
+    "madeWith": "Calendario del Mundial 2026"
+  },
+  "lang": {
+    "label": "Idioma",
+    "es": "Español",
+    "en": "English"
+  }
+}
