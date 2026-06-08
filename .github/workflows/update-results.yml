@@ -9,10 +9,10 @@ name: Update World Cup results
 
 on:
   schedule:
-    # Every 30 min, 16:00–23:30 UTC (afternoon/evening matches in the Americas)
-    - cron: "*/30 16-23 * * *"
-    # Every 30 min, 00:00–06:00 UTC (late games + post-match settling)
-    - cron: "*/30 0-6 * * *"
+    # Every 10 min, 16:00–23:50 UTC (afternoon/evening matches in the Americas)
+    - cron: "*/10 16-23 * * *"
+    # Every 10 min, 00:00–06:50 UTC (late games + post-match settling)
+    - cron: "*/10 0-6 * * *"
     # Daily full sync at 12:00 UTC (catches schedule/fixture changes)
     - cron: "0 12 * * *"
   workflow_dispatch: {}
