@@ -11,8 +11,8 @@ on:
   schedule:
     # Every 10 min, 16:00–23:50 UTC (afternoon/evening matches in the Americas)
     - cron: "*/10 16-23 * * *"
-    # Every 10 min, 00:00–06:50 UTC (late games + post-match settling)
-    - cron: "*/10 0-6 * * *"
+    # Every 10 min, 00:00–07:50 UTC (late games incl. extra time/penalties)
+    - cron: "*/10 0-7 * * *"
     # Daily full sync at 12:00 UTC (catches schedule/fixture changes)
     - cron: "0 12 * * *"
   workflow_dispatch: {}
