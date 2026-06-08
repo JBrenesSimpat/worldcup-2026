@@ -88,7 +88,7 @@ Create Next.js + TS + Tailwind project, base layout, header/footer with data-sou
 Responsive bracket view (Round of 32 → 16 → QF → SF → Final + 3rd place). Winners auto-advance based on results in the data; "TBD" shown until decided.
 
 ### Phase 5 — Results auto-update ✅ (implemented)
-- **Strategy: Hybrid scheduling.** `.github/workflows/update-results.yml` polls every 30 min during the daily match window (UTC). `scripts/sync-data.mjs` runs with `MATCH_WINDOW_ONLY=1`, so it only calls the API when a match is actually in progress (kickoff − 15 min … kickoff + 3 h); otherwise it's a no-op. A daily 12:00 UTC run does a full sync to catch schedule changes. Manual `workflow_dispatch` also available.
+- **Strategy: Hybrid scheduling.** `.github/workflows/update-results.yml` polls every 10 min during the daily match window (UTC). `scripts/sync-data.mjs` runs with `MATCH_WINDOW_ONLY=1`, so it only calls the API when a match is actually in progress (kickoff − 15 min … kickoff + 3 h); otherwise it's a no-op. A daily 12:00 UTC run does a full sync to catch schedule changes. Manual `workflow_dispatch` also available.
 - The script re-syncs teams + matches, including scores and decided winners (extra time / penalties via the API `winner` field); the bracket advances automatically. **Commits only when `data/` actually changes** → triggers a Vercel redeploy.
 - Free on a **public** repo (unlimited GitHub Actions minutes).
 - **Token** stored as GitHub Actions secret `FOOTBALL_DATA_TOKEN` (never in frontend; locally in git-ignored `.env.local`).

@@ -21,7 +21,7 @@ This app is a static Next.js site. Deployment is free and zero-config on Vercel'
 ## How updates flow
 
 - **Any push to `main`** → Vercel auto-redeploys.
-- **During match days** → the GitHub Action (`.github/workflows/update-results.yml`) fetches scores from football-data.org, commits changed data, which triggers a Vercel redeploy. Results appear within ~30 min of each final whistle.
+- **During match days** → the GitHub Action (`.github/workflows/update-results.yml`) fetches scores from football-data.org every ~10 min, commits changed data, which triggers a Vercel redeploy. Results appear within ~10 min of a goal/final whistle.
 
 ## Notes
 
