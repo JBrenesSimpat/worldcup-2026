@@ -7,10 +7,10 @@
     "home": "MEX",
     "away": "RSA",
     "score": {
-      "home": null,
-      "away": null
+      "home": 2,
+      "away": 0
     },
-    "winner": null,
+    "winner": "home",
     "status": "finished",
     "group": "A",
     "matchday": 1,

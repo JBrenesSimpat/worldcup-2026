@@ -216,6 +216,15 @@ async function main() {
     })
     .sort((a, b) => Date.parse(a.datetime) - Date.parse(b.datetime));
 
+  // Overlay real scores from worldcup26.ir (football-data's free tier doesn't
+  // provide them). Keeps football-data structure / ids / venues / bracket intact.
+  try {
+    const overlaid = await overlayScores(matches);
+    console.log(`Overlaid scores from worldcup26 on ${overlaid} matches.`);
+  } catch (e) {
+    console.log(`worldcup26 overlay skipped: ${e.message}`);
+  }
+
   writeFileSync(
     join(dataDir, "teams.json"),
     JSON.stringify(teams, null, 2) + "\n",
@@ -235,6 +244,73 @@ async function main() {
   console.log(`Synced ${teams.length} teams, ${matches.length} matches.`);
   console.log("By stage:", byStage);
   console.log(`Finished matches: ${decided}`);
+}
+
+// football-data uses "URY" for Uruguay; worldcup26 uses "URU".
+const normCode = (c) => (c === "URU" ? "URY" : c);
+
+// worldcup26 local_date is Mexico time (UTC−6) → UTC epoch ms.
+function wcEpoch(localDate) {
+  const m = String(localDate).match(/(\d{2})\/(\d{2})\/(\d{4})\s+(\d{1,2}):(\d{2})/);
+  if (!m) return null;
+  const [, MM, DD, YYYY, HH, mm] = m;
+  return Date.UTC(+YYYY, +MM - 1, +DD, +HH + 6, +mm);
+}
+
+// Returns {status, home, away} from a worldcup26 game, or null if not started.
+function wcScore(wc) {
+  const hs = parseInt(wc.home_score, 10);
+  const as = parseInt(wc.away_score, 10);
+  if (!Number.isInteger(hs) || !Number.isInteger(as)) return null;
+  const finished = String(wc.finished).toUpperCase() === "TRUE";
+  const te = String(wc.time_elapsed || "").toLowerCase();
+  if (finished) return { status: "finished", home: hs, away: as };
+  if (te && te !== "notstarted") return { status: "live", home: hs, away: as };
+  return null; // notstarted → don't overlay the placeholder 0-0
+}
+
+async function overlayScores(matches) {
+  const teamsRes = await fetch("https://worldcup26.ir/get/teams");
+  const wcTeams = (await teamsRes.json()).teams ?? [];
+  const codeByWcId = new Map(
+    wcTeams.map((t) => [t.id, normCode(t.fifa_code)]),
+  );
+
+  const gamesRes = await fetch("https://worldcup26.ir/get/games");
+  const wcGames = (await gamesRes.json()).games ?? [];
+
+  const byCode = new Map();
+  const byEpoch = new Map();
+  for (const wc of wcGames) {
+    const h = codeByWcId.get(wc.home_team_id);
+    const a = codeByWcId.get(wc.away_team_id);
+    if (h && a) byCode.set(`${h}-${a}`, wc);
+    const ep = wcEpoch(wc.local_date);
+    if (ep != null) byEpoch.set(ep, wc);
+  }
+
+  let count = 0;
+  for (const match of matches) {
+    let wc =
+      match.home && match.away
+        ? byCode.get(`${match.home}-${match.away}`)
+        : undefined;
+    if (!wc) wc = byEpoch.get(Date.parse(match.datetime)); // knockout fallback
+    if (!wc) continue;
+
+    const ss = wcScore(wc);
+    if (!ss) continue;
+
+    match.score = { home: ss.home, away: ss.away };
+    match.status = ss.status;
+    match.winner =
+      ss.home > ss.away ? "home" : ss.away > ss.home ? "away" : null;
+    // Fill knockout teams that football-data hasn't set yet.
+    if (!match.home) match.home = codeByWcId.get(wc.home_team_id) ?? null;
+    if (!match.away) match.away = codeByWcId.get(wc.away_team_id) ?? null;
+    count += 1;
+  }
+  return count;
 }
 
 main().catch((e) => {
