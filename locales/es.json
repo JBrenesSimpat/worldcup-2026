@@ -39,7 +39,9 @@
   },
   "groups": {
     "title": "Fase de grupos",
-    "subtitle": "Posiciones calculadas según los resultados · clasifican los 2 primeros (+ mejores terceros)"
+    "subtitle": "Posiciones calculadas según los resultados · clasifican los 2 primeros (+ mejores terceros)",
+    "qualifies": "Clasifican (1.º y 2.º)",
+    "bestThird": "Posible mejor 3.º"
   },
   "bracket": {
     "title": "Eliminatorias",

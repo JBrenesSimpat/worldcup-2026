@@ -39,7 +39,9 @@
   },
   "groups": {
     "title": "Group stage",
-    "subtitle": "Standings computed from results · top 2 (+ best thirds) advance"
+    "subtitle": "Standings computed from results · top 2 (+ best thirds) advance",
+    "qualifies": "Qualify (1st & 2nd)",
+    "bestThird": "Possible best 3rd"
   },
   "bracket": {
     "title": "Knockout bracket",
