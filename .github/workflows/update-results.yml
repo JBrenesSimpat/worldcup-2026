@@ -9,12 +9,13 @@ name: Update World Cup results
 
 on:
   schedule:
-    # Every 10 min, 16:00–23:50 UTC (afternoon/evening matches in the Americas)
-    - cron: "*/10 16-23 * * *"
-    # Every 10 min, 00:00–07:50 UTC (late games incl. extra time/penalties)
-    - cron: "*/10 0-7 * * *"
-    # Daily full sync at 12:00 UTC (catches schedule/fixture changes)
-    - cron: "0 12 * * *"
+    # Every 30 min (at :07 and :37 to dodge top-of-hour congestion), during the
+    # daily match window. The script no-ops when no match is live, so non-match
+    # days/hours cost nothing.
+    - cron: "7,37 16-23 * * *"   # afternoon/evening matches (Americas), UTC
+    - cron: "7,37 0-7 * * *"     # late games incl. extra time/penalties, UTC
+    # Daily full sync at 12:07 UTC (catches schedule/fixture changes)
+    - cron: "7 12 * * *"
   workflow_dispatch: {}
 
 concurrency:
@@ -39,7 +40,7 @@ jobs:
           FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
           # Windowed only for the frequent polling crons; the daily 12:00 UTC
           # run and manual dispatches do a full sync.
-          MATCH_WINDOW_ONLY: ${{ github.event_name == 'schedule' && github.event.schedule != '0 12 * * *' && '1' || '0' }}
+          MATCH_WINDOW_ONLY: ${{ github.event_name == 'schedule' && github.event.schedule != '7 12 * * *' && '1' || '0' }}
         run: node scripts/sync-data.mjs
 
       - name: Commit & push if data changed
