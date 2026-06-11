@@ -150,6 +150,12 @@ async function main() {
     ? JSON.parse(readFileSync(venuesPath, "utf8"))
     : {};
 
+  // Official bracket slot labels (built by scripts/build-bracket.mjs), keyed by our match id.
+  const bracketPath = join(dataDir, "bracket.json");
+  const bracket = existsSync(bracketPath)
+    ? JSON.parse(readFileSync(bracketPath, "utf8"))
+    : {};
+
   // --- Teams (from group-stage participants) ---
   const teamMap = new Map();
   for (const m of apiMatches) {
@@ -197,6 +203,14 @@ async function main() {
       if (v) {
         match.venue = v.venue;
         if (v.city) match.city = v.city;
+      }
+
+      // Official bracket slot labels for knockout matches (shown until teams are set).
+      const b = bracket[match.id];
+      if (b) {
+        match.matchNumber = b.matchNumber;
+        match.homeLabel = b.homeLabel;
+        match.awayLabel = b.awayLabel;
       }
       return match;
     })

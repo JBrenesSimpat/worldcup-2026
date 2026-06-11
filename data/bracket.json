@@ -1,0 +1,162 @@
+{
+  "WC-537417": {
+    "matchNumber": 73,
+    "homeLabel": "2A",
+    "awayLabel": "2B"
+  },
+  "WC-537423": {
+    "matchNumber": 76,
+    "homeLabel": "1C",
+    "awayLabel": "2F"
+  },
+  "WC-537415": {
+    "matchNumber": 74,
+    "homeLabel": "1E",
+    "awayLabel": "3:A/B/C/D/F"
+  },
+  "WC-537418": {
+    "matchNumber": 75,
+    "homeLabel": "1F",
+    "awayLabel": "2C"
+  },
+  "WC-537424": {
+    "matchNumber": 78,
+    "homeLabel": "2E",
+    "awayLabel": "2I"
+  },
+  "WC-537416": {
+    "matchNumber": 77,
+    "homeLabel": "1I",
+    "awayLabel": "3:C/D/F/G/H"
+  },
+  "WC-537425": {
+    "matchNumber": 79,
+    "homeLabel": "1A",
+    "awayLabel": "3:C/E/F/H/I"
+  },
+  "WC-537426": {
+    "matchNumber": 80,
+    "homeLabel": "1L",
+    "awayLabel": "3:E/H/I/J/K"
+  },
+  "WC-537422": {
+    "matchNumber": 82,
+    "homeLabel": "1G",
+    "awayLabel": "3:A/E/H/I/J"
+  },
+  "WC-537421": {
+    "matchNumber": 81,
+    "homeLabel": "1D",
+    "awayLabel": "3:B/E/F/I/J"
+  },
+  "WC-537420": {
+    "matchNumber": 84,
+    "homeLabel": "1H",
+    "awayLabel": "2J"
+  },
+  "WC-537419": {
+    "matchNumber": 83,
+    "homeLabel": "2K",
+    "awayLabel": "2L"
+  },
+  "WC-537429": {
+    "matchNumber": 85,
+    "homeLabel": "1B",
+    "awayLabel": "3:E/F/G/I/J"
+  },
+  "WC-537428": {
+    "matchNumber": 88,
+    "homeLabel": "2D",
+    "awayLabel": "2G"
+  },
+  "WC-537427": {
+    "matchNumber": 86,
+    "homeLabel": "1J",
+    "awayLabel": "2H"
+  },
+  "WC-537430": {
+    "matchNumber": 87,
+    "homeLabel": "1K",
+    "awayLabel": "3:D/E/I/J/L"
+  },
+  "WC-537376": {
+    "matchNumber": 90,
+    "homeLabel": "W73",
+    "awayLabel": "W75"
+  },
+  "WC-537375": {
+    "matchNumber": 89,
+    "homeLabel": "W74",
+    "awayLabel": "W77"
+  },
+  "WC-537377": {
+    "matchNumber": 91,
+    "homeLabel": "W76",
+    "awayLabel": "W78"
+  },
+  "WC-537378": {
+    "matchNumber": 92,
+    "homeLabel": "W79",
+    "awayLabel": "W80"
+  },
+  "WC-537379": {
+    "matchNumber": 93,
+    "homeLabel": "W83",
+    "awayLabel": "W84"
+  },
+  "WC-537380": {
+    "matchNumber": 94,
+    "homeLabel": "W81",
+    "awayLabel": "W82"
+  },
+  "WC-537381": {
+    "matchNumber": 95,
+    "homeLabel": "W86",
+    "awayLabel": "W88"
+  },
+  "WC-537382": {
+    "matchNumber": 96,
+    "homeLabel": "W85",
+    "awayLabel": "W87"
+  },
+  "WC-537383": {
+    "matchNumber": 97,
+    "homeLabel": "W89",
+    "awayLabel": "W90"
+  },
+  "WC-537384": {
+    "matchNumber": 98,
+    "homeLabel": "W93",
+    "awayLabel": "W94"
+  },
+  "WC-537385": {
+    "matchNumber": 99,
+    "homeLabel": "W91",
+    "awayLabel": "W92"
+  },
+  "WC-537386": {
+    "matchNumber": 100,
+    "homeLabel": "W95",
+    "awayLabel": "W96"
+  },
+  "WC-537387": {
+    "matchNumber": 101,
+    "homeLabel": "W97",
+    "awayLabel": "W98"
+  },
+  "WC-537388": {
+    "matchNumber": 102,
+    "homeLabel": "W99",
+    "awayLabel": "W100"
+  },
+  "WC-537389": {
+    "matchNumber": 103,
+    "homeLabel": "L101",
+    "awayLabel": "L102"
+  },
+  "WC-537390": {
+    "matchNumber": 104,
+    "homeLabel": "W101",
+    "awayLabel": "W102"
+  }
+}

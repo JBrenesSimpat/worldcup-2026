@@ -38,6 +38,8 @@ export interface Match {
   id: string;
   /** football-data.org numeric match id (for incremental updates). */
   apiId?: number;
+  /** Official FIFA match number (1–104), for bracket slot references. */
+  matchNumber?: number;
   stage: Stage;
   /** Present only for group-stage matches. */
   group?: GroupId;

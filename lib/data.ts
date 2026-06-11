@@ -26,25 +26,31 @@ export function sortedMatches(): Match[] {
 export type Translate = (key: string) => string;
 
 /**
- * Human-friendly text for an undecided knockout slot label.
- *  "1A" → "1.º A" / "1st A"
- *  "W73" → "Ganador M73" / "Winner M73"
- *  "L101" → "Perdedor M101" / "Loser M101"
+ * Human-friendly text for an undecided knockout slot label (official bracket).
+ *  "1A"            → "1.º Grupo A" / "1st Group A"
+ *  "2B"            → "2.º Grupo B" / "2nd Group B"
+ *  "3:C/E/F/H/I"   → "3.º (C/E/F/H/I)" / "3rd (C/E/F/H/I)"
+ *  "W73"           → "Ganador P73" / "Winner M73"
+ *  "L101"          → "Perdedor P101" / "Loser M101"
  */
 export function slotLabelText(label: string | undefined, t: Translate): string {
   if (!label) return t("common.tbd");
 
-  const rank = label.match(/^([123])([A-L])$/);
+  // Best-third slot with candidate groups, e.g. "3:C/E/F/H/I".
+  const third = label.match(/^3:(.+)$/);
+  if (third) return `${t("label.rank3")} (${third[1]})`;
+
+  // Group winner / runner-up, e.g. "1A", "2B".
+  const rank = label.match(/^([12])([A-L])$/);
   if (rank) {
-    const rankWord = t(`label.rank${rank[1]}`);
-    return `${rankWord} ${rank[2]}`;
+    return `${t(`label.rank${rank[1]}`)} ${t("common.group")} ${rank[2]}`;
   }
 
   const winner = label.match(/^W(\d+)$/);
-  if (winner) return `${t("label.winner")} M${winner[1]}`;
+  if (winner) return `${t("label.winner")} ${t("label.matchAbbr")}${winner[1]}`;
 
   const loser = label.match(/^L(\d+)$/);
-  if (loser) return `${t("label.loser")} M${loser[1]}`;
+  if (loser) return `${t("label.loser")} ${t("label.matchAbbr")}${loser[1]}`;
 
   return label;
 }

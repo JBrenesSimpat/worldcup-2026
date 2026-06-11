@@ -84,7 +84,8 @@
     "loser": "Perdedor",
     "rank1": "1.º",
     "rank2": "2.º",
-    "rank3": "3.º"
+    "rank3": "3.º",
+    "matchAbbr": "P"
   },
   "common": {
     "tbd": "Por definir",

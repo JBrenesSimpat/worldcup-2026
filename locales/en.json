@@ -84,7 +84,8 @@
     "loser": "Loser",
     "rank1": "1st",
     "rank2": "2nd",
-    "rank3": "3rd"
+    "rank3": "3rd",
+    "matchAbbr": "M"
   },
   "common": {
     "tbd": "TBD",

@@ -31,7 +31,13 @@ function SlotRow({
     >
       <span className="flex min-w-0 items-center gap-1.5">
         <span aria-hidden>{team ? team.flag : "🏳️"}</span>
-        <span className={`truncate ${team ? "" : "italic text-muted"}`}>
+        <span
+          className={
+            team
+              ? "truncate"
+              : "text-[0.72rem] italic leading-tight text-muted"
+          }
+        >
           {name}
         </span>
       </span>
@@ -41,8 +47,15 @@ function SlotRow({
 }
 
 function Tie({ bm }: { bm: BracketMatch }) {
+  const { t } = useI18n();
   return (
     <div className="overflow-hidden rounded-xl border border-line bg-surface">
+      {bm.match.matchNumber && (
+        <div className="bg-emerald-50/40 px-3 py-0.5 text-[0.6rem] font-semibold uppercase tracking-wide text-muted">
+          {t("label.matchAbbr")}
+          {bm.match.matchNumber}
+        </div>
+      )}
       <SlotRow
         slot={bm.home}
         score={bm.match.score.home}
