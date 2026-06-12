@@ -43,11 +43,11 @@
     "home": "CAN",
     "away": "BIH",
     "score": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 1
     },
-    "winner": null,
-    "status": "scheduled",
+    "winner": "away",
+    "status": "live",
     "group": "B",
     "matchday": 1,
     "venue": "BMO Field",
