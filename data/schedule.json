@@ -43,10 +43,10 @@
     "home": "CAN",
     "away": "BIH",
     "score": {
-      "home": 0,
+      "home": 1,
       "away": 1
     },
-    "winner": "away",
+    "winner": null,
     "status": "live",
     "group": "B",
     "matchday": 1,
