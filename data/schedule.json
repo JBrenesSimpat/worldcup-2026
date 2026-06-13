@@ -79,11 +79,11 @@
     "home": "QAT",
     "away": "SUI",
     "score": {
-      "home": 0,
+      "home": 1,
       "away": 1
     },
-    "winner": "away",
-    "status": "live",
+    "winner": null,
+    "status": "finished",
     "group": "B",
     "matchday": 1,
     "venue": "Levi's Stadium",
