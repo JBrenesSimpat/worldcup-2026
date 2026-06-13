@@ -97,11 +97,11 @@
     "home": "BRA",
     "away": "MAR",
     "score": {
-      "home": null,
-      "away": null
+      "home": 1,
+      "away": 1
     },
     "winner": null,
-    "status": "scheduled",
+    "status": "live",
     "group": "C",
     "matchday": 1,
     "venue": "MetLife Stadium",
