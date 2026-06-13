@@ -61,11 +61,11 @@
     "home": "USA",
     "away": "PAR",
     "score": {
-      "home": 3,
-      "away": 0
+      "home": 4,
+      "away": 1
     },
     "winner": "home",
-    "status": "live",
+    "status": "finished",
     "group": "D",
     "matchday": 1,
     "venue": "SoFi Stadium",
