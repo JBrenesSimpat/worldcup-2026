@@ -115,11 +115,11 @@
     "home": "HAI",
     "away": "SCO",
     "score": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
     },
     "winner": null,
-    "status": "scheduled",
+    "status": "live",
     "group": "C",
     "matchday": 1,
     "venue": "Gillette Stadium",
