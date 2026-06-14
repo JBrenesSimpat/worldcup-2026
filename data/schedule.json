@@ -133,11 +133,11 @@
     "home": "AUS",
     "away": "TUR",
     "score": {
-      "home": 1,
+      "home": 2,
       "away": 0
     },
     "winner": "home",
-    "status": "live",
+    "status": "finished",
     "group": "D",
     "matchday": 1,
     "venue": "BC Place",
