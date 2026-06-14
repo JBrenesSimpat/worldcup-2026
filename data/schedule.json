@@ -151,11 +151,11 @@
     "home": "GER",
     "away": "CUW",
     "score": {
-      "home": 3,
+      "home": 7,
       "away": 1
     },
     "winner": "home",
-    "status": "live",
+    "status": "finished",
     "group": "E",
     "matchday": 1,
     "venue": "NRG Stadium",
