@@ -187,11 +187,11 @@
     "home": "CIV",
     "away": "ECU",
     "score": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
     },
     "winner": null,
-    "status": "scheduled",
+    "status": "live",
     "group": "E",
     "matchday": 1,
     "venue": "Lincoln Financial Field",
