@@ -205,11 +205,11 @@
     "home": "SWE",
     "away": "TUN",
     "score": {
-      "home": null,
-      "away": null
+      "home": 1,
+      "away": 0
     },
-    "winner": null,
-    "status": "scheduled",
+    "winner": "home",
+    "status": "live",
     "group": "F",
     "matchday": 1,
     "venue": "Estadio BBVA",
