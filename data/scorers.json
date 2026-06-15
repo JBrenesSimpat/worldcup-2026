@@ -25,6 +25,11 @@
     "team": "SWE"
   },
   {
+    "name": "Abdallh Alamri",
+    "goals": 1,
+    "team": "KSA"
+  },
+  {
     "name": "B. Khoukhi",
     "goals": 1,
     "team": "QAT"
@@ -143,10 +148,5 @@
     "name": "Nestory Irankunda",
     "goals": 1,
     "team": "AUS"
-  },
-  {
-    "name": "O. Rekik",
-    "goals": 1,
-    "team": "TUN"
   }
 ]
