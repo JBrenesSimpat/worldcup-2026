@@ -33,6 +33,15 @@ export interface MatchScore {
   away: number | null;
 }
 
+export interface Scorer {
+  /** Player display name. */
+  name: string;
+  /** Goals scored (own goals excluded). */
+  goals: number;
+  /** Team code, or null if unmapped. */
+  team: string | null;
+}
+
 export interface Match {
   /** Stable match id, e.g. "WC-537327". */
   id: string;

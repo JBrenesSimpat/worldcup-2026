@@ -225,6 +225,13 @@ async function main() {
     console.log(`worldcup26 overlay skipped: ${e.message}`);
   }
 
+  try {
+    const n = await buildTopScorers();
+    console.log(`Top scorers parsed: ${n} players.`);
+  } catch (e) {
+    console.log(`top scorers skipped: ${e.message}`);
+  }
+
   writeFileSync(
     join(dataDir, "teams.json"),
     JSON.stringify(teams, null, 2) + "\n",
@@ -311,6 +318,63 @@ async function overlayScores(matches) {
     count += 1;
   }
   return count;
+}
+
+// --- Top scorers (Golden Boot), parsed from worldcup26.ir scorer strings ---
+// Strings look like {"Felix Nmecha 7'","K. Havertz 45'+5'(p)"} — quotes can be
+// straight or curly; "(OG)" = own goal (excluded); "(p)" = penalty (counts).
+function scorerKey(name) {
+  return name
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .replace(/[^a-z0-9]/g, "");
+}
+
+function addScorers(raw, teamCode, tally) {
+  if (!raw || String(raw).toLowerCase() === "null") return;
+  const re = /["“”]([^"“”]+)["“”]/g;
+  let m;
+  while ((m = re.exec(raw)) !== null) {
+    const entry = m[1];
+    if (/\(\s*og\s*\)/i.test(entry)) continue; // own goal — doesn't count
+    const d = entry.search(/\d/);
+    const name = (d > 0 ? entry.slice(0, d) : entry)
+      .replace(/['’`]+$/, "")
+      .trim();
+    if (!name) continue;
+    const key = scorerKey(name);
+    if (!key) continue;
+    const cur = tally.get(key);
+    if (cur) {
+      cur.goals += 1;
+      if (name.length > cur.name.length) cur.name = name; // prefer fuller name
+    } else {
+      tally.set(key, { name, goals: 1, team: teamCode ?? null });
+    }
+  }
+}
+
+async function buildTopScorers() {
+  const wcTeams = (await (await fetch("https://worldcup26.ir/get/teams")).json()).teams ?? [];
+  const codeByWcId = new Map(wcTeams.map((t) => [t.id, normCode(t.fifa_code)]));
+  const wcGames = (await (await fetch("https://worldcup26.ir/get/games")).json()).games ?? [];
+
+  const tally = new Map();
+  for (const g of wcGames) {
+    addScorers(g.home_scorers, codeByWcId.get(g.home_team_id), tally);
+    addScorers(g.away_scorers, codeByWcId.get(g.away_team_id), tally);
+  }
+  const list = [...tally.values()]
+    .sort((a, b) => b.goals - a.goals || a.name.localeCompare(b.name))
+    .slice(0, 30);
+
+  writeFileSync(
+    join(dataDir, "scorers.json"),
+    JSON.stringify(list, null, 2) + "\n",
+    "utf8",
+  );
+  return list.length;
 }
 
 main().catch((e) => {

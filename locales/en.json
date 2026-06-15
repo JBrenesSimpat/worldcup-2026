@@ -10,7 +10,16 @@
     "schedule": "Schedule",
     "teams": "Teams",
     "groups": "Groups",
+    "scorers": "Scorers",
     "bracket": "Bracket"
+  },
+  "scorers": {
+    "title": "Top scorers",
+    "subtitle": "Tournament goalscoring leaders",
+    "player": "Player",
+    "goals": "Goals",
+    "empty": "No goals recorded yet.",
+    "note": "Best-effort data · worldcup26.ir"
   },
   "teams": {
     "title": "Teams",

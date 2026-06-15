@@ -11,6 +11,7 @@ const NAV = [
   { href: "/schedule", key: "nav.schedule" },
   { href: "/teams", key: "nav.teams" },
   { href: "/groups", key: "nav.groups" },
+  { href: "/goleadores", key: "nav.scorers" },
   { href: "/bracket", key: "nav.bracket" },
 ] as const;
 

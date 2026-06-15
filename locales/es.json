@@ -10,7 +10,16 @@
     "schedule": "Calendario",
     "teams": "Selecciones",
     "groups": "Grupos",
+    "scorers": "Goleadores",
     "bracket": "Eliminatorias"
+  },
+  "scorers": {
+    "title": "Goleadores",
+    "subtitle": "Tabla de goleadores del torneo",
+    "player": "Jugador",
+    "goals": "Goles",
+    "empty": "Aún no hay goles registrados.",
+    "note": "Datos de mejor esfuerzo · worldcup26.ir"
   },
   "teams": {
     "title": "Selecciones",
