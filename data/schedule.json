@@ -241,11 +241,11 @@
     "home": "BEL",
     "away": "EGY",
     "score": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
     },
     "winner": null,
-    "status": "scheduled",
+    "status": "live",
     "group": "G",
     "matchday": 1,
     "venue": "Lumen Field",
