@@ -223,11 +223,11 @@
     "home": "ESP",
     "away": "CPV",
     "score": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
     },
     "winner": null,
-    "status": "scheduled",
+    "status": "live",
     "group": "H",
     "matchday": 1,
     "venue": "Mercedes-Benz Stadium",
