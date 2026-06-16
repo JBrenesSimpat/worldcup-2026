@@ -130,6 +130,11 @@
     "team": "SWE"
   },
   {
+    "name": "Maksimilianv Araivkhv",
+    "goals": 1,
+    "team": "URY"
+  },
+  {
     "name": "Maurício",
     "goals": 1,
     "team": "PAR"
@@ -143,10 +148,5 @@
     "name": "N. Schlotterbeck",
     "goals": 1,
     "team": "GER"
-  },
-  {
-    "name": "Nestory Irankunda",
-    "goals": 1,
-    "team": "AUS"
   }
 ]
