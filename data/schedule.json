@@ -43,8 +43,8 @@
     "home": "CAN",
     "away": "BIH",
     "score": {
-      "home": 1,
-      "away": 1
+      "home": null,
+      "away": null
     },
     "winner": null,
     "status": "finished",
@@ -277,11 +277,11 @@
     "home": "IRN",
     "away": "NZL",
     "score": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 1
     },
-    "winner": null,
-    "status": "scheduled",
+    "winner": "away",
+    "status": "live",
     "group": "G",
     "matchday": 1,
     "venue": "SoFi Stadium",
