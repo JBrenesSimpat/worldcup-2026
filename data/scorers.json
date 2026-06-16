@@ -1,5 +1,10 @@
 [
   {
+    "name": "Ali Jast",
+    "goals": 2,
+    "team": "NZL"
+  },
+  {
     "name": "F. Balogun",
     "goals": 2,
     "team": "USA"
@@ -58,6 +63,11 @@
     "name": "D. Undav",
     "goals": 1,
     "team": "GER"
+  },
+  {
+    "name": "Emam Ashour",
+    "goals": 1,
+    "team": "EGY"
   },
   {
     "name": "Felix Nmecha",
@@ -138,15 +148,5 @@
     "name": "Maurício",
     "goals": 1,
     "team": "PAR"
-  },
-  {
-    "name": "N. Brown",
-    "goals": 1,
-    "team": "GER"
-  },
-  {
-    "name": "N. Schlotterbeck",
-    "goals": 1,
-    "team": "GER"
   }
 ]
