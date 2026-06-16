@@ -43,8 +43,8 @@
     "home": "CAN",
     "away": "BIH",
     "score": {
-      "home": 1,
-      "away": 1
+      "home": null,
+      "away": null
     },
     "winner": null,
     "status": "finished",
@@ -257,7 +257,7 @@
     "stage": "group",
     "datetime": "2026-06-15T22:00:00Z",
     "home": "KSA",
-    "away": "URU",
+    "away": "URY",
     "score": {
       "home": 1,
       "away": 1
@@ -688,7 +688,7 @@
     "apiId": 537372,
     "stage": "group",
     "datetime": "2026-06-21T22:00:00Z",
-    "home": "URU",
+    "home": "URY",
     "away": "CPV",
     "score": {
       "home": null,
@@ -1120,7 +1120,7 @@
     "apiId": 537373,
     "stage": "group",
     "datetime": "2026-06-27T00:00:00Z",
-    "home": "URU",
+    "home": "URY",
     "away": "ESP",
     "score": {
       "home": null,
