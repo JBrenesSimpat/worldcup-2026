@@ -1,6 +1,6 @@
 [
   {
-    "name": "Ali Jast",
+    "name": "Elijah Just",
     "goals": 2,
     "team": "NZL"
   },
@@ -13,6 +13,11 @@
     "name": "K. Havertz",
     "goals": 2,
     "team": "GER"
+  },
+  {
+    "name": "Kilian Ambaph",
+    "goals": 2,
+    "team": "FRA"
   },
   {
     "name": "Y.Ayari",
@@ -30,7 +35,7 @@
     "team": "SWE"
   },
   {
-    "name": "Abdallh Alamri",
+    "name": "Abdulelah Al-Amri",
     "goals": 1,
     "team": "KSA"
   },
@@ -38,6 +43,11 @@
     "name": "B. Khoukhi",
     "goals": 1,
     "team": "QAT"
+  },
+  {
+    "name": "Brdli Barkvla",
+    "goals": 1,
+    "team": "FRA"
   },
   {
     "name": "Breel Embolo",
@@ -95,6 +105,11 @@
     "team": "KOR"
   },
   {
+    "name": "Ibrahim Am Baih",
+    "goals": 1,
+    "team": "SEN"
+  },
+  {
     "name": "J. McGinn",
     "goals": 1,
     "team": "SCO"
@@ -133,20 +148,5 @@
     "name": "L. Krejčí",
     "goals": 1,
     "team": "CZE"
-  },
-  {
-    "name": "M. Svanberg",
-    "goals": 1,
-    "team": "SWE"
-  },
-  {
-    "name": "Maksimilianv Araivkhv",
-    "goals": 1,
-    "team": "URY"
-  },
-  {
-    "name": "Maurício",
-    "goals": 1,
-    "team": "PAR"
   }
 ]
