@@ -1,5 +1,10 @@
 [
   {
+    "name": "Arling Halnd",
+    "goals": 2,
+    "team": "NOR"
+  },
+  {
     "name": "Elijah Just",
     "goals": 2,
     "team": "NZL"
@@ -15,7 +20,7 @@
     "team": "GER"
   },
   {
-    "name": "Kilian Ambaph",
+    "name": "K. Mbappé",
     "goals": 2,
     "team": "FRA"
   },
@@ -40,14 +45,19 @@
     "team": "KSA"
   },
   {
+    "name": "Aimn Hsin",
+    "goals": 1,
+    "team": "IRQ"
+  },
+  {
+    "name": "B. Barcola",
+    "goals": 1,
+    "team": "FRA"
+  },
+  {
     "name": "B. Khoukhi",
     "goals": 1,
     "team": "QAT"
-  },
-  {
-    "name": "Brdli Barkvla",
-    "goals": 1,
-    "team": "FRA"
   },
   {
     "name": "Breel Embolo",
@@ -95,6 +105,11 @@
     "team": "KOR"
   },
   {
+    "name": "I. Mbaye",
+    "goals": 1,
+    "team": "SEN"
+  },
+  {
     "name": "I. Saibari",
     "goals": 1,
     "team": "MAR"
@@ -103,11 +118,6 @@
     "name": "I.B. Hwang",
     "goals": 1,
     "team": "KOR"
-  },
-  {
-    "name": "Ibrahim Am Baih",
-    "goals": 1,
-    "team": "SEN"
   },
   {
     "name": "J. McGinn",
@@ -138,15 +148,5 @@
     "name": "K. Ogawa",
     "goals": 1,
     "team": "JPN"
-  },
-  {
-    "name": "L. Comenencia",
-    "goals": 1,
-    "team": "CUW"
-  },
-  {
-    "name": "L. Krejčí",
-    "goals": 1,
-    "team": "CZE"
   }
 ]

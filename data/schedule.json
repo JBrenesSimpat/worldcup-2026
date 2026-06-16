@@ -313,10 +313,10 @@
     "home": "IRQ",
     "away": "NOR",
     "score": {
-      "home": 0,
-      "away": 0
+      "home": 1,
+      "away": 2
     },
-    "winner": null,
+    "winner": "away",
     "status": "live",
     "group": "I",
     "matchday": 1,
