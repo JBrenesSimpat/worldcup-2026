@@ -115,6 +115,11 @@
     "team": "KOR"
   },
   {
+    "name": "Hri Kin",
+    "goals": 1,
+    "team": "ENG"
+  },
+  {
     "name": "I. Mbaye",
     "goals": 1,
     "team": "SEN"
@@ -143,10 +148,5 @@
     "name": "J. Musiala",
     "goals": 1,
     "team": "GER"
-  },
-  {
-    "name": "J. Neves",
-    "goals": 1,
-    "team": "POR"
   }
 ]
