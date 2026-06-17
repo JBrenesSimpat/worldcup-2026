@@ -1,5 +1,10 @@
 [
   {
+    "name": "Livnl Msi",
+    "goals": 3,
+    "team": "ARG"
+  },
+  {
     "name": "Aimn Hsin",
     "goals": 2,
     "team": "IRQ"
@@ -141,11 +146,6 @@
   },
   {
     "name": "K. Nakamura",
-    "goals": 1,
-    "team": "JPN"
-  },
-  {
-    "name": "K. Ogawa",
     "goals": 1,
     "team": "JPN"
   }
