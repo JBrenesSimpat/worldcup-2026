@@ -1,23 +1,23 @@
 [
   {
-    "name": "Livnl Msi",
+    "name": "Lionel Messi",
     "goals": 3,
     "team": "ARG"
   },
   {
-    "name": "Aimn Hsin",
+    "name": "Aymen Hussein",
     "goals": 2,
     "team": "IRQ"
-  },
-  {
-    "name": "Arling Halnd",
-    "goals": 2,
-    "team": "NOR"
   },
   {
     "name": "Elijah Just",
     "goals": 2,
     "team": "NZL"
+  },
+  {
+    "name": "Erling Haaland",
+    "goals": 2,
+    "team": "NOR"
   },
   {
     "name": "F. Balogun",
