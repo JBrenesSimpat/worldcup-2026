@@ -331,11 +331,11 @@
     "home": "ARG",
     "away": "ALG",
     "score": {
-      "home": null,
-      "away": null
+      "home": 1,
+      "away": 0
     },
-    "winner": null,
-    "status": "scheduled",
+    "winner": "home",
+    "status": "live",
     "group": "J",
     "matchday": 1,
     "venue": "Arrowhead Stadium",
