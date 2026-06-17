@@ -257,7 +257,7 @@
     "stage": "group",
     "datetime": "2026-06-15T22:00:00Z",
     "home": "KSA",
-    "away": "URY",
+    "away": "URU",
     "score": {
       "home": 1,
       "away": 1
@@ -389,7 +389,7 @@
       "away": 2
     },
     "winner": "home",
-    "status": "live",
+    "status": "finished",
     "group": "L",
     "matchday": 1,
     "venue": "AT&T Stadium",
@@ -688,7 +688,7 @@
     "apiId": 537372,
     "stage": "group",
     "datetime": "2026-06-21T22:00:00Z",
-    "home": "URY",
+    "home": "URU",
     "away": "CPV",
     "score": {
       "home": null,
@@ -1120,7 +1120,7 @@
     "apiId": 537373,
     "stage": "group",
     "datetime": "2026-06-27T00:00:00Z",
-    "home": "URY",
+    "home": "URU",
     "away": "ESP",
     "score": {
       "home": null,
