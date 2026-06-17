@@ -314,10 +314,10 @@
     "away": "NOR",
     "score": {
       "home": 1,
-      "away": 3
+      "away": 4
     },
     "winner": "away",
-    "status": "live",
+    "status": "finished",
     "group": "I",
     "matchday": 1,
     "venue": "Gillette Stadium",
