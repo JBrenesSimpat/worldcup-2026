@@ -1,5 +1,10 @@
 [
   {
+    "name": "Aimn Hsin",
+    "goals": 2,
+    "team": "IRQ"
+  },
+  {
     "name": "Arling Halnd",
     "goals": 2,
     "team": "NOR"
@@ -43,11 +48,6 @@
     "name": "Abdulelah Al-Amri",
     "goals": 1,
     "team": "KSA"
-  },
-  {
-    "name": "Aimn Hsin",
-    "goals": 1,
-    "team": "IRQ"
   },
   {
     "name": "B. Barcola",
