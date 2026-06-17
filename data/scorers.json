@@ -55,6 +55,11 @@
     "team": "KSA"
   },
   {
+    "name": "Ali Avlvan",
+    "goals": 1,
+    "team": "JOR"
+  },
+  {
     "name": "B. Barcola",
     "goals": 1,
     "team": "FRA"
@@ -125,6 +130,11 @@
     "team": "KOR"
   },
   {
+    "name": "Izn Alarb",
+    "goals": 1,
+    "team": "AUT"
+  },
+  {
     "name": "J. McGinn",
     "goals": 1,
     "team": "SCO"
@@ -138,15 +148,5 @@
     "name": "J. Quiñones",
     "goals": 1,
     "team": "MEX"
-  },
-  {
-    "name": "Jovo Lukić",
-    "goals": 1,
-    "team": "BIH"
-  },
-  {
-    "name": "K. Nakamura",
-    "goals": 1,
-    "team": "JPN"
   }
 ]
