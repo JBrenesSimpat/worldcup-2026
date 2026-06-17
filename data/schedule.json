@@ -257,7 +257,7 @@
     "stage": "group",
     "datetime": "2026-06-15T22:00:00Z",
     "home": "KSA",
-    "away": "URU",
+    "away": "URY",
     "score": {
       "home": 1,
       "away": 1
@@ -371,7 +371,7 @@
       "away": 1
     },
     "winner": null,
-    "status": "live",
+    "status": "finished",
     "group": "K",
     "matchday": 1,
     "venue": "NRG Stadium",
@@ -688,7 +688,7 @@
     "apiId": 537372,
     "stage": "group",
     "datetime": "2026-06-21T22:00:00Z",
-    "home": "URU",
+    "home": "URY",
     "away": "CPV",
     "score": {
       "home": null,
@@ -1120,7 +1120,7 @@
     "apiId": 537373,
     "stage": "group",
     "datetime": "2026-06-27T00:00:00Z",
-    "home": "URU",
+    "home": "URY",
     "away": "ESP",
     "score": {
       "home": null,
