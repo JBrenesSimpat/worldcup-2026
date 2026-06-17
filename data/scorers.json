@@ -25,6 +25,11 @@
     "team": "USA"
   },
   {
+    "name": "H. Kane",
+    "goals": 2,
+    "team": "ENG"
+  },
+  {
     "name": "K. Havertz",
     "goals": 2,
     "team": "GER"
@@ -115,11 +120,6 @@
     "team": "KOR"
   },
   {
-    "name": "Hri Kin",
-    "goals": 1,
-    "team": "ENG"
-  },
-  {
     "name": "I. Mbaye",
     "goals": 1,
     "team": "SEN"
@@ -140,13 +140,13 @@
     "team": "AUT"
   },
   {
+    "name": "J. Bellingham",
+    "goals": 1,
+    "team": "ENG"
+  },
+  {
     "name": "J. McGinn",
     "goals": 1,
     "team": "SCO"
-  },
-  {
-    "name": "J. Musiala",
-    "goals": 1,
-    "team": "GER"
   }
 ]
