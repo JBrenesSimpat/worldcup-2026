@@ -5,10 +5,24 @@ import { useI18n } from "@/lib/i18n";
 import { useTimezone } from "@/lib/timezone";
 import { sortedMatches, teamByCode, teamName, teams } from "@/lib/data";
 import { GROUP_IDS } from "@/lib/standings";
-import type { Match, Stage } from "@/lib/types";
+import type { Match } from "@/lib/types";
 import MatchDayList from "@/components/MatchDayList";
 
-const STAGES: Stage[] = ["group", "r32", "r16", "qf", "sf", "third", "final"];
+// A "round" = a group matchday (j1/j2/j3) or a knockout stage.
+const ROUND_ORDER = [
+  "j1", "j2", "j3", "r32", "r16", "qf", "sf", "third", "final",
+];
+
+function roundKey(m: Match): string {
+  return m.stage === "group" ? `j${m.matchday}` : m.stage;
+}
+
+/** The round currently in play = round of the earliest not-yet-finished match. */
+function currentRound(matches: Match[]): string {
+  const next = matches.find((m) => m.status !== "finished");
+  const target = next ?? matches[matches.length - 1];
+  return target ? roundKey(target) : "";
+}
 
 export default function SchedulePage() {
   const { locale, t } = useI18n();
@@ -17,7 +31,8 @@ export default function SchedulePage() {
 
   const [group, setGroup] = useState("");
   const [team, setTeam] = useState("");
-  const [stage, setStage] = useState("");
+  // Default to the round being played right now.
+  const [round, setRound] = useState(() => currentRound(all));
   const [query, setQuery] = useState("");
 
   const teamOptions = useMemo(
@@ -28,11 +43,17 @@ export default function SchedulePage() {
     [locale],
   );
 
+  function roundLabel(key: string): string {
+    return key[0] === "j"
+      ? `${t("common.matchday")} ${key.slice(1)}`
+      : t(`stage.${key}`);
+  }
+
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
     return all.filter((m: Match) => {
       if (group && m.group !== group) return false;
-      if (stage && m.stage !== stage) return false;
+      if (round && roundKey(m) !== round) return false;
       if (team && m.home !== team && m.away !== team) return false;
       if (q) {
         const home = teamByCode(m.home);
@@ -52,7 +73,7 @@ export default function SchedulePage() {
       }
       return true;
     });
-  }, [all, group, stage, team, query]);
+  }, [all, group, round, team, query]);
 
   const selectClass =
     "rounded-xl border border-line bg-surface px-3 py-2 text-sm";
@@ -68,6 +89,20 @@ export default function SchedulePage() {
       </div>
 
       <div className="flex flex-wrap gap-2">
+        <select
+          className={selectClass}
+          value={round}
+          onChange={(e) => setRound(e.target.value)}
+          aria-label={t("filters.allRounds")}
+        >
+          <option value="">{t("filters.allRounds")}</option>
+          {ROUND_ORDER.map((r) => (
+            <option key={r} value={r}>
+              {roundLabel(r)}
+            </option>
+          ))}
+        </select>
+
         <select
           className={selectClass}
           value={group}
@@ -92,20 +127,6 @@ export default function SchedulePage() {
           {teamOptions.map((tm) => (
             <option key={tm.code} value={tm.code}>
               {tm.flag} {teamName(tm, locale)}
-            </option>
-          ))}
-        </select>
-
-        <select
-          className={selectClass}
-          value={stage}
-          onChange={(e) => setStage(e.target.value)}
-          aria-label={t("filters.allStages")}
-        >
-          <option value="">{t("filters.allStages")}</option>
-          {STAGES.map((s) => (
-            <option key={s} value={s}>
-              {t(`stage.${s}`)}
             </option>
           ))}
         </select>
