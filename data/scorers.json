@@ -55,6 +55,11 @@
     "team": "SWE"
   },
   {
+    "name": "Abas Bk Fiz Allh Af",
+    "goals": 1,
+    "team": "UZB"
+  },
+  {
     "name": "Abdulelah Al-Amri",
     "goals": 1,
     "team": "KSA"
@@ -143,10 +148,5 @@
     "name": "Izn Alarb",
     "goals": 1,
     "team": "AUT"
-  },
-  {
-    "name": "J. Bellingham",
-    "goals": 1,
-    "team": "ENG"
   }
 ]

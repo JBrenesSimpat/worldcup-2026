@@ -421,11 +421,11 @@
     "home": "UZB",
     "away": "COL",
     "score": {
-      "home": 0,
-      "away": 1
+      "home": 1,
+      "away": 3
     },
     "winner": "away",
-    "status": "live",
+    "status": "finished",
     "group": "K",
     "matchday": 1,
     "venue": "Estadio Azteca",
