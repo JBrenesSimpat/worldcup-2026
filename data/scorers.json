@@ -100,6 +100,11 @@
     "team": "GER"
   },
   {
+    "name": "Dnil Mvnvz",
+    "goals": 1,
+    "team": "COL"
+  },
+  {
     "name": "Emam Ashour",
     "goals": 1,
     "team": "EGY"
@@ -143,10 +148,5 @@
     "name": "J. Bellingham",
     "goals": 1,
     "team": "ENG"
-  },
-  {
-    "name": "J. McGinn",
-    "goals": 1,
-    "team": "SCO"
   }
 ]
