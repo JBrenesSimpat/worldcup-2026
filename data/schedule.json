@@ -457,11 +457,11 @@
     "home": "SUI",
     "away": "BIH",
     "score": {
-      "home": 1,
-      "away": 0
+      "home": 4,
+      "away": 1
     },
     "winner": "home",
-    "status": "live",
+    "status": "finished",
     "group": "B",
     "matchday": 2,
     "venue": "SoFi Stadium",
