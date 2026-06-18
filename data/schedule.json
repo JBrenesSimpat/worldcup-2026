@@ -403,11 +403,11 @@
     "home": "GHA",
     "away": "PAN",
     "score": {
-      "home": 0,
+      "home": 1,
       "away": 0
     },
-    "winner": null,
-    "status": "live",
+    "winner": "home",
+    "status": "finished",
     "group": "L",
     "matchday": 1,
     "venue": "BMO Field",
