@@ -30,6 +30,11 @@
     "team": "ENG"
   },
   {
+    "name": "Jvhan Mnzambi",
+    "goals": 2,
+    "team": "SUI"
+  },
+  {
     "name": "K. Havertz",
     "goals": 2,
     "team": "GER"
@@ -68,6 +73,11 @@
     "name": "Ali Avlvan",
     "goals": 1,
     "team": "JOR"
+  },
+  {
+    "name": "Armin Mhmich",
+    "goals": 1,
+    "team": "BIH"
   },
   {
     "name": "B. Barcola",
@@ -138,15 +148,5 @@
     "name": "I. Saibari",
     "goals": 1,
     "team": "MAR"
-  },
-  {
-    "name": "I.B. Hwang",
-    "goals": 1,
-    "team": "KOR"
-  },
-  {
-    "name": "Izn Alarb",
-    "goals": 1,
-    "team": "AUT"
   }
 ]
