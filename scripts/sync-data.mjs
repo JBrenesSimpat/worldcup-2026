@@ -133,103 +133,109 @@ async function main() {
     return;
   }
 
-  const res = await fetch(
-    "https://api.football-data.org/v4/competitions/WC/matches",
-    { headers: { "X-Auth-Token": TOKEN } },
-  );
-  if (!res.ok) {
-    console.error(`API error ${res.status}: ${await res.text()}`);
-    process.exit(1);
-  }
-  const data = await res.json();
-  const apiMatches = data.matches ?? [];
-
-  // Static venue map (built by scripts/build-venues.mjs), keyed by API match id.
+  // Static venue + bracket maps (committed; used when (re)building from football-data).
   const venuesPath = join(dataDir, "venues.json");
   const venues = existsSync(venuesPath)
     ? JSON.parse(readFileSync(venuesPath, "utf8"))
     : {};
-
-  // Official bracket slot labels (built by scripts/build-bracket.mjs), keyed by our match id.
   const bracketPath = join(dataDir, "bracket.json");
   const bracket = existsSync(bracketPath)
     ? JSON.parse(readFileSync(bracketPath, "utf8"))
     : {};
 
-  // --- Teams (from group-stage participants) ---
-  const teamMap = new Map();
-  for (const m of apiMatches) {
-    if (m.stage !== "GROUP_STAGE") continue;
-    for (const tm of [m.homeTeam, m.awayTeam]) {
-      if (!tm?.tla || teamMap.has(tm.tla)) continue;
-      const ref = REF[tm.tla] ?? { flag: "🏳️", es: tm.name };
-      teamMap.set(tm.tla, {
-        code: tm.tla,
-        en: tm.name,
-        es: ref.es,
-        flag: ref.flag,
-        group: groupLetter(m.group),
-      });
+  // football-data only supplies the STRUCTURE (fixtures/teams/dates), which
+  // doesn't change mid-tournament. A hiccup there must NOT fail the run — so on
+  // any error we reuse the committed structure and still apply live scores.
+  let teams;
+  let matches;
+  try {
+    const res = await fetch(
+      "https://api.football-data.org/v4/competitions/WC/matches",
+      { headers: { "X-Auth-Token": TOKEN } },
+    );
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const apiMatches = (await res.json()).matches ?? [];
+    if (apiMatches.length === 0) throw new Error("empty response");
+
+    const teamMap = new Map();
+    for (const m of apiMatches) {
+      if (m.stage !== "GROUP_STAGE") continue;
+      for (const tm of [m.homeTeam, m.awayTeam]) {
+        if (!tm?.tla || teamMap.has(tm.tla)) continue;
+        const ref = REF[tm.tla] ?? { flag: "🏳️", es: tm.name };
+        teamMap.set(tm.tla, {
+          code: tm.tla,
+          en: tm.name,
+          es: ref.es,
+          flag: ref.flag,
+          group: groupLetter(m.group),
+        });
+      }
     }
-  }
-  const teams = [...teamMap.values()].sort((a, b) =>
-    a.group === b.group
-      ? a.en.localeCompare(b.en)
-      : (a.group ?? "").localeCompare(b.group ?? ""),
-  );
+    teams = [...teamMap.values()].sort((a, b) =>
+      a.group === b.group
+        ? a.en.localeCompare(b.en)
+        : (a.group ?? "").localeCompare(b.group ?? ""),
+    );
 
-  // --- Matches ---
-  const matches = apiMatches
-    .map((m) => {
-      const match = {
-        id: `WC-${m.id}`,
-        apiId: m.id,
-        stage: STAGE_MAP[m.stage] ?? "group",
-        datetime: m.utcDate,
-        home: m.homeTeam?.tla ?? null,
-        away: m.awayTeam?.tla ?? null,
-        score: {
-          home: m.score?.fullTime?.home ?? null,
-          away: m.score?.fullTime?.away ?? null,
-        },
-        winner: mapWinner(m.score?.winner),
-        status: mapStatus(m.status),
-      };
-      const g = groupLetter(m.group);
-      if (g) match.group = g;
-      if (m.matchday && m.stage === "GROUP_STAGE") match.matchday = m.matchday;
+    matches = apiMatches
+      .map((m) => {
+        const match = {
+          id: `WC-${m.id}`,
+          apiId: m.id,
+          stage: STAGE_MAP[m.stage] ?? "group",
+          datetime: m.utcDate,
+          home: m.homeTeam?.tla ?? null,
+          away: m.awayTeam?.tla ?? null,
+          score: {
+            home: m.score?.fullTime?.home ?? null,
+            away: m.score?.fullTime?.away ?? null,
+          },
+          winner: mapWinner(m.score?.winner),
+          status: mapStatus(m.status),
+        };
+        const g = groupLetter(m.group);
+        if (g) match.group = g;
+        if (m.matchday && m.stage === "GROUP_STAGE") match.matchday = m.matchday;
 
-      const v = venues[m.id];
-      if (v) {
-        match.venue = v.venue;
-        if (v.city) match.city = v.city;
-      }
+        const v = venues[m.id];
+        if (v) {
+          match.venue = v.venue;
+          if (v.city) match.city = v.city;
+        }
 
-      // Official bracket slot labels for knockout matches (shown until teams are set).
-      const b = bracket[match.id];
-      if (b) {
-        match.matchNumber = b.matchNumber;
-        match.homeLabel = b.homeLabel;
-        match.awayLabel = b.awayLabel;
-      }
-      return match;
-    })
-    .sort((a, b) => Date.parse(a.datetime) - Date.parse(b.datetime));
-
-  // Overlay real scores from worldcup26.ir (football-data's free tier doesn't
-  // provide them). Keeps football-data structure / ids / venues / bracket intact.
-  try {
-    const overlaid = await overlayScores(matches);
-    console.log(`Overlaid scores from worldcup26 on ${overlaid} matches.`);
+        const b = bracket[match.id];
+        if (b) {
+          match.matchNumber = b.matchNumber;
+          match.homeLabel = b.homeLabel;
+          match.awayLabel = b.awayLabel;
+        }
+        return match;
+      })
+      .sort((a, b) => Date.parse(a.datetime) - Date.parse(b.datetime));
   } catch (e) {
-    console.log(`worldcup26 overlay skipped: ${e.message}`);
+    console.log(
+      `football-data unavailable (${e.message}); reusing committed structure.`,
+    );
+    const schedulePath0 = join(dataDir, "schedule.json");
+    const teamsPath0 = join(dataDir, "teams.json");
+    if (!existsSync(schedulePath0) || !existsSync(teamsPath0)) {
+      console.error("No committed data to fall back to.");
+      process.exit(1);
+    }
+    matches = JSON.parse(readFileSync(schedulePath0, "utf8"));
+    teams = JSON.parse(readFileSync(teamsPath0, "utf8"));
   }
 
+  // Fetch worldcup26 ONCE and reuse it for both scores and top scorers.
   try {
-    const n = await buildTopScorers();
+    const wc = await fetchWorldcup();
+    const overlaid = overlayScores(matches, wc);
+    console.log(`Overlaid scores from worldcup26 on ${overlaid} matches.`);
+    const n = buildTopScorers(wc);
     console.log(`Top scorers parsed: ${n} players.`);
   } catch (e) {
-    console.log(`top scorers skipped: ${e.message}`);
+    console.log(`worldcup26 unavailable (${e.message}); keeping existing scores.`);
   }
 
   writeFileSync(
@@ -276,16 +282,15 @@ function wcScore(wc) {
   return null; // notstarted → don't overlay the placeholder 0-0
 }
 
-async function overlayScores(matches) {
-  const teamsRes = await fetch("https://worldcup26.ir/get/teams");
-  const wcTeams = (await teamsRes.json()).teams ?? [];
-  const codeByWcId = new Map(
-    wcTeams.map((t) => [t.id, normCode(t.fifa_code)]),
-  );
+// Fetch worldcup26 teams + games ONCE; reused for scores and scorers.
+async function fetchWorldcup() {
+  const wcTeams = (await (await fetch("https://worldcup26.ir/get/teams")).json()).teams ?? [];
+  const codeByWcId = new Map(wcTeams.map((t) => [t.id, normCode(t.fifa_code)]));
+  const wcGames = (await (await fetch("https://worldcup26.ir/get/games")).json()).games ?? [];
+  return { codeByWcId, wcGames };
+}
 
-  const gamesRes = await fetch("https://worldcup26.ir/get/games");
-  const wcGames = (await gamesRes.json()).games ?? [];
-
+function overlayScores(matches, { codeByWcId, wcGames }) {
   const byCode = new Map();
   const byEpoch = new Map();
   for (const wc of wcGames) {
@@ -355,11 +360,7 @@ function addScorers(raw, teamCode, tally) {
   }
 }
 
-async function buildTopScorers() {
-  const wcTeams = (await (await fetch("https://worldcup26.ir/get/teams")).json()).teams ?? [];
-  const codeByWcId = new Map(wcTeams.map((t) => [t.id, normCode(t.fifa_code)]));
-  const wcGames = (await (await fetch("https://worldcup26.ir/get/games")).json()).games ?? [];
-
+function buildTopScorers({ codeByWcId, wcGames }) {
   const tally = new Map();
   for (const g of wcGames) {
     addScorers(g.home_scorers, codeByWcId.get(g.home_team_id), tally);
