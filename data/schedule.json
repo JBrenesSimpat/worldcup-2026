@@ -440,10 +440,10 @@
     "away": "RSA",
     "score": {
       "home": 1,
-      "away": 0
+      "away": 1
     },
-    "winner": "home",
-    "status": "live",
+    "winner": null,
+    "status": "finished",
     "group": "A",
     "matchday": 2,
     "venue": "Mercedes-Benz Stadium",
