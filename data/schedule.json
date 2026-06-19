@@ -149,7 +149,7 @@
     "stage": "group",
     "datetime": "2026-06-14T17:00:00Z",
     "home": "GER",
-    "away": "CUW",
+    "away": "CUR",
     "score": {
       "home": 7,
       "away": 1
@@ -617,7 +617,7 @@
     "stage": "group",
     "datetime": "2026-06-21T00:00:00Z",
     "home": "ECU",
-    "away": "CUW",
+    "away": "CUR",
     "score": {
       "home": null,
       "away": null
@@ -994,7 +994,7 @@
     "apiId": 537356,
     "stage": "group",
     "datetime": "2026-06-25T20:00:00Z",
-    "home": "CUW",
+    "home": "CUR",
     "away": "CIV",
     "score": {
       "home": null,
