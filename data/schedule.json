@@ -43,8 +43,8 @@
     "home": "CAN",
     "away": "BIH",
     "score": {
-      "home": 1,
-      "away": 1
+      "home": null,
+      "away": null
     },
     "winner": null,
     "status": "finished",
