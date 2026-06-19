@@ -90,6 +90,11 @@
     "team": "BIH"
   },
   {
+    "name": "Asmaail Saibari",
+    "goals": 1,
+    "team": "MAR"
+  },
+  {
     "name": "B. Barcola",
     "goals": 1,
     "team": "FRA"
@@ -143,10 +148,5 @@
     "name": "G. Reyna",
     "goals": 1,
     "team": "USA"
-  },
-  {
-    "name": "H.G. Oh",
-    "goals": 1,
-    "team": "KOR"
   }
 ]
