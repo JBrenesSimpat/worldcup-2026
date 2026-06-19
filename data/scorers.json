@@ -75,6 +75,11 @@
     "team": "KSA"
   },
   {
+    "name": "Alex Freeman",
+    "goals": 1,
+    "team": "USA"
+  },
+  {
     "name": "Ali Avlvan",
     "goals": 1,
     "team": "JOR"
@@ -143,10 +148,5 @@
     "name": "H.G. Oh",
     "goals": 1,
     "team": "KOR"
-  },
-  {
-    "name": "I. Mbaye",
-    "goals": 1,
-    "team": "SEN"
   }
 ]
