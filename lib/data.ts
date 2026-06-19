@@ -54,3 +54,10 @@ export function slotLabelText(label: string | undefined, t: Translate): string {
 
   return label;
 }
+
+/** Compact group-position label for a clinched slot: "1A" → "1.º A" / "1st A". */
+export function positionLabel(label: string | undefined, t: Translate): string {
+  if (!label) return "";
+  const m = label.match(/^([12])([A-L])$/);
+  return m ? `${t(`label.rank${m[1]}`)} ${m[2]}` : "";
+}

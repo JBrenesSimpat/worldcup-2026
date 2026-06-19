@@ -1,7 +1,7 @@
 "use client";
 
 import { useI18n } from "@/lib/i18n";
-import { slotLabelText, teamByCode, teamName } from "@/lib/data";
+import { positionLabel, slotLabelText, teamByCode, teamName } from "@/lib/data";
 import { clinchedSlots } from "@/lib/standings";
 
 export default function TeamBadge({
@@ -41,8 +41,11 @@ export default function TeamBadge({
         {name}
       </span>
       {projected && (
-        <span className="text-pitch" title={t("bracket.clinched")} aria-hidden>
-          ✓
+        <span
+          className="rounded bg-emerald-50 px-1.5 py-0.5 text-[0.6rem] font-bold text-pitch-dark"
+          title={t("bracket.clinched")}
+        >
+          {positionLabel(label, t)}
         </span>
       )}
     </div>

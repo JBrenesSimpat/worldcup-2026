@@ -1,7 +1,7 @@
 "use client";
 
 import { useI18n } from "@/lib/i18n";
-import { slotLabelText, teamByCode, teamName } from "@/lib/data";
+import { positionLabel, slotLabelText, teamByCode, teamName } from "@/lib/data";
 import {
   bracketRounds,
   championCode,
@@ -41,8 +41,11 @@ function SlotRow({
           {name}
         </span>
         {slot.projected && (
-          <span className="text-pitch" title={t("bracket.clinched")} aria-label={t("bracket.clinched")}>
-            ✓
+          <span
+            className="shrink-0 rounded bg-emerald-50 px-1 text-[0.6rem] font-bold text-pitch-dark"
+            title={t("bracket.clinched")}
+          >
+            {positionLabel(slot.label, t)}
           </span>
         )}
       </span>
