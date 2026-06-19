@@ -1,5 +1,10 @@
 [
   {
+    "name": "Jonathan David",
+    "goals": 3,
+    "team": "CAN"
+  },
+  {
     "name": "Lionel Messi",
     "goals": 3,
     "team": "ARG"
@@ -143,10 +148,5 @@
     "name": "I. Mbaye",
     "goals": 1,
     "team": "SEN"
-  },
-  {
-    "name": "I. Saibari",
-    "goals": 1,
-    "team": "MAR"
   }
 ]
