@@ -56,7 +56,8 @@
     "title": "Knockout bracket",
     "subtitle": "Round of 32 to the final · winners advance automatically",
     "champion": "Champion",
-    "scrollHint": "Scroll sideways to see all rounds"
+    "scrollHint": "Scroll sideways to see all rounds",
+    "clinched": "Already qualified (mathematically)"
   },
   "filters": {
     "allGroups": "All groups",

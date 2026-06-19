@@ -56,7 +56,8 @@
     "title": "Eliminatorias",
     "subtitle": "De dieciseisavos a la final · los ganadores avanzan automáticamente",
     "champion": "Campeón",
-    "scrollHint": "Desliza horizontalmente para ver todas las rondas"
+    "scrollHint": "Desliza horizontalmente para ver todas las rondas",
+    "clinched": "Ya clasificado (matemáticamente)"
   },
   "filters": {
     "allGroups": "Todos los grupos",

@@ -150,3 +150,56 @@ export function groupStandings(group: GroupId): Standing[] {
 export const GROUP_IDS: GroupId[] = [
   "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L",
 ];
+
+/**
+ * Positions that are MATHEMATICALLY locked (can't change no matter the
+ * remaining results), by points alone — conservative, so it never pins wrong
+ * (it ignores tiebreakers, only locking when points make it certain).
+ * Returns a map like { "1A": "MEX", "2B": "CAN" }.
+ */
+export function clinchedSlots(): Record<string, string> {
+  const result: Record<string, string> = {};
+
+  for (const G of GROUP_IDS) {
+    const codes = teams.filter((t) => t.group === G).map((t) => t.code);
+    const st: Record<string, { pts: number; rem: number }> = {};
+    codes.forEach((c) => (st[c] = { pts: 0, rem: 0 }));
+
+    for (const m of matches) {
+      if (m.stage !== "group" || m.group !== G) continue;
+      const home = m.home && st[m.home] ? st[m.home] : null;
+      const away = m.away && st[m.away] ? st[m.away] : null;
+      if (!home || !away) continue;
+      if (isFinished(m)) {
+        const h = m.score.home as number;
+        const a = m.score.away as number;
+        if (h > a) home.pts += 3;
+        else if (a > h) away.pts += 3;
+        else {
+          home.pts += 1;
+          away.pts += 1;
+        }
+      } else {
+        home.rem += 1;
+        away.rem += 1;
+      }
+    }
+
+    const arr = codes.map((c) => ({ c, ...st[c] }));
+    for (const x of arr) {
+      const others = arr.filter((y) => y.c !== x.c);
+      // Clinched 1st: more points than every rival's maximum possible.
+      if (others.every((y) => x.pts > y.pts + 3 * y.rem)) {
+        result[`1${G}`] = x.c;
+        continue;
+      }
+      // Clinched exactly 2nd: exactly one rival is sure to finish above, and
+      // no other rival can even reach this team's current points.
+      const sureAbove = others.filter((y) => y.pts > x.pts + 3 * x.rem).length;
+      const canReach = others.filter((y) => y.pts + 3 * y.rem >= x.pts).length;
+      if (sureAbove === 1 && canReach === 1) result[`2${G}`] = x.c;
+    }
+  }
+
+  return result;
+}

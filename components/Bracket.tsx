@@ -40,6 +40,11 @@ function SlotRow({
         >
           {name}
         </span>
+        {slot.projected && (
+          <span className="text-pitch" title={t("bracket.clinched")} aria-label={t("bracket.clinched")}>
+            ✓
+          </span>
+        )}
       </span>
       <span className="tabular-nums text-muted">{score ?? ""}</span>
     </div>

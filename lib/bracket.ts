@@ -1,4 +1,5 @@
 import { matches } from "./data";
+import { clinchedSlots } from "./standings";
 import type { Match, Stage } from "./types";
 
 export interface ResolvedSlot {
@@ -6,6 +7,8 @@ export interface ResolvedSlot {
   code: string | null;
   /** Official bracket label while undecided (e.g. "1A", "3:C/E/F/H/I", "W73"). */
   label?: string;
+  /** True when the team is shown because its group position is mathematically clinched. */
+  projected?: boolean;
 }
 
 export interface BracketMatch {
@@ -47,16 +50,19 @@ export function winnerOf(m: Match | undefined): string | null {
 export function resolveSlot(
   code: string | null,
   label: string | undefined,
+  clinched: Record<string, string> = {},
 ): ResolvedSlot {
   if (code) return { code };
+  // Mathematically locked group position → show the team early (projected).
+  if (label && clinched[label]) return { code: clinched[label], label, projected: true };
   return { code: null, label };
 }
 
-function toBracketMatch(m: Match): BracketMatch {
+function toBracketMatch(m: Match, clinched: Record<string, string>): BracketMatch {
   return {
     match: m,
-    home: resolveSlot(m.home, m.homeLabel),
-    away: resolveSlot(m.away, m.awayLabel),
+    home: resolveSlot(m.home, m.homeLabel, clinched),
+    away: resolveSlot(m.away, m.awayLabel, clinched),
     winnerCode: winnerOf(m),
   };
 }
@@ -65,19 +71,20 @@ const KNOCKOUT_ORDER: Stage[] = ["r32", "r16", "qf", "sf", "final"];
 
 /** The main bracket rounds (R32 → Final), in display order. */
 export function bracketRounds(): BracketRound[] {
+  const clinched = clinchedSlots();
   return KNOCKOUT_ORDER.map((stage) => ({
     stage,
     matches: matches
       .filter((m) => m.stage === stage)
       .sort((a, b) => Date.parse(a.datetime) - Date.parse(b.datetime))
-      .map(toBracketMatch),
+      .map((m) => toBracketMatch(m, clinched)),
   }));
 }
 
 /** The third-place play-off, if present. */
 export function thirdPlaceMatch(): BracketMatch | null {
   const m = matches.find((x) => x.stage === "third");
-  return m ? toBracketMatch(m) : null;
+  return m ? toBracketMatch(m, {}) : null;
 }
 
 /** Champion team code, once the final is decided. */
