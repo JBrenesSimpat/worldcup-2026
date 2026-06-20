@@ -55,6 +55,11 @@
     "team": "FRA"
   },
   {
+    "name": "Kvdi Khakpv",
+    "goals": 2,
+    "team": "NED"
+  },
+  {
     "name": "Matheus Cunha",
     "goals": 2,
     "team": "BRA"
@@ -143,10 +148,5 @@
     "name": "Dnil Mvnvz",
     "goals": 1,
     "team": "COL"
-  },
-  {
-    "name": "Emam Ashour",
-    "goals": 1,
-    "team": "EGY"
   }
 ]
