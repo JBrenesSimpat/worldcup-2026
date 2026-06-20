@@ -15,6 +15,11 @@
     "team": "IRQ"
   },
   {
+    "name": "Brian Brobbey",
+    "goals": 2,
+    "team": "NED"
+  },
+  {
     "name": "Elijah Just",
     "goals": 2,
     "team": "NZL"
@@ -143,10 +148,5 @@
     "name": "Emam Ashour",
     "goals": 1,
     "team": "EGY"
-  },
-  {
-    "name": "Felix Nmecha",
-    "goals": 1,
-    "team": "GER"
   }
 ]
