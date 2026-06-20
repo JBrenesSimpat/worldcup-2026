@@ -100,6 +100,11 @@
     "team": "JOR"
   },
   {
+    "name": "Anthony Elanga",
+    "goals": 1,
+    "team": "SWE"
+  },
+  {
     "name": "Armin Mhmich",
     "goals": 1,
     "team": "BIH"
@@ -140,13 +145,8 @@
     "team": "NED"
   },
   {
-    "name": "D. Undav",
+    "name": "Crysencio Summerville",
     "goals": 1,
-    "team": "GER"
-  },
-  {
-    "name": "Dnil Mvnvz",
-    "goals": 1,
-    "team": "COL"
+    "team": "NED"
   }
 ]
