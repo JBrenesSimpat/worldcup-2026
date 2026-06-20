@@ -20,6 +20,11 @@
     "team": "NED"
   },
   {
+    "name": "Dniz Avndav",
+    "goals": 2,
+    "team": "GER"
+  },
+  {
     "name": "Elijah Just",
     "goals": 2,
     "team": "NZL"
@@ -141,11 +146,6 @@
   },
   {
     "name": "C. Summerville",
-    "goals": 1,
-    "team": "NED"
-  },
-  {
-    "name": "Crysencio Summerville",
     "goals": 1,
     "team": "NED"
   }
