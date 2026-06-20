@@ -50,6 +50,11 @@
     "team": "FRA"
   },
   {
+    "name": "Matheus Cunha",
+    "goals": 2,
+    "team": "BRA"
+  },
+  {
     "name": "Y.Ayari",
     "goals": 2,
     "team": "SWE"
@@ -143,10 +148,5 @@
     "name": "Felix Nmecha",
     "goals": 1,
     "team": "GER"
-  },
-  {
-    "name": "G. Reyna",
-    "goals": 1,
-    "team": "USA"
   }
 ]
