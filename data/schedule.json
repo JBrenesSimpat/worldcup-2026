@@ -149,7 +149,7 @@
     "stage": "group",
     "datetime": "2026-06-14T17:00:00Z",
     "home": "GER",
-    "away": "CUR",
+    "away": "CUW",
     "score": {
       "home": 7,
       "away": 1
@@ -257,7 +257,7 @@
     "stage": "group",
     "datetime": "2026-06-15T22:00:00Z",
     "home": "KSA",
-    "away": "URY",
+    "away": "URU",
     "score": {
       "home": 1,
       "away": 1
@@ -617,7 +617,7 @@
     "stage": "group",
     "datetime": "2026-06-21T00:00:00Z",
     "home": "ECU",
-    "away": "CUR",
+    "away": "CUW",
     "score": {
       "home": null,
       "away": null
@@ -688,7 +688,7 @@
     "apiId": 537372,
     "stage": "group",
     "datetime": "2026-06-21T22:00:00Z",
-    "home": "URY",
+    "home": "URU",
     "away": "CPV",
     "score": {
       "home": null,
@@ -994,7 +994,7 @@
     "apiId": 537356,
     "stage": "group",
     "datetime": "2026-06-25T20:00:00Z",
-    "home": "CUR",
+    "home": "CUW",
     "away": "CIV",
     "score": {
       "home": null,
@@ -1120,7 +1120,7 @@
     "apiId": 537373,
     "stage": "group",
     "datetime": "2026-06-27T00:00:00Z",
-    "home": "URY",
+    "home": "URU",
     "away": "ESP",
     "score": {
       "home": null,
