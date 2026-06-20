@@ -551,7 +551,7 @@
       "away": 0
     },
     "winner": "home",
-    "status": "live",
+    "status": "finished",
     "group": "C",
     "matchday": 2,
     "venue": "Lincoln Financial Field",
@@ -565,11 +565,11 @@
     "home": "TUR",
     "away": "PAR",
     "score": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 1
     },
-    "winner": null,
-    "status": "scheduled",
+    "winner": "away",
+    "status": "live",
     "group": "D",
     "matchday": 2,
     "venue": "Levi's Stadium",
