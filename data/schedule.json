@@ -601,11 +601,11 @@
     "home": "GER",
     "away": "CIV",
     "score": {
-      "home": 1,
+      "home": 2,
       "away": 1
     },
-    "winner": null,
-    "status": "live",
+    "winner": "home",
+    "status": "finished",
     "group": "E",
     "matchday": 2,
     "venue": "BMO Field",
