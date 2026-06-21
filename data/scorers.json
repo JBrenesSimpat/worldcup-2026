@@ -75,6 +75,11 @@
     "team": "BRA"
   },
   {
+    "name": "Mikel Oyarzabal",
+    "goals": 2,
+    "team": "ESP"
+  },
+  {
     "name": "Y.Ayari",
     "goals": 2,
     "team": "SWE"
@@ -143,10 +148,5 @@
     "name": "C. Larin",
     "goals": 1,
     "team": "CAN"
-  },
-  {
-    "name": "C. Metcalfe",
-    "goals": 1,
-    "team": "AUS"
   }
 ]
