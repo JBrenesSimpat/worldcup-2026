@@ -10,6 +10,11 @@
     "team": "ARG"
   },
   {
+    "name": "Aiash Ivida",
+    "goals": 2,
+    "team": "JPN"
+  },
+  {
     "name": "Aymen Hussein",
     "goals": 2,
     "team": "IRQ"
@@ -93,11 +98,6 @@
     "name": "Abdulelah Al-Amri",
     "goals": 1,
     "team": "KSA"
-  },
-  {
-    "name": "Aiash Ivida",
-    "goals": 1,
-    "team": "JPN"
   },
   {
     "name": "Alex Freeman",

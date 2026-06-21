@@ -257,7 +257,7 @@
     "stage": "group",
     "datetime": "2026-06-15T22:00:00Z",
     "home": "KSA",
-    "away": "URY",
+    "away": "URU",
     "score": {
       "home": 1,
       "away": 1
@@ -638,10 +638,10 @@
     "away": "JPN",
     "score": {
       "home": 0,
-      "away": 2
+      "away": 4
     },
     "winner": "away",
-    "status": "live",
+    "status": "finished",
     "group": "F",
     "matchday": 2,
     "venue": "Estadio BBVA",
@@ -688,7 +688,7 @@
     "apiId": 537372,
     "stage": "group",
     "datetime": "2026-06-21T22:00:00Z",
-    "home": "URY",
+    "home": "URU",
     "away": "CPV",
     "score": {
       "home": null,
@@ -1120,7 +1120,7 @@
     "apiId": 537373,
     "stage": "group",
     "datetime": "2026-06-27T00:00:00Z",
-    "home": "URY",
+    "home": "URU",
     "away": "ESP",
     "score": {
       "home": null,
