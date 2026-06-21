@@ -95,6 +95,11 @@
     "team": "KSA"
   },
   {
+    "name": "Aiash Ivida",
+    "goals": 1,
+    "team": "JPN"
+  },
+  {
     "name": "Alex Freeman",
     "goals": 1,
     "team": "USA"
@@ -143,10 +148,5 @@
     "name": "C. Metcalfe",
     "goals": 1,
     "team": "AUS"
-  },
-  {
-    "name": "C. Summerville",
-    "goals": 1,
-    "team": "NED"
   }
 ]
