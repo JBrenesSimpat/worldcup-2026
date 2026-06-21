@@ -75,6 +75,11 @@
     "team": "BRA"
   },
   {
+    "name": "Maximiliano Araújo",
+    "goals": 2,
+    "team": "URY"
+  },
+  {
     "name": "Mikel Oyarzabal",
     "goals": 2,
     "team": "ESP"
@@ -103,6 +108,11 @@
     "name": "Abdulelah Al-Amri",
     "goals": 1,
     "team": "KSA"
+  },
+  {
+    "name": "Agustín Canobbio",
+    "goals": 1,
+    "team": "URY"
   },
   {
     "name": "Alex Freeman",
@@ -138,15 +148,5 @@
     "name": "B. Khoukhi",
     "goals": 1,
     "team": "QAT"
-  },
-  {
-    "name": "Breel Embolo",
-    "goals": 1,
-    "team": "SUI"
-  },
-  {
-    "name": "C. Larin",
-    "goals": 1,
-    "team": "CAN"
   }
 ]

@@ -691,11 +691,11 @@
     "home": "URU",
     "away": "CPV",
     "score": {
-      "home": null,
-      "away": null
+      "home": 2,
+      "away": 2
     },
     "winner": null,
-    "status": "scheduled",
+    "status": "live",
     "group": "H",
     "matchday": 2,
     "venue": "Hard Rock Stadium",
