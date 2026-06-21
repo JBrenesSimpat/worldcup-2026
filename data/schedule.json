@@ -655,11 +655,11 @@
     "home": "ESP",
     "away": "KSA",
     "score": {
-      "home": null,
-      "away": null
+      "home": 4,
+      "away": 0
     },
-    "winner": null,
-    "status": "scheduled",
+    "winner": "home",
+    "status": "live",
     "group": "H",
     "matchday": 2,
     "venue": "Mercedes-Benz Stadium",
