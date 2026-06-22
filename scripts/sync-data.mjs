@@ -111,6 +111,37 @@ function groupLetter(g) {
   return g && g.startsWith("GROUP_") ? g.replace("GROUP_", "") : undefined;
 }
 
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+// Bounded retry for flaky upstreams: worldcup26.ir has intermittent DNS failures
+// (EAI_AGAIN) and occasionally returns an empty 200; football-data free tier
+// rate-limits. A single transient blip must NOT cost us a whole 30-min poll
+// cycle, so we retry in-process instead of waiting for the next scheduled run
+// (which is what used to make the Action "need two consecutive runs").
+async function fetchJSON(
+  url,
+  { headers, tries = 3, backoffMs = 800, timeoutMs = 10000 } = {},
+) {
+  let lastErr;
+  for (let attempt = 1; attempt <= tries; attempt++) {
+    try {
+      const ctrl = new AbortController();
+      const timer = setTimeout(() => ctrl.abort(), timeoutMs);
+      try {
+        const res = await fetch(url, { headers, signal: ctrl.signal });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return await res.json();
+      } finally {
+        clearTimeout(timer);
+      }
+    } catch (e) {
+      lastErr = e;
+      if (attempt < tries) await sleep(backoffMs * attempt);
+    }
+  }
+  throw lastErr;
+}
+
 // Hybrid guard: when MATCH_WINDOW_ONLY=1, only hit the API if a match is
 // currently in progress (kickoff − 15 min … kickoff + 3 h). Lets the workflow
 // poll often but stay a no-op outside actual match times.
@@ -149,22 +180,28 @@ async function main() {
   let teams;
   let matches;
   try {
-    const res = await fetch(
-      "https://api.football-data.org/v4/competitions/WC/matches",
-      { headers: { "X-Auth-Token": TOKEN } },
-    );
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const apiMatches = (await res.json()).matches ?? [];
+    const apiMatches =
+      (
+        await fetchJSON(
+          "https://api.football-data.org/v4/competitions/WC/matches",
+          { headers: { "X-Auth-Token": TOKEN } },
+        )
+      ).matches ?? [];
     if (apiMatches.length === 0) throw new Error("empty response");
 
     const teamMap = new Map();
     for (const m of apiMatches) {
       if (m.stage !== "GROUP_STAGE") continue;
       for (const tm of [m.homeTeam, m.awayTeam]) {
-        if (!tm?.tla || teamMap.has(tm.tla)) continue;
-        const ref = REF[tm.tla] ?? { flag: "🏳️", es: tm.name };
-        teamMap.set(tm.tla, {
-          code: tm.tla,
+        // Normalize the TLA (e.g. URU→URY) so codes stay consistent with REF
+        // and with the worldcup26 score overlay regardless of which form the
+        // API serves — otherwise the team gets a blank flag and its scores
+        // never match during overlay.
+        const code = tm?.tla ? normCode(tm.tla) : null;
+        if (!code || teamMap.has(code)) continue;
+        const ref = REF[code] ?? { flag: "🏳️", es: tm.name };
+        teamMap.set(code, {
+          code,
           en: tm.name,
           es: ref.es,
           flag: ref.flag,
@@ -185,8 +222,8 @@ async function main() {
           apiId: m.id,
           stage: STAGE_MAP[m.stage] ?? "group",
           datetime: m.utcDate,
-          home: m.homeTeam?.tla ?? null,
-          away: m.awayTeam?.tla ?? null,
+          home: m.homeTeam?.tla ? normCode(m.homeTeam.tla) : null,
+          away: m.awayTeam?.tla ? normCode(m.awayTeam.tla) : null,
           score: {
             home: m.score?.fullTime?.home ?? null,
             away: m.score?.fullTime?.away ?? null,
@@ -283,10 +320,16 @@ function wcScore(wc) {
 }
 
 // Fetch worldcup26 teams + games ONCE; reused for scores and scorers.
+// An empty (but HTTP 200) payload is treated as a failure: returning it would
+// otherwise wipe good scores/scorers, so we throw and let the caller keep the
+// committed data instead.
 async function fetchWorldcup() {
-  const wcTeams = (await (await fetch("https://worldcup26.ir/get/teams")).json()).teams ?? [];
+  const wcTeams = (await fetchJSON("https://worldcup26.ir/get/teams")).teams ?? [];
+  const wcGames = (await fetchJSON("https://worldcup26.ir/get/games")).games ?? [];
+  if (wcTeams.length === 0 || wcGames.length === 0) {
+    throw new Error("empty worldcup26 payload");
+  }
   const codeByWcId = new Map(wcTeams.map((t) => [t.id, normCode(t.fifa_code)]));
-  const wcGames = (await (await fetch("https://worldcup26.ir/get/games")).json()).games ?? [];
   return { codeByWcId, wcGames };
 }
 
@@ -370,11 +413,15 @@ function buildTopScorers({ codeByWcId, wcGames }) {
     .sort((a, b) => b.goals - a.goals || a.name.localeCompare(b.name))
     .slice(0, 30);
 
-  writeFileSync(
-    join(dataDir, "scorers.json"),
-    JSON.stringify(list, null, 2) + "\n",
-    "utf8",
-  );
+  // Never replace a good scorer list with an empty one (belt-and-suspenders on
+  // top of the empty-payload guard in fetchWorldcup): keep the committed data.
+  const outPath = join(dataDir, "scorers.json");
+  if (list.length === 0 && existsSync(outPath)) {
+    const prev = JSON.parse(readFileSync(outPath, "utf8"));
+    if (Array.isArray(prev) && prev.length > 0) return prev.length;
+  }
+
+  writeFileSync(outPath, JSON.stringify(list, null, 2) + "\n", "utf8");
   return list.length;
 }
 
