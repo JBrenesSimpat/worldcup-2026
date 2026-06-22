@@ -43,8 +43,8 @@
     "home": "CAN",
     "away": "BIH",
     "score": {
-      "home": null,
-      "away": null
+      "home": 1,
+      "away": 1
     },
     "winner": null,
     "status": "finished",
@@ -727,11 +727,11 @@
     "home": "ARG",
     "away": "AUT",
     "score": {
-      "home": 0,
+      "home": 2,
       "away": 0
     },
-    "winner": null,
-    "status": "live",
+    "winner": "home",
+    "status": "finished",
     "group": "J",
     "matchday": 2,
     "venue": "AT&T Stadium",
