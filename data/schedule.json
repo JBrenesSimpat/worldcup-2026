@@ -709,11 +709,11 @@
     "home": "NZL",
     "away": "EGY",
     "score": {
-      "home": null,
-      "away": null
+      "home": 1,
+      "away": 3
     },
-    "winner": null,
-    "status": "scheduled",
+    "winner": "away",
+    "status": "finished",
     "group": "G",
     "matchday": 2,
     "venue": "BC Place",
