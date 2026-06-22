@@ -12,8 +12,8 @@ on:
     # Every 30 min (at :07 and :37 to dodge top-of-hour congestion), during the
     # daily match window. The script no-ops when no match is live, so non-match
     # days/hours cost nothing.
-    - cron: "7,37 16-23 * * *"   # afternoon/evening matches (Americas), UTC
-    - cron: "7,37 0-7 * * *"     # late games incl. extra time/penalties, UTC
+    - cron: "2,32 16-23 * * *" # afternoon/evening matches (Americas), UTC
+    - cron: "2,32 0-7 * * *" # late games incl. extra time/penalties, UTC
     # Daily full sync at 12:07 UTC (catches schedule/fixture changes)
     - cron: "7 12 * * *"
   workflow_dispatch: {}
