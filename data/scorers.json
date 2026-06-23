@@ -70,6 +70,11 @@
     "team": "NED"
   },
   {
+    "name": "Kylian Mbappé",
+    "goals": 2,
+    "team": "FRA"
+  },
+  {
     "name": "Matheus Cunha",
     "goals": 2,
     "team": "BRA"
@@ -143,10 +148,5 @@
     "name": "B. Barcola",
     "goals": 1,
     "team": "FRA"
-  },
-  {
-    "name": "B. Khoukhi",
-    "goals": 1,
-    "team": "QAT"
   }
 ]
