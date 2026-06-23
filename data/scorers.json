@@ -120,6 +120,11 @@
     "team": "UZB"
   },
   {
+    "name": "Abdalvhid Namtvf",
+    "goals": 1,
+    "team": "POR"
+  },
+  {
     "name": "Abdulelah Al-Amri",
     "goals": 1,
     "team": "KSA"
@@ -143,10 +148,5 @@
     "name": "Ali Avlvan",
     "goals": 1,
     "team": "JOR"
-  },
-  {
-    "name": "Amine Gouiri",
-    "goals": 1,
-    "team": "ALG"
   }
 ]

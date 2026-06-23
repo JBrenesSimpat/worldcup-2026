@@ -799,7 +799,7 @@
     "home": "POR",
     "away": "UZB",
     "score": {
-      "home": 3,
+      "home": 5,
       "away": 0
     },
     "winner": "home",
@@ -1338,7 +1338,7 @@
     "apiId": 537415,
     "stage": "r32",
     "datetime": "2026-06-29T20:30:00Z",
-    "home": "GER",
+    "home": null,
     "away": null,
     "score": {
       "home": null,
@@ -1414,7 +1414,7 @@
     "apiId": 537425,
     "stage": "r32",
     "datetime": "2026-07-01T01:00:00Z",
-    "home": "MEX",
+    "home": null,
     "away": null,
     "score": {
       "home": null,
@@ -1471,7 +1471,7 @@
     "apiId": 537421,
     "stage": "r32",
     "datetime": "2026-07-02T00:00:00Z",
-    "home": "USA",
+    "home": null,
     "away": null,
     "score": {
       "home": null,
