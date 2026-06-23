@@ -764,10 +764,10 @@
     "away": "SEN",
     "score": {
       "home": 3,
-      "away": 1
+      "away": 2
     },
     "winner": "home",
-    "status": "live",
+    "status": "finished",
     "group": "I",
     "matchday": 2,
     "venue": "MetLife Stadium",
@@ -781,11 +781,11 @@
     "home": "JOR",
     "away": "ALG",
     "score": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
     },
     "winner": null,
-    "status": "scheduled",
+    "status": "live",
     "group": "J",
     "matchday": 2,
     "venue": "Levi's Stadium",

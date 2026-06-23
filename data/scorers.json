@@ -50,6 +50,11 @@
     "team": "ENG"
   },
   {
+    "name": "Ismaïla Sarr",
+    "goals": 2,
+    "team": "SEN"
+  },
+  {
     "name": "Jvhan Mnzambi",
     "goals": 2,
     "team": "SUI"
@@ -143,10 +148,5 @@
     "name": "Asmaail Saibari",
     "goals": 1,
     "team": "MAR"
-  },
-  {
-    "name": "B. Barcola",
-    "goals": 1,
-    "team": "FRA"
   }
 ]
