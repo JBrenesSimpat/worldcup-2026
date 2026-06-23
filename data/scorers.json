@@ -5,6 +5,11 @@
     "team": "ARG"
   },
   {
+    "name": "Erling Haaland",
+    "goals": 4,
+    "team": "NOR"
+  },
+  {
     "name": "Jonathan David",
     "goals": 3,
     "team": "CAN"
@@ -33,11 +38,6 @@
     "name": "Elijah Just",
     "goals": 2,
     "team": "NZL"
-  },
-  {
-    "name": "Erling Haaland",
-    "goals": 2,
-    "team": "NOR"
   },
   {
     "name": "F. Balogun",
