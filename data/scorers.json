@@ -125,6 +125,11 @@
     "team": "URY"
   },
   {
+    "name": "Al Rashdan",
+    "goals": 1,
+    "team": "JOR"
+  },
+  {
     "name": "Alex Freeman",
     "goals": 1,
     "team": "USA"
@@ -143,10 +148,5 @@
     "name": "Armin Mhmich",
     "goals": 1,
     "team": "BIH"
-  },
-  {
-    "name": "Asmaail Saibari",
-    "goals": 1,
-    "team": "MAR"
   }
 ]
