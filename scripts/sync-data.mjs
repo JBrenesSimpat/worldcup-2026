@@ -371,12 +371,21 @@ function overlayScores(matches, { codeByWcId, wcGames }) {
 // --- Top scorers (Golden Boot), parsed from worldcup26.ir scorer strings ---
 // Strings look like {"Felix Nmecha 7'","K. Havertz 45'+5'(p)"} — quotes can be
 // straight or curly; "(OG)" = own goal (excluded); "(p)" = penalty (counts).
-function scorerKey(name) {
-  return name
+// Dedup key that collapses the two forms worldcup26 emits for one player:
+// it lists e.g. "Kylian Mbappé" in one match and "K. Mbappé" in another.
+// Keying on team + surname + first initial merges them (both → "fra|k|mbappe")
+// while still telling apart different players (different surname/team/initial).
+function scorerKey(name, teamCode) {
+  const parts = name
     .toLowerCase()
     .normalize("NFD")
     .replace(/[̀-ͯ]/g, "")
-    .replace(/[^a-z0-9]/g, "");
+    .split(/[^a-z0-9]+/)
+    .filter(Boolean);
+  if (parts.length === 0) return "";
+  const surname = parts[parts.length - 1];
+  const initial = parts.length > 1 ? parts[0][0] : "";
+  return `${teamCode ?? ""}|${initial}|${surname}`;
 }
 
 function addScorers(raw, teamCode, tally) {
@@ -391,7 +400,7 @@ function addScorers(raw, teamCode, tally) {
       .replace(/['’`]+$/, "")
       .trim();
     if (!name) continue;
-    const key = scorerKey(name);
+    const key = scorerKey(name, teamCode);
     if (!key) continue;
     const cur = tally.get(key);
     if (cur) {

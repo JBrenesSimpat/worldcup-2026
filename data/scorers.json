@@ -10,6 +10,11 @@
     "team": "NOR"
   },
   {
+    "name": "Kylian Mbappé",
+    "goals": 4,
+    "team": "FRA"
+  },
+  {
     "name": "Jonathan David",
     "goals": 3,
     "team": "CAN"
@@ -20,12 +25,12 @@
     "team": "JPN"
   },
   {
-    "name": "Aymen Hussein",
+    "name": "Brian Brobbey",
     "goals": 2,
-    "team": "IRQ"
+    "team": "NED"
   },
   {
-    "name": "Brian Brobbey",
+    "name": "Crysencio Summerville",
     "goals": 2,
     "team": "NED"
   },
@@ -65,19 +70,9 @@
     "team": "GER"
   },
   {
-    "name": "K. Mbappé",
-    "goals": 2,
-    "team": "FRA"
-  },
-  {
     "name": "Kvdi Khakpv",
     "goals": 2,
     "team": "NED"
-  },
-  {
-    "name": "Kylian Mbappé",
-    "goals": 2,
-    "team": "FRA"
   },
   {
     "name": "Matheus Cunha",
@@ -93,6 +88,11 @@
     "name": "Mikel Oyarzabal",
     "goals": 2,
     "team": "ESP"
+  },
+  {
+    "name": "Vinícius Júnior",
+    "goals": 2,
+    "team": "BRA"
   },
   {
     "name": "Y.Ayari",
