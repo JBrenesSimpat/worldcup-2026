@@ -763,11 +763,11 @@
     "home": "NOR",
     "away": "SEN",
     "score": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
     },
     "winner": null,
-    "status": "scheduled",
+    "status": "live",
     "group": "I",
     "matchday": 2,
     "venue": "MetLife Stadium",
