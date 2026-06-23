@@ -782,9 +782,9 @@
     "away": "ALG",
     "score": {
       "home": 1,
-      "away": 0
+      "away": 1
     },
-    "winner": "home",
+    "winner": null,
     "status": "live",
     "group": "J",
     "matchday": 2,
