@@ -30,6 +30,11 @@
     "team": "NED"
   },
   {
+    "name": "Cristiano Ronaldo",
+    "goals": 2,
+    "team": "POR"
+  },
+  {
     "name": "Crysencio Summerville",
     "goals": 2,
     "team": "NED"
@@ -143,10 +148,5 @@
     "name": "Amine Gouiri",
     "goals": 1,
     "team": "ALG"
-  },
-  {
-    "name": "Anthony Elanga",
-    "goals": 1,
-    "team": "SWE"
   }
 ]
