@@ -782,10 +782,10 @@
     "away": "ALG",
     "score": {
       "home": 1,
-      "away": 1
+      "away": 2
     },
-    "winner": null,
-    "status": "live",
+    "winner": "away",
+    "status": "finished",
     "group": "J",
     "matchday": 2,
     "venue": "Levi's Stadium",

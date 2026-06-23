@@ -65,13 +65,18 @@
     "team": "GER"
   },
   {
+    "name": "K. Mbappé",
+    "goals": 2,
+    "team": "FRA"
+  },
+  {
     "name": "Kvdi Khakpv",
     "goals": 2,
     "team": "NED"
   },
   {
     "name": "Kylian Mbappé",
-    "goals": 4,
+    "goals": 2,
     "team": "FRA"
   },
   {
@@ -135,13 +140,13 @@
     "team": "JOR"
   },
   {
+    "name": "Amine Gouiri",
+    "goals": 1,
+    "team": "ALG"
+  },
+  {
     "name": "Anthony Elanga",
     "goals": 1,
     "team": "SWE"
-  },
-  {
-    "name": "Armin Mhmich",
-    "goals": 1,
-    "team": "BIH"
   }
 ]
