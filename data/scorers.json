@@ -15,6 +15,11 @@
     "team": "FRA"
   },
   {
+    "name": "Vinícius Júnior",
+    "goals": 4,
+    "team": "BRA"
+  },
+  {
     "name": "Jonathan David",
     "goals": 3,
     "team": "CAN"
@@ -25,7 +30,7 @@
     "team": "SUI"
   },
   {
-    "name": "Vinícius Júnior",
+    "name": "Matheus Cunha",
     "goals": 3,
     "team": "BRA"
   },
@@ -38,6 +43,11 @@
     "name": "Armin Mhmich",
     "goals": 2,
     "team": "BIH"
+  },
+  {
+    "name": "Asmaail Saibari",
+    "goals": 2,
+    "team": "MAR"
   },
   {
     "name": "Brian Brobbey",
@@ -95,11 +105,6 @@
     "team": "NED"
   },
   {
-    "name": "Matheus Cunha",
-    "goals": 2,
-    "team": "BRA"
-  },
-  {
     "name": "Maximiliano Araújo",
     "goals": 2,
     "team": "URY"
@@ -143,10 +148,5 @@
     "name": "Abdulelah Al-Amri",
     "goals": 1,
     "team": "KSA"
-  },
-  {
-    "name": "Abvnad",
-    "goals": 1,
-    "team": "BIH"
   }
 ]

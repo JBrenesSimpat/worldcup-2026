@@ -907,8 +907,8 @@
     "home": "MAR",
     "away": "HAI",
     "score": {
-      "home": 1,
-      "away": 1
+      "home": 2,
+      "away": 2
     },
     "winner": null,
     "status": "live",
@@ -926,7 +926,7 @@
     "away": "BRA",
     "score": {
       "home": 0,
-      "away": 1
+      "away": 3
     },
     "winner": "away",
     "status": "live",
