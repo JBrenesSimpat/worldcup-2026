@@ -907,10 +907,10 @@
     "home": "MAR",
     "away": "HAI",
     "score": {
-      "home": 2,
+      "home": 3,
       "away": 2
     },
-    "winner": null,
+    "winner": "home",
     "status": "live",
     "group": "C",
     "matchday": 3,
