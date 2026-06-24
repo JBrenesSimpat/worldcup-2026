@@ -22,6 +22,12 @@ function SlotRow({
   const { locale, t } = useI18n();
   const team = teamByCode(slot.code);
   const name = team ? teamName(team, locale) : slotLabelText(slot.label, t);
+  // Projected badge: "1.º A"/"2.º B" for winners/runners-up, or — for a best
+  // third, whose label lists candidate groups — "3.º" + the team's own group.
+  const badge =
+    team && slot.label?.startsWith("3:")
+      ? `${t("label.rank3")} ${team.group}`
+      : positionLabel(slot.label, t);
 
   return (
     <div
@@ -40,12 +46,12 @@ function SlotRow({
         >
           {name}
         </span>
-        {slot.projected && (
+        {slot.projected && badge && (
           <span
             className="shrink-0 rounded bg-emerald-50 px-1 text-[0.6rem] font-bold text-pitch-dark"
             title={t("bracket.clinched")}
           >
-            {positionLabel(slot.label, t)}
+            {badge}
           </span>
         )}
       </span>

@@ -24,6 +24,12 @@ export default function TeamBadge({
 
   const flag = team ? team.flag : "🏳️";
   const name = team ? teamName(team, locale) : slotLabelText(label, t);
+  // "1.º A"/"2.º B" for winners/runners-up; for a best third (label lists
+  // candidate groups) show "3.º" + the team's own group.
+  const badge =
+    team && label?.startsWith("3:")
+      ? `${t("label.rank3")} ${team.group}`
+      : positionLabel(label, t);
 
   return (
     <div
@@ -40,12 +46,12 @@ export default function TeamBadge({
       >
         {name}
       </span>
-      {projected && (
+      {projected && badge && (
         <span
           className="rounded bg-emerald-50 px-1.5 py-0.5 text-[0.6rem] font-bold text-pitch-dark"
           title={t("bracket.clinched")}
         >
-          {positionLabel(label, t)}
+          {badge}
         </span>
       )}
     </div>

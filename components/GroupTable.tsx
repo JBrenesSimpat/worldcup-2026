@@ -2,19 +2,25 @@
 
 import { useI18n } from "@/lib/i18n";
 import { teamName } from "@/lib/data";
-import { groupStandings } from "@/lib/standings";
+import { bestThirdTeamCodes, groupStandings } from "@/lib/standings";
 import type { GroupId } from "@/lib/types";
 
-// Qualification styling by position: 1st/2nd advance, 3rd may advance as a best third.
-function posStyles(i: number): { row: string; badge: string } {
+// Qualification styling by position: 1st/2nd advance (green); a 3rd place is
+// gold while it can still be a best third, or once confirmed as one.
+function posStyles(i: number, thirdQualifies: boolean): { row: string; badge: string } {
   if (i < 2) return { row: "bg-emerald-50/70", badge: "bg-pitch text-white" };
-  if (i === 2) return { row: "bg-amber-50/70", badge: "bg-gold text-amber-900" };
+  if (i === 2 && thirdQualifies)
+    return { row: "bg-amber-50/70", badge: "bg-gold text-amber-900" };
   return { row: "", badge: "bg-line text-muted" };
 }
 
 export default function GroupTable({ group }: { group: GroupId }) {
   const { locale, t } = useI18n();
   const rows = groupStandings(group);
+  // Once the best eight thirds are decided, only the qualifiers stay gold;
+  // until then every third place is still a candidate.
+  const qualifiedThirds = bestThirdTeamCodes();
+  const thirdsDecided = qualifiedThirds.size > 0;
 
   return (
     <div className="overflow-hidden rounded-2xl border border-line bg-surface">
@@ -37,7 +43,9 @@ export default function GroupTable({ group }: { group: GroupId }) {
         </thead>
         <tbody>
           {rows.map((s, i) => {
-            const styles = posStyles(i);
+            const thirdQualifies =
+              !thirdsDecided || qualifiedThirds.has(s.team.code);
+            const styles = posStyles(i, thirdQualifies);
             return (
               <tr key={s.team.code} className={`border-t border-line ${styles.row}`}>
                 <td className="px-3 py-2 text-left">

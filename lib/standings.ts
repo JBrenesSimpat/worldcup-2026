@@ -1,5 +1,26 @@
 import { matches, teams } from "./data";
+import thirdCombosData from "@/data/third-place-combinations.json";
 import type { GroupId, Match, Team } from "./types";
+
+const THIRD_COMBOS = thirdCombosData as {
+  /** Group-winner opponents in the same column order as `combinations` values. */
+  opponentOrder: string[];
+  /** Sorted 8-group key → 8 group letters (in `opponentOrder`) supplying each third. */
+  combinations: Record<string, string>;
+};
+
+// R32 third-place slot label (as authored in data/bracket.json) for each
+// group-winner opponent. Mirrors the third labels in scripts/build-bracket.mjs.
+const THIRD_SLOT_LABEL: Record<string, string> = {
+  "1A": "3:C/E/F/H/I",
+  "1B": "3:E/F/G/I/J",
+  "1D": "3:B/E/F/I/J",
+  "1E": "3:A/B/C/D/F",
+  "1G": "3:A/E/H/I/J",
+  "1I": "3:C/D/F/G/H",
+  "1K": "3:D/E/I/J/L",
+  "1L": "3:E/H/I/J/K",
+};
 
 export interface Standing {
   team: Team;
@@ -155,6 +176,18 @@ export function clinchedSlots(): Record<string, string> {
     });
 
     const gm = matches.filter((m) => m.stage === "group" && m.group === G);
+
+    // Whole group decided → take 1st/2nd straight from the final standings,
+    // which apply the full official tiebreakers (head-to-head, then overall
+    // GD/goals). The points-only projection below can't pin a runner-up who is
+    // level on points with the third-placed team, even once it's settled.
+    if (gm.length > 0 && gm.every(isFinished)) {
+      const table = groupStandings(G);
+      if (table[0]) result[`1${G}`] = table[0].team.code;
+      if (table[1]) result[`2${G}`] = table[1].team.code;
+      continue;
+    }
+
     for (const m of gm) {
       if (!m.home || !m.away || pts[m.home] === undefined || pts[m.away] === undefined)
         continue;
@@ -210,6 +243,79 @@ export function clinchedSlots(): Record<string, string> {
     }
   }
 
+  Object.assign(result, bestThirdSlots());
+
   clinchedMemo = result;
+  return result;
+}
+
+/**
+ * Team codes of the eight confirmed best third-placed teams, or an empty set
+ * while the qualifiers are still undecided. Derived from the third-slot entries
+ * that {@link clinchedSlots} pins once the group stage is complete.
+ */
+export function bestThirdTeamCodes(): Set<string> {
+  return new Set(
+    Object.entries(clinchedSlots())
+      .filter(([label]) => label.startsWith("3:"))
+      .map(([, code]) => code),
+  );
+}
+
+/**
+ * Assigns the eight best third-placed teams to their Round-of-32 slots
+ * ({ "3:C/E/F/H/I": "FRA", … }), but only once the WHOLE group stage is
+ * finished and the eight qualifiers are unambiguous.
+ *
+ * FIFA ranks thirds by points, then overall goal difference, then goals scored;
+ * the remaining tiebreakers (discipline, FIFA ranking, drawing of lots) aren't
+ * in our data, so if the 8th and 9th thirds are level on all three we pin
+ * nothing. Which slot each qualifier takes follows FIFA's fixed Annex C table
+ * (data/third-place-combinations.json) — it depends on the SET of qualifying
+ * groups, not on their order, so identifying the eight teams isn't enough on
+ * its own to fill the bracket.
+ */
+function bestThirdSlots(): Record<string, string> {
+  const groupMatches = matches.filter((m) => m.stage === "group");
+  if (groupMatches.length === 0 || !groupMatches.every(isFinished)) return {};
+
+  // Each group's third-placed team (groupStandings already applies the full
+  // in-group tiebreakers), then ranked across all groups.
+  const thirds = GROUP_IDS.map((G) => {
+    const s = groupStandings(G)[2];
+    return s
+      ? { group: G, code: s.team.code, points: s.points, gd: s.gd, gf: s.gf }
+      : null;
+  }).filter((t): t is NonNullable<typeof t> => t !== null);
+  if (thirds.length < 9) return {};
+
+  thirds.sort((a, b) => b.points - a.points || b.gd - a.gd || b.gf - a.gf);
+
+  // Last qualifying spot tied beyond the criteria we have → don't guess.
+  const eighth = thirds[7];
+  const ninth = thirds[8];
+  if (
+    eighth.points === ninth.points &&
+    eighth.gd === ninth.gd &&
+    eighth.gf === ninth.gf
+  ) {
+    return {};
+  }
+
+  const key = thirds
+    .slice(0, 8)
+    .map((t) => t.group)
+    .sort()
+    .join("");
+  const assigned = THIRD_COMBOS.combinations[key];
+  if (!assigned) return {};
+
+  const codeByGroup = new Map(thirds.map((t) => [t.group, t.code]));
+  const result: Record<string, string> = {};
+  THIRD_COMBOS.opponentOrder.forEach((opponent, i) => {
+    const label = THIRD_SLOT_LABEL[opponent];
+    const code = codeByGroup.get(assigned[i] as GroupId);
+    if (label && code) result[label] = code;
+  });
   return result;
 }
