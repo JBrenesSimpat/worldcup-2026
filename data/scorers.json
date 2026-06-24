@@ -100,6 +100,11 @@
     "team": "ESP"
   },
   {
+    "name": "Rubén Vargas",
+    "goals": 2,
+    "team": "SUI"
+  },
+  {
     "name": "Vinícius Júnior",
     "goals": 2,
     "team": "BRA"
@@ -143,10 +148,5 @@
     "name": "Al Rashdan",
     "goals": 1,
     "team": "JOR"
-  },
-  {
-    "name": "Alex Freeman",
-    "goals": 1,
-    "team": "USA"
   }
 ]
