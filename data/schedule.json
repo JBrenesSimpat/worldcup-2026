@@ -871,11 +871,11 @@
     "home": "SUI",
     "away": "CAN",
     "score": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
     },
     "winner": null,
-    "status": "scheduled",
+    "status": "live",
     "group": "B",
     "matchday": 3,
     "venue": "BC Place",
@@ -889,11 +889,11 @@
     "home": "BIH",
     "away": "QAT",
     "score": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
     },
     "winner": null,
-    "status": "scheduled",
+    "status": "live",
     "group": "B",
     "matchday": 3,
     "venue": "Lumen Field",
