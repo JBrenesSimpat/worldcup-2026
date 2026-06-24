@@ -853,11 +853,11 @@
     "home": "COL",
     "away": "COD",
     "score": {
-      "home": 0,
+      "home": 1,
       "away": 0
     },
-    "winner": null,
-    "status": "live",
+    "winner": "home",
+    "status": "finished",
     "group": "K",
     "matchday": 2,
     "venue": "Estadio Akron",

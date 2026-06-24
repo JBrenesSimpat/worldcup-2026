@@ -40,6 +40,11 @@
     "team": "NED"
   },
   {
+    "name": "Dnil Mvnvz",
+    "goals": 2,
+    "team": "COL"
+  },
+  {
     "name": "Dniz Avndav",
     "goals": 2,
     "team": "GER"
@@ -143,10 +148,5 @@
     "name": "Alex Freeman",
     "goals": 1,
     "team": "USA"
-  },
-  {
-    "name": "Ali Avlvan",
-    "goals": 1,
-    "team": "JOR"
   }
 ]
