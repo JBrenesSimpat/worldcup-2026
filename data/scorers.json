@@ -20,6 +20,11 @@
     "team": "BRA"
   },
   {
+    "name": "Brian Brobbey",
+    "goals": 3,
+    "team": "NED"
+  },
+  {
     "name": "Jonathan David",
     "goals": 3,
     "team": "CAN"
@@ -48,11 +53,6 @@
     "name": "Asmaail Saibari",
     "goals": 2,
     "team": "MAR"
-  },
-  {
-    "name": "Brian Brobbey",
-    "goals": 2,
-    "team": "NED"
   },
   {
     "name": "Cristiano Ronaldo",

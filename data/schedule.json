@@ -1015,11 +1015,11 @@
     "home": "TUN",
     "away": "NED",
     "score": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 2
     },
-    "winner": null,
-    "status": "scheduled",
+    "winner": "away",
+    "status": "live",
     "group": "F",
     "matchday": 3,
     "venue": "Arrowhead Stadium",
@@ -1033,11 +1033,11 @@
     "home": "JPN",
     "away": "SWE",
     "score": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
     },
     "winner": null,
-    "status": "scheduled",
+    "status": "live",
     "group": "F",
     "matchday": 3,
     "venue": "AT&T Stadium",
