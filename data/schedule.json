@@ -944,9 +944,9 @@
     "away": "MEX",
     "score": {
       "home": 0,
-      "away": 0
+      "away": 3
     },
-    "winner": null,
+    "winner": "away",
     "status": "live",
     "group": "A",
     "matchday": 3,
@@ -961,10 +961,10 @@
     "home": "RSA",
     "away": "KOR",
     "score": {
-      "home": 0,
+      "home": 1,
       "away": 0
     },
-    "winner": null,
+    "winner": "home",
     "status": "live",
     "group": "A",
     "matchday": 3,
