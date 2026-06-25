@@ -947,7 +947,7 @@
       "away": 3
     },
     "winner": "away",
-    "status": "live",
+    "status": "finished",
     "group": "A",
     "matchday": 3,
     "venue": "Estadio Azteca",
@@ -965,7 +965,7 @@
       "away": 0
     },
     "winner": "home",
-    "status": "live",
+    "status": "finished",
     "group": "A",
     "matchday": 3,
     "venue": "Estadio BBVA",
