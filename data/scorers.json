@@ -115,6 +115,11 @@
     "team": "ESP"
   },
   {
+    "name": "Nikvlas Ph Ph",
+    "goals": 2,
+    "team": "CIV"
+  },
+  {
     "name": "Rubén Vargas",
     "goals": 2,
     "team": "SUI"
@@ -143,10 +148,5 @@
     "name": "Abdalvhid Namtvf",
     "goals": 1,
     "team": "POR"
-  },
-  {
-    "name": "Abdulelah Al-Amri",
-    "goals": 1,
-    "team": "KSA"
   }
 ]

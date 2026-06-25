@@ -979,11 +979,11 @@
     "home": "ECU",
     "away": "GER",
     "score": {
-      "home": 1,
+      "home": 2,
       "away": 1
     },
-    "winner": null,
-    "status": "live",
+    "winner": "home",
+    "status": "finished",
     "group": "E",
     "matchday": 3,
     "venue": "MetLife Stadium",
@@ -998,10 +998,10 @@
     "away": "CIV",
     "score": {
       "home": 0,
-      "away": 1
+      "away": 2
     },
     "winner": "away",
-    "status": "live",
+    "status": "finished",
     "group": "E",
     "matchday": 3,
     "venue": "Lincoln Financial Field",
