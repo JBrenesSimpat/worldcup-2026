@@ -911,7 +911,7 @@
       "away": 2
     },
     "winner": "home",
-    "status": "live",
+    "status": "finished",
     "group": "C",
     "matchday": 3,
     "venue": "Mercedes-Benz Stadium",
@@ -929,7 +929,7 @@
       "away": 3
     },
     "winner": "away",
-    "status": "live",
+    "status": "finished",
     "group": "C",
     "matchday": 3,
     "venue": "Hard Rock Stadium",
