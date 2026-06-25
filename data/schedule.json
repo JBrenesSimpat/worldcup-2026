@@ -943,11 +943,11 @@
     "home": "CZE",
     "away": "MEX",
     "score": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
     },
     "winner": null,
-    "status": "scheduled",
+    "status": "live",
     "group": "A",
     "matchday": 3,
     "venue": "Estadio Azteca",
@@ -961,11 +961,11 @@
     "home": "RSA",
     "away": "KOR",
     "score": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
     },
     "winner": null,
-    "status": "scheduled",
+    "status": "live",
     "group": "A",
     "matchday": 3,
     "venue": "Estadio BBVA",
