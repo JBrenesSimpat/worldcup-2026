@@ -1015,8 +1015,8 @@
     "home": "TUN",
     "away": "NED",
     "score": {
-      "home": 0,
-      "away": 2
+      "home": 1,
+      "away": 3
     },
     "winner": "away",
     "status": "live",
@@ -1033,8 +1033,8 @@
     "home": "JPN",
     "away": "SWE",
     "score": {
-      "home": 0,
-      "away": 0
+      "home": 1,
+      "away": 1
     },
     "winner": null,
     "status": "live",

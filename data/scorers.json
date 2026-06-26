@@ -45,6 +45,11 @@
     "team": "JPN"
   },
   {
+    "name": "Anthony Elanga",
+    "goals": 2,
+    "team": "SWE"
+  },
+  {
     "name": "Armin Mhmich",
     "goals": 2,
     "team": "BIH"
@@ -143,10 +148,5 @@
     "name": "Abas Bk Fiz Allh Af",
     "goals": 1,
     "team": "UZB"
-  },
-  {
-    "name": "Abdalvhid Namtvf",
-    "goals": 1,
-    "team": "POR"
   }
 ]
