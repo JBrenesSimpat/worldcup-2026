@@ -1052,9 +1052,9 @@
     "away": "USA",
     "score": {
       "home": 2,
-      "away": 1
+      "away": 2
     },
-    "winner": "home",
+    "winner": null,
     "status": "live",
     "group": "D",
     "matchday": 3,
@@ -1338,7 +1338,7 @@
     "apiId": 537415,
     "stage": "r32",
     "datetime": "2026-06-29T20:30:00Z",
-    "home": null,
+    "home": "GER",
     "away": null,
     "score": {
       "home": null,
@@ -1414,7 +1414,7 @@
     "apiId": 537425,
     "stage": "r32",
     "datetime": "2026-07-01T01:00:00Z",
-    "home": null,
+    "home": "MEX",
     "away": null,
     "score": {
       "home": null,
@@ -1471,7 +1471,7 @@
     "apiId": 537421,
     "stage": "r32",
     "datetime": "2026-07-02T00:00:00Z",
-    "home": null,
+    "home": "USA",
     "away": null,
     "score": {
       "home": null,
@@ -1566,7 +1566,7 @@
     "apiId": 537427,
     "stage": "r32",
     "datetime": "2026-07-03T22:00:00Z",
-    "home": null,
+    "home": "ARG",
     "away": null,
     "score": {
       "home": null,
