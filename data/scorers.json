@@ -30,6 +30,11 @@
     "team": "NED"
   },
   {
+    "name": "Ismaïla Sarr",
+    "goals": 3,
+    "team": "SEN"
+  },
+  {
     "name": "Jonathan David",
     "goals": 3,
     "team": "CAN"
@@ -100,11 +105,6 @@
     "team": "ENG"
   },
   {
-    "name": "Ismaïla Sarr",
-    "goals": 2,
-    "team": "SEN"
-  },
-  {
     "name": "K. Havertz",
     "goals": 2,
     "team": "GER"
@@ -130,6 +130,11 @@
     "team": "CIV"
   },
   {
+    "name": "Paph Gviih",
+    "goals": 2,
+    "team": "SEN"
+  },
+  {
     "name": "Rubén Vargas",
     "goals": 2,
     "team": "SUI"
@@ -143,10 +148,5 @@
     "name": "A. Diallo",
     "goals": 1,
     "team": "CIV"
-  },
-  {
-    "name": "A. Isak",
-    "goals": 1,
-    "team": "SWE"
   }
 ]
