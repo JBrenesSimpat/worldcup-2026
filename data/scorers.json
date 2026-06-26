@@ -15,6 +15,11 @@
     "team": "FRA"
   },
   {
+    "name": "Ousmane Dembélé",
+    "goals": 4,
+    "team": "FRA"
+  },
+  {
     "name": "Vinícius Júnior",
     "goals": 4,
     "team": "BRA"
@@ -143,10 +148,5 @@
     "name": "A. Isak",
     "goals": 1,
     "team": "SWE"
-  },
-  {
-    "name": "Abas Bk Fiz Allh Af",
-    "goals": 1,
-    "team": "UZB"
   }
 ]
