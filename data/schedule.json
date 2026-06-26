@@ -1300,8 +1300,8 @@
     "apiId": 537417,
     "stage": "r32",
     "datetime": "2026-06-28T19:00:00Z",
-    "home": null,
-    "away": null,
+    "home": "RSA",
+    "away": "CAN",
     "score": {
       "home": null,
       "away": null
@@ -1319,8 +1319,8 @@
     "apiId": 537423,
     "stage": "r32",
     "datetime": "2026-06-29T17:00:00Z",
-    "home": null,
-    "away": null,
+    "home": "BRA",
+    "away": "JPN",
     "score": {
       "home": null,
       "away": null
@@ -1338,7 +1338,7 @@
     "apiId": 537415,
     "stage": "r32",
     "datetime": "2026-06-29T20:30:00Z",
-    "home": null,
+    "home": "GER",
     "away": null,
     "score": {
       "home": null,
@@ -1357,8 +1357,8 @@
     "apiId": 537418,
     "stage": "r32",
     "datetime": "2026-06-30T01:00:00Z",
-    "home": null,
-    "away": null,
+    "home": "NED",
+    "away": "MAR",
     "score": {
       "home": null,
       "away": null
@@ -1414,7 +1414,7 @@
     "apiId": 537425,
     "stage": "r32",
     "datetime": "2026-07-01T01:00:00Z",
-    "home": null,
+    "home": "MEX",
     "away": null,
     "score": {
       "home": null,
@@ -1471,8 +1471,8 @@
     "apiId": 537421,
     "stage": "r32",
     "datetime": "2026-07-02T00:00:00Z",
-    "home": null,
-    "away": null,
+    "home": "USA",
+    "away": "BIH",
     "score": {
       "home": null,
       "away": null
@@ -1528,7 +1528,7 @@
     "apiId": 537429,
     "stage": "r32",
     "datetime": "2026-07-03T03:00:00Z",
-    "home": null,
+    "home": "SUI",
     "away": null,
     "score": {
       "home": null,
@@ -1547,7 +1547,7 @@
     "apiId": 537428,
     "stage": "r32",
     "datetime": "2026-07-03T18:00:00Z",
-    "home": null,
+    "home": "AUS",
     "away": null,
     "score": {
       "home": null,
@@ -1566,7 +1566,7 @@
     "apiId": 537427,
     "stage": "r32",
     "datetime": "2026-07-03T22:00:00Z",
-    "home": null,
+    "home": "ARG",
     "away": null,
     "score": {
       "home": null,
