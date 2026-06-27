@@ -1123,11 +1123,11 @@
     "home": "URY",
     "away": "ESP",
     "score": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 1
     },
-    "winner": null,
-    "status": "scheduled",
+    "winner": "away",
+    "status": "live",
     "group": "H",
     "matchday": 3,
     "venue": "Estadio Akron",
@@ -1141,11 +1141,11 @@
     "home": "CPV",
     "away": "KSA",
     "score": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
     },
     "winner": null,
-    "status": "scheduled",
+    "status": "live",
     "group": "H",
     "matchday": 3,
     "venue": "NRG Stadium",
