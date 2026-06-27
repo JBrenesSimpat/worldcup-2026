@@ -1217,7 +1217,7 @@
       "away": 1
     },
     "winner": "home",
-    "status": "live",
+    "status": "finished",
     "group": "L",
     "matchday": 3,
     "venue": "Lincoln Financial Field",
@@ -1376,7 +1376,7 @@
     "apiId": 537424,
     "stage": "r32",
     "datetime": "2026-06-30T17:00:00Z",
-    "home": null,
+    "home": "CIV",
     "away": null,
     "score": {
       "home": null,
