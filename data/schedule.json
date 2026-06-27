@@ -1196,9 +1196,9 @@
     "away": "ENG",
     "score": {
       "home": 0,
-      "away": 0
+      "away": 2
     },
-    "winner": null,
+    "winner": "away",
     "status": "live",
     "group": "L",
     "matchday": 3,
