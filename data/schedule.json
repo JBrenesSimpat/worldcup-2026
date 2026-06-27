@@ -1127,7 +1127,7 @@
       "away": 1
     },
     "winner": "away",
-    "status": "live",
+    "status": "finished",
     "group": "H",
     "matchday": 3,
     "venue": "Estadio Akron",
@@ -1145,7 +1145,7 @@
       "away": 0
     },
     "winner": null,
-    "status": "live",
+    "status": "finished",
     "group": "H",
     "matchday": 3,
     "venue": "NRG Stadium",
