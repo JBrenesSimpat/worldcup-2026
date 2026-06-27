@@ -115,6 +115,11 @@
     "team": "NED"
   },
   {
+    "name": "Leandro Trossard",
+    "goals": 2,
+    "team": "BEL"
+  },
+  {
     "name": "Maximiliano Araújo",
     "goals": 2,
     "team": "URY"
@@ -143,10 +148,5 @@
     "name": "Y.Ayari",
     "goals": 2,
     "team": "SWE"
-  },
-  {
-    "name": "A. Diallo",
-    "goals": 1,
-    "team": "CIV"
   }
 ]

@@ -1159,11 +1159,11 @@
     "home": "NZL",
     "away": "BEL",
     "score": {
-      "home": null,
-      "away": null
+      "home": 1,
+      "away": 5
     },
-    "winner": null,
-    "status": "scheduled",
+    "winner": "away",
+    "status": "finished",
     "group": "G",
     "matchday": 3,
     "venue": "BC Place",
@@ -1177,11 +1177,11 @@
     "home": "EGY",
     "away": "IRN",
     "score": {
-      "home": null,
-      "away": null
+      "home": 1,
+      "away": 1
     },
     "winner": null,
-    "status": "scheduled",
+    "status": "finished",
     "group": "G",
     "matchday": 3,
     "venue": "Lumen Field",
