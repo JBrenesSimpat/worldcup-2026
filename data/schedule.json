@@ -1231,11 +1231,11 @@
     "home": "COL",
     "away": "POR",
     "score": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
     },
     "winner": null,
-    "status": "scheduled",
+    "status": "live",
     "group": "K",
     "matchday": 3,
     "venue": "Hard Rock Stadium",
@@ -1249,11 +1249,11 @@
     "home": "COD",
     "away": "UZB",
     "score": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 1
     },
-    "winner": null,
-    "status": "scheduled",
+    "winner": "away",
+    "status": "live",
     "group": "K",
     "matchday": 3,
     "venue": "Mercedes-Benz Stadium",
@@ -1300,8 +1300,8 @@
     "apiId": 537417,
     "stage": "r32",
     "datetime": "2026-06-28T19:00:00Z",
-    "home": "RSA",
-    "away": "CAN",
+    "home": null,
+    "away": null,
     "score": {
       "home": null,
       "away": null
@@ -1319,8 +1319,8 @@
     "apiId": 537423,
     "stage": "r32",
     "datetime": "2026-06-29T17:00:00Z",
-    "home": "BRA",
-    "away": "JPN",
+    "home": null,
+    "away": null,
     "score": {
       "home": null,
       "away": null
@@ -1338,7 +1338,7 @@
     "apiId": 537415,
     "stage": "r32",
     "datetime": "2026-06-29T20:30:00Z",
-    "home": "GER",
+    "home": null,
     "away": null,
     "score": {
       "home": null,
@@ -1357,8 +1357,8 @@
     "apiId": 537418,
     "stage": "r32",
     "datetime": "2026-06-30T01:00:00Z",
-    "home": "NED",
-    "away": "MAR",
+    "home": null,
+    "away": null,
     "score": {
       "home": null,
       "away": null
@@ -1376,7 +1376,7 @@
     "apiId": 537424,
     "stage": "r32",
     "datetime": "2026-06-30T17:00:00Z",
-    "home": "CIV",
+    "home": null,
     "away": null,
     "score": {
       "home": null,
@@ -1414,7 +1414,7 @@
     "apiId": 537425,
     "stage": "r32",
     "datetime": "2026-07-01T01:00:00Z",
-    "home": "MEX",
+    "home": null,
     "away": null,
     "score": {
       "home": null,
@@ -1471,8 +1471,8 @@
     "apiId": 537421,
     "stage": "r32",
     "datetime": "2026-07-02T00:00:00Z",
-    "home": "USA",
-    "away": "BIH",
+    "home": null,
+    "away": null,
     "score": {
       "home": null,
       "away": null
@@ -1528,7 +1528,7 @@
     "apiId": 537429,
     "stage": "r32",
     "datetime": "2026-07-03T03:00:00Z",
-    "home": "SUI",
+    "home": null,
     "away": null,
     "score": {
       "home": null,
@@ -1547,7 +1547,7 @@
     "apiId": 537428,
     "stage": "r32",
     "datetime": "2026-07-03T18:00:00Z",
-    "home": "AUS",
+    "home": null,
     "away": null,
     "score": {
       "home": null,
@@ -1566,7 +1566,7 @@
     "apiId": 537427,
     "stage": "r32",
     "datetime": "2026-07-03T22:00:00Z",
-    "home": "ARG",
+    "home": null,
     "away": null,
     "score": {
       "home": null,
