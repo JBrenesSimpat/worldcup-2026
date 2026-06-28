@@ -1,7 +1,7 @@
 [
   {
     "name": "Lionel Messi",
-    "goals": 5,
+    "goals": 6,
     "team": "ARG"
   },
   {
@@ -140,13 +140,13 @@
     "team": "SEN"
   },
   {
+    "name": "Riyad Mahrez",
+    "goals": 2,
+    "team": "ALG"
+  },
+  {
     "name": "Rubén Vargas",
     "goals": 2,
     "team": "SUI"
-  },
-  {
-    "name": "Y.Ayari",
-    "goals": 2,
-    "team": "SWE"
   }
 ]

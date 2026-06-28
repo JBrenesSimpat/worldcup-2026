@@ -1268,10 +1268,10 @@
     "away": "ARG",
     "score": {
       "home": 1,
-      "away": 2
+      "away": 3
     },
     "winner": "away",
-    "status": "live",
+    "status": "finished",
     "group": "J",
     "matchday": 3,
     "venue": "AT&T Stadium",
@@ -1285,11 +1285,11 @@
     "home": "ALG",
     "away": "AUT",
     "score": {
-      "home": 2,
-      "away": 2
+      "home": 3,
+      "away": 3
     },
     "winner": null,
-    "status": "live",
+    "status": "finished",
     "group": "J",
     "matchday": 3,
     "venue": "Arrowhead Stadium",
