@@ -1267,7 +1267,7 @@
     "home": "JOR",
     "away": "ARG",
     "score": {
-      "home": 0,
+      "home": 1,
       "away": 2
     },
     "winner": "away",
@@ -1285,8 +1285,8 @@
     "home": "ALG",
     "away": "AUT",
     "score": {
-      "home": 1,
-      "away": 1
+      "home": 2,
+      "away": 2
     },
     "winner": null,
     "status": "live",
