@@ -57,7 +57,8 @@
     "subtitle": "Round of 32 to the final · winners advance automatically",
     "champion": "Champion",
     "scrollHint": "Scroll sideways to see all rounds",
-    "clinched": "Already qualified (mathematically)"
+    "clinched": "Already qualified (mathematically)",
+    "groupOrigin": "Group position"
   },
   "filters": {
     "allGroups": "All groups",

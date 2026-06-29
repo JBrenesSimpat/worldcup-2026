@@ -108,7 +108,10 @@ export function resolveSlot(
   label: string | undefined,
   clinched: Record<string, string> = {},
 ): ResolvedSlot {
-  if (code) return { code };
+  // Keep the label even once the team is known, so an R32 tie can still show
+  // the group position the team qualified from (e.g. "2A"). Not projected — the
+  // team is officially there.
+  if (code) return { code, label };
   // Mathematically locked group position → show the team early (projected).
   if (label && clinched[label]) return { code: clinched[label], label, projected: true };
   return { code: null, label };

@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useI18n } from "@/lib/i18n";
-import { positionLabel, slotLabelText, teamByCode, teamName } from "@/lib/data";
+import { slotLabelText, teamByCode, teamName } from "@/lib/data";
 import {
   bracketRounds,
   championCode,
@@ -16,20 +16,27 @@ function SlotRow({
   slot,
   score,
   isWinner,
+  showOrigin,
 }: {
   slot: ResolvedSlot;
   score: number | null;
   isWinner: boolean;
+  /** Show the team's group-position origin badge (Round of 32 only). */
+  showOrigin: boolean;
 }) {
   const { locale, t } = useI18n();
   const team = teamByCode(slot.code);
   const name = team ? teamName(team, locale) : slotLabelText(slot.label, t);
-  // Projected badge: "1.º A"/"2.º B" for winners/runners-up, or — for a best
-  // third, whose label lists candidate groups — "3.º" + the team's own group.
-  const badge =
-    team && slot.label?.startsWith("3:")
-      ? `${t("label.rank3")} ${team.group}`
-      : positionLabel(slot.label, t);
+  // Compact origin badge ("1A"/"2B"/"3C"): winner/runner-up slot labels are
+  // already in that form; a best-third label ("3:C/E/F/H/I") collapses to "3"
+  // plus the team's own group. Only annotates a resolved team.
+  const badge = !team
+    ? ""
+    : slot.label?.startsWith("3:")
+      ? `3${team.group}`
+      : slot.label && /^[12][A-L]$/.test(slot.label)
+        ? slot.label
+        : "";
 
   return (
     <div
@@ -48,10 +55,14 @@ function SlotRow({
         >
           {name}
         </span>
-        {slot.projected && badge && (
+        {showOrigin && badge && (
           <span
-            className="shrink-0 rounded bg-emerald-50 px-1 text-[0.6rem] font-bold text-pitch-dark"
-            title={t("bracket.clinched")}
+            className={`shrink-0 rounded px-1 text-[0.6rem] font-bold ${
+              slot.projected
+                ? "bg-emerald-50 text-pitch-dark"
+                : "bg-line text-muted"
+            }`}
+            title={slot.projected ? t("bracket.clinched") : t("bracket.groupOrigin")}
           >
             {badge}
           </span>
@@ -64,6 +75,9 @@ function SlotRow({
 
 function Tie({ bm }: { bm: BracketMatch }) {
   const { t } = useI18n();
+  // Group-position origin ("2A") only makes sense for Round-of-32 ties; later
+  // rounds are fed by match winners, not group slots.
+  const showOrigin = bm.match.stage === "r32";
   return (
     <div className="overflow-hidden rounded-xl border border-line bg-surface">
       {bm.match.matchNumber && (
@@ -76,12 +90,14 @@ function Tie({ bm }: { bm: BracketMatch }) {
         slot={bm.home}
         score={bm.match.score.home}
         isWinner={!!bm.winnerCode && bm.winnerCode === bm.home.code}
+        showOrigin={showOrigin}
       />
       <div className="border-t border-line" />
       <SlotRow
         slot={bm.away}
         score={bm.match.score.away}
         isWinner={!!bm.winnerCode && bm.winnerCode === bm.away.code}
+        showOrigin={showOrigin}
       />
     </div>
   );
