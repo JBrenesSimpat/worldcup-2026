@@ -1604,7 +1604,7 @@
     "apiId": 537376,
     "stage": "r16",
     "datetime": "2026-07-04T17:00:00Z",
-    "home": null,
+    "home": "CAN",
     "away": null,
     "score": {
       "home": null,
