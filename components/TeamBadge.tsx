@@ -2,7 +2,7 @@
 
 import { useI18n } from "@/lib/i18n";
 import { positionLabel, slotLabelText, teamByCode, teamName } from "@/lib/data";
-import { clinchedSlots } from "@/lib/standings";
+import { projectedSlots } from "@/lib/bracket";
 
 export default function TeamBadge({
   code,
@@ -15,10 +15,11 @@ export default function TeamBadge({
 }) {
   const { locale, t } = useI18n();
 
-  // Direct team, or — for an undecided knockout slot — a mathematically
-  // clinched group position (e.g. "1A" already locked = México).
+  // Direct team, or — for an undecided knockout slot — a team we can fill early:
+  // a mathematically clinched group position (e.g. "1A" locked = México) or the
+  // winner of an already-played feeder tie (e.g. "W73" → Canadá).
   const direct = teamByCode(code);
-  const projectedCode = !direct && label ? clinchedSlots()[label] : undefined;
+  const projectedCode = !direct && label ? projectedSlots()[label] : undefined;
   const team = direct ?? teamByCode(projectedCode);
   const projected = !direct && !!team;
 

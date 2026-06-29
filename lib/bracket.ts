@@ -58,6 +58,46 @@ export function winnerOf(m: Match | undefined): string | null {
   return null; // even score with no shootout data — undecided
 }
 
+/** Loser team code of a knockout match (feeds the third-place play-off), or null. */
+export function loserOf(m: Match | undefined): string | null {
+  const w = winnerOf(m);
+  if (!m || !w) return null;
+  return m.home === w ? m.away : m.away === w ? m.home : null;
+}
+
+/**
+ * Knockout slots already decided by a played tie, keyed by the "W##"/"L##"
+ * label the next round uses to reference it — e.g. once match 73 is won,
+ * { "W73": "CAN" }; "L101"/"L102" feed the third-place play-off. This lets a
+ * winner flow into its successor tie the moment the result is in, instead of
+ * waiting for the upstream feed to assign the team to the next fixture (which
+ * lags). Mirrors `clinchedSlots()` for group positions — both supply
+ * `resolveSlot`'s "projected" path.
+ */
+let advancedMemo: Record<string, string> | null = null;
+export function advancedSlots(): Record<string, string> {
+  if (advancedMemo) return advancedMemo;
+  const result: Record<string, string> = {};
+  for (const m of matches) {
+    if (m.matchNumber == null) continue;
+    const w = winnerOf(m);
+    if (w) result[`W${m.matchNumber}`] = w;
+    const l = loserOf(m);
+    if (l) result[`L${m.matchNumber}`] = l;
+  }
+  advancedMemo = result;
+  return result;
+}
+
+/**
+ * Every undecided knockout slot we can fill early: mathematically clinched
+ * group positions plus winners/losers of ties already played. Shared by the
+ * bracket and the schedule so one result propagates to both views at once.
+ */
+export function projectedSlots(): Record<string, string> {
+  return { ...clinchedSlots(), ...advancedSlots() };
+}
+
 /**
  * Resolve a slot to a team if the API has filled it in; otherwise keep the
  * official bracket label for display. The API is the source of truth for who
@@ -112,7 +152,7 @@ function treeOrder(): Map<string, number> {
 
 /** The main bracket rounds (R32 → Final), in display order. */
 export function bracketRounds(): BracketRound[] {
-  const clinched = clinchedSlots();
+  const clinched = projectedSlots();
   const order = treeOrder();
   const rank = (m: Match) => order.get(m.id) ?? Number.MAX_SAFE_INTEGER;
   return KNOCKOUT_ORDER.map((stage) => ({
