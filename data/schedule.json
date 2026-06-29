@@ -1322,11 +1322,11 @@
     "home": "BRA",
     "away": "JPN",
     "score": {
-      "home": 0,
+      "home": 2,
       "away": 1
     },
-    "winner": "away",
-    "status": "live",
+    "winner": "home",
+    "status": "finished",
     "venue": "NRG Stadium",
     "city": "Houston",
     "matchNumber": 76,
