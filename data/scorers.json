@@ -45,6 +45,11 @@
     "team": "SUI"
   },
   {
+    "name": "Kai Havertz",
+    "goals": 3,
+    "team": "GER"
+  },
+  {
     "name": "Matheus Cunha",
     "goals": 3,
     "team": "BRA"
@@ -103,11 +108,6 @@
     "name": "H. Kane",
     "goals": 2,
     "team": "ENG"
-  },
-  {
-    "name": "K. Havertz",
-    "goals": 2,
-    "team": "GER"
   },
   {
     "name": "Kvdi Khakpv",
