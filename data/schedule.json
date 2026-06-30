@@ -1341,11 +1341,11 @@
     "home": "GER",
     "away": "PAR",
     "score": {
-      "home": 2,
+      "home": 1,
       "away": 1
     },
-    "winner": "home",
-    "status": "live",
+    "winner": null,
+    "status": "finished",
     "venue": "Gillette Stadium",
     "city": "Boston",
     "matchNumber": 74,
