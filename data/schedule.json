@@ -1367,12 +1367,8 @@
       "home": 1,
       "away": 1
     },
-    "winner": "away",
+    "winner": null,
     "status": "finished",
-    "penalties": {
-      "home": 2,
-      "away": 3
-    },
     "venue": "Estadio BBVA",
     "city": "Monterrey",
     "matchNumber": 75,
