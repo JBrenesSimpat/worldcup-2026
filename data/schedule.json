@@ -1388,10 +1388,10 @@
     "away": "NOR",
     "score": {
       "home": 1,
-      "away": 1
+      "away": 2
     },
-    "winner": null,
-    "status": "live",
+    "winner": "away",
+    "status": "finished",
     "venue": "AT&T Stadium",
     "city": "Dallas",
     "matchNumber": 78,
