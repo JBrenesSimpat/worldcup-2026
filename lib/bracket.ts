@@ -55,6 +55,11 @@ export function winnerOf(m: Match | undefined): string | null {
   if (m.winner === "away") return m.away;
   if ((m.score.home as number) > (m.score.away as number)) return m.home;
   if ((m.score.away as number) > (m.score.home as number)) return m.away;
+  // Tie on the pitch: fall back to the penalty shootout if we have it.
+  if (m.penalties) {
+    if (m.penalties.home > m.penalties.away) return m.home;
+    if (m.penalties.away > m.penalties.home) return m.away;
+  }
   return null; // even score with no shootout data — undecided
 }
 

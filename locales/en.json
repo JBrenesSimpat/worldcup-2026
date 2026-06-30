@@ -99,7 +99,8 @@
     "rank1": "1st",
     "rank2": "2nd",
     "rank3": "3rd",
-    "matchAbbr": "M"
+    "matchAbbr": "M",
+    "pens": "pens"
   },
   "common": {
     "tbd": "TBD",

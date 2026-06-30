@@ -15,11 +15,14 @@ import {
 function SlotRow({
   slot,
   score,
+  pens,
   isWinner,
   showOrigin,
 }: {
   slot: ResolvedSlot;
   score: number | null;
+  /** Penalty-shootout goals for this side, when the tie went to penalties. */
+  pens: number | null;
   isWinner: boolean;
   /** Show the team's group-position origin badge (Round of 32 only). */
   showOrigin: boolean;
@@ -68,7 +71,14 @@ function SlotRow({
           </span>
         )}
       </span>
-      <span className="tabular-nums text-muted">{score ?? ""}</span>
+      <span className="tabular-nums text-muted">
+        {score ?? ""}
+        {pens != null && (
+          <span className="ml-1 text-[0.72rem] font-bold text-pitch-dark">
+            ({pens})
+          </span>
+        )}
+      </span>
     </div>
   );
 }
@@ -89,6 +99,7 @@ function Tie({ bm }: { bm: BracketMatch }) {
       <SlotRow
         slot={bm.home}
         score={bm.match.score.home}
+        pens={bm.match.penalties?.home ?? null}
         isWinner={!!bm.winnerCode && bm.winnerCode === bm.home.code}
         showOrigin={showOrigin}
       />
@@ -96,6 +107,7 @@ function Tie({ bm }: { bm: BracketMatch }) {
       <SlotRow
         slot={bm.away}
         score={bm.match.score.away}
+        pens={bm.match.penalties?.away ?? null}
         isWinner={!!bm.winnerCode && bm.winnerCode === bm.away.code}
         showOrigin={showOrigin}
       />

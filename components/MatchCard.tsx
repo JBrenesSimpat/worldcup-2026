@@ -47,6 +47,12 @@ export default function MatchCard({ match }: { match: Match }) {
           </div>
         )}
 
+        {match.penalties && (
+          <div className="text-[0.72rem] font-semibold text-muted">
+            {match.penalties.home} – {match.penalties.away} {t("label.pens")}
+          </div>
+        )}
+
         <div className="mt-0.5 text-[0.72rem] text-muted">
           <StageLabel match={match} />
         </div>

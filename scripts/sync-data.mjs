@@ -107,6 +107,36 @@ function mapWinner(w) {
   return null;
 }
 
+// Penalty-shootout breakdown from a football-data score object, or null when
+// the tie wasn't decided on penalties. football-data leaves `score.winner` null
+// for shootouts and its standalone `penalties` field is unreliable (it can read
+// e.g. 4-4 for a tie that obviously had a winner). The trustworthy figure is
+// `fullTime`, which is the aggregate INCLUDING the shootout — so we recover the
+// shootout score as fullTime minus the on-pitch (regular + extra time) result,
+// and use `penalties` only as a last-resort fallback.
+function shootout(score) {
+  if (!score || score.duration !== "PENALTY_SHOOTOUT") return null;
+  const n = (x) => (Number.isInteger(x) ? x : 0);
+  const ft = score.fullTime ?? {};
+  const reg = score.regularTime ?? {};
+  const et = score.extraTime ?? {};
+  // On-pitch result that stands going into the shootout (e.g. "1-1").
+  const endHome = n(reg.home) + n(et.home);
+  const endAway = n(reg.away) + n(et.away);
+  let pHome = n(ft.home) - endHome;
+  let pAway = n(ft.away) - endAway;
+  if (pHome <= 0 && pAway <= 0 && score.penalties) {
+    pHome = n(score.penalties.home);
+    pAway = n(score.penalties.away);
+  }
+  if (pHome === pAway) return null; // no derivable winner — leave undecided
+  return {
+    endScore: { home: endHome, away: endAway },
+    penalties: { home: pHome, away: pAway },
+    winner: pHome > pAway ? "home" : "away",
+  };
+}
+
 function groupLetter(g) {
   return g && g.startsWith("GROUP_") ? g.replace("GROUP_", "") : undefined;
 }
@@ -217,6 +247,9 @@ async function main() {
 
     matches = apiMatches
       .map((m) => {
+        // For shootouts, show the on-pitch result and carry the penalty score;
+        // football-data's `fullTime` aggregate would otherwise read e.g. "4-5".
+        const so = shootout(m.score);
         const match = {
           id: `WC-${m.id}`,
           apiId: m.id,
@@ -224,13 +257,16 @@ async function main() {
           datetime: m.utcDate,
           home: m.homeTeam?.tla ? normCode(m.homeTeam.tla) : null,
           away: m.awayTeam?.tla ? normCode(m.awayTeam.tla) : null,
-          score: {
-            home: m.score?.fullTime?.home ?? null,
-            away: m.score?.fullTime?.away ?? null,
-          },
-          winner: mapWinner(m.score?.winner),
+          score: so
+            ? { home: so.endScore.home, away: so.endScore.away }
+            : {
+                home: m.score?.fullTime?.home ?? null,
+                away: m.score?.fullTime?.away ?? null,
+              },
+          winner: so ? so.winner : mapWinner(m.score?.winner),
           status: mapStatus(m.status),
         };
+        if (so) match.penalties = so.penalties;
         const g = groupLetter(m.group);
         if (g) match.group = g;
         if (m.matchday && m.stage === "GROUP_STAGE") match.matchday = m.matchday;
@@ -358,8 +394,19 @@ function overlayScores(matches, { codeByWcId, wcGames }) {
 
     match.score = { home: ss.home, away: ss.away };
     match.status = ss.status;
+    // worldcup26 reports only the on-pitch score (no shootout), so a tie reads
+    // as no winner. When football-data already gave us a penalty result for
+    // this tie, keep it as the tiebreak instead of clobbering it to null.
     match.winner =
-      ss.home > ss.away ? "home" : ss.away > ss.home ? "away" : null;
+      ss.home > ss.away
+        ? "home"
+        : ss.away > ss.home
+          ? "away"
+          : match.penalties
+            ? match.penalties.home > match.penalties.away
+              ? "home"
+              : "away"
+            : null;
     // Fill knockout teams that football-data hasn't set yet.
     if (!match.home) match.home = codeByWcId.get(wc.home_team_id) ?? null;
     if (!match.away) match.away = codeByWcId.get(wc.away_team_id) ?? null;

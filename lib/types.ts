@@ -66,6 +66,12 @@ export interface Match {
   homeLabel?: string;
   awayLabel?: string;
   score: MatchScore;
+  /**
+   * Penalty shootout result, present only when a knockout tie was decided on
+   * penalties. `score` then holds the on-pitch result (after extra time) and
+   * `winner` is set from this shootout.
+   */
+  penalties?: { home: number; away: number };
   /** Decided winner side (covers extra-time/penalties), when known. */
   winner?: "home" | "away" | null;
   status: MatchStatus;
