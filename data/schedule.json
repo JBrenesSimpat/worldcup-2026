@@ -1613,7 +1613,7 @@
     "stage": "r16",
     "datetime": "2026-07-04T17:00:00Z",
     "home": "CAN",
-    "away": null,
+    "away": "MAR",
     "score": {
       "home": null,
       "away": null
@@ -1631,7 +1631,7 @@
     "apiId": 537375,
     "stage": "r16",
     "datetime": "2026-07-04T21:00:00Z",
-    "home": null,
+    "home": "PAR",
     "away": null,
     "score": {
       "home": null,
@@ -1650,7 +1650,7 @@
     "apiId": 537377,
     "stage": "r16",
     "datetime": "2026-07-05T20:00:00Z",
-    "home": null,
+    "home": "BRA",
     "away": null,
     "score": {
       "home": null,
