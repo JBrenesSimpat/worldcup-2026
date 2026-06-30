@@ -1364,11 +1364,11 @@
     "home": "NED",
     "away": "MAR",
     "score": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
     },
     "winner": null,
-    "status": "scheduled",
+    "status": "live",
     "venue": "Estadio BBVA",
     "city": "Monterrey",
     "matchNumber": 75,
