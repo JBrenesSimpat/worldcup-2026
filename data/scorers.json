@@ -11,7 +11,7 @@
   },
   {
     "name": "Kylian Mbappé",
-    "goals": 4,
+    "goals": 5,
     "team": "FRA"
   },
   {
@@ -85,6 +85,11 @@
     "team": "MAR"
   },
   {
+    "name": "Bradley Barcola",
+    "goals": 2,
+    "team": "FRA"
+  },
+  {
     "name": "Cristiano Ronaldo",
     "goals": 2,
     "team": "POR"
@@ -143,10 +148,5 @@
     "name": "Paph Gviih",
     "goals": 2,
     "team": "SEN"
-  },
-  {
-    "name": "Riyad Mahrez",
-    "goals": 2,
-    "team": "ALG"
   }
 ]

@@ -1406,10 +1406,10 @@
     "home": "FRA",
     "away": "SWE",
     "score": {
-      "home": 0,
+      "home": 2,
       "away": 0
     },
-    "winner": null,
+    "winner": "home",
     "status": "live",
     "venue": "MetLife Stadium",
     "city": "New York/New Jersey",
