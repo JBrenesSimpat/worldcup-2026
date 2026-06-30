@@ -50,6 +50,11 @@
     "team": "GER"
   },
   {
+    "name": "Kvdi Khakpv",
+    "goals": 3,
+    "team": "NED"
+  },
+  {
     "name": "Matheus Cunha",
     "goals": 3,
     "team": "BRA"
@@ -108,11 +113,6 @@
     "name": "H. Kane",
     "goals": 2,
     "team": "ENG"
-  },
-  {
-    "name": "Kvdi Khakpv",
-    "goals": 2,
-    "team": "NED"
   },
   {
     "name": "Leandro Trossard",

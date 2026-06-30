@@ -1364,10 +1364,10 @@
     "home": "NED",
     "away": "MAR",
     "score": {
-      "home": 0,
+      "home": 1,
       "away": 0
     },
-    "winner": null,
+    "winner": "home",
     "status": "live",
     "venue": "Estadio BBVA",
     "city": "Monterrey",
