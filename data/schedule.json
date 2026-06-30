@@ -1387,11 +1387,11 @@
     "home": "CIV",
     "away": "NOR",
     "score": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 1
     },
-    "winner": null,
-    "status": "scheduled",
+    "winner": "away",
+    "status": "live",
     "venue": "AT&T Stadium",
     "city": "Dallas",
     "matchNumber": 78,
