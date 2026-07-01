@@ -40,6 +40,11 @@
     "team": "NED"
   },
   {
+    "name": "Deniz Undav",
+    "goals": 3,
+    "team": "GER"
+  },
+  {
     "name": "Ismaïla Sarr",
     "goals": 3,
     "team": "SEN"
@@ -53,6 +58,11 @@
     "name": "Jonathan David",
     "goals": 3,
     "team": "CAN"
+  },
+  {
+    "name": "Julián Quiñones",
+    "goals": 3,
+    "team": "MEX"
   },
   {
     "name": "Kai Havertz",
@@ -110,11 +120,6 @@
     "team": "COL"
   },
   {
-    "name": "Deniz Undav",
-    "goals": 2,
-    "team": "GER"
-  },
-  {
     "name": "Elijah Just",
     "goals": 2,
     "team": "NZL"
@@ -125,9 +130,9 @@
     "team": "USA"
   },
   {
-    "name": "Julián Quiñones",
+    "name": "Habib Diarra",
     "goals": 2,
-    "team": "MEX"
+    "team": "SEN"
   },
   {
     "name": "Leandro Trossard",
