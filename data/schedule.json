@@ -1463,10 +1463,10 @@
     "home": "BEL",
     "away": "SEN",
     "score": {
-      "home": 0,
+      "home": 2,
       "away": 2
     },
-    "winner": "away",
+    "winner": null,
     "status": "live",
     "venue": "Lumen Field",
     "city": "Seattle",
