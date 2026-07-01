@@ -1632,7 +1632,7 @@
     "stage": "r16",
     "datetime": "2026-07-04T21:00:00Z",
     "home": "PAR",
-    "away": null,
+    "away": "FRA",
     "score": {
       "home": null,
       "away": null
@@ -1651,7 +1651,7 @@
     "stage": "r16",
     "datetime": "2026-07-05T20:00:00Z",
     "home": "BRA",
-    "away": null,
+    "away": "NOR",
     "score": {
       "home": null,
       "away": null
