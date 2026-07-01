@@ -125,6 +125,11 @@
     "team": "ENG"
   },
   {
+    "name": "Jvlian Kviinvnz",
+    "goals": 2,
+    "team": "MEX"
+  },
+  {
     "name": "Leandro Trossard",
     "goals": 2,
     "team": "BEL"
@@ -143,10 +148,5 @@
     "name": "Nikvlas Ph Ph",
     "goals": 2,
     "team": "CIV"
-  },
-  {
-    "name": "Paph Gviih",
-    "goals": 2,
-    "team": "SEN"
   }
 ]

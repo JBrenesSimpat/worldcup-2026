@@ -1425,11 +1425,11 @@
     "home": "MEX",
     "away": "ECU",
     "score": {
-      "home": null,
-      "away": null
+      "home": 2,
+      "away": 0
     },
-    "winner": null,
-    "status": "scheduled",
+    "winner": "home",
+    "status": "live",
     "venue": "Estadio Azteca",
     "city": "Mexico City",
     "matchNumber": 79,
