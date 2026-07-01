@@ -1444,10 +1444,10 @@
     "home": "ENG",
     "away": "COD",
     "score": {
-      "home": 1,
+      "home": 2,
       "away": 1
     },
-    "winner": null,
+    "winner": "home",
     "status": "live",
     "venue": "Mercedes-Benz Stadium",
     "city": "Atlanta",

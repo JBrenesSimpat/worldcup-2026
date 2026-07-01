@@ -30,6 +30,11 @@
     "team": "NED"
   },
   {
+    "name": "Hri Kin",
+    "goals": 3,
+    "team": "ENG"
+  },
+  {
     "name": "Ismaïla Sarr",
     "goals": 3,
     "team": "SEN"
@@ -121,11 +126,6 @@
   },
   {
     "name": "H. Kane",
-    "goals": 2,
-    "team": "ENG"
-  },
-  {
-    "name": "Hri Kin",
     "goals": 2,
     "team": "ENG"
   },
