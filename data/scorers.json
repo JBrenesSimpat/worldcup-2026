@@ -125,6 +125,11 @@
     "team": "ENG"
   },
   {
+    "name": "Hri Kin",
+    "goals": 2,
+    "team": "ENG"
+  },
+  {
     "name": "Jvlian Kviinvnz",
     "goals": 2,
     "team": "MEX"
@@ -143,10 +148,5 @@
     "name": "Mikel Oyarzabal",
     "goals": 2,
     "team": "ESP"
-  },
-  {
-    "name": "Nikvlas Ph Ph",
-    "goals": 2,
-    "team": "CIV"
   }
 ]
