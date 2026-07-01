@@ -20,6 +20,11 @@
     "team": "ENG"
   },
   {
+    "name": "Ismaïla Sarr",
+    "goals": 4,
+    "team": "SEN"
+  },
+  {
     "name": "Ousmane Dembélé",
     "goals": 4,
     "team": "FRA"
@@ -43,11 +48,6 @@
     "name": "Deniz Undav",
     "goals": 3,
     "team": "GER"
-  },
-  {
-    "name": "Ismaïla Sarr",
-    "goals": 3,
-    "team": "SEN"
   },
   {
     "name": "Johan Manzambi",
