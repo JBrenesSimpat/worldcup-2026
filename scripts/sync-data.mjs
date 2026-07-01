@@ -435,6 +435,23 @@ function scorerKey(name, teamCode) {
   return `${teamCode ?? ""}|${initial}|${surname}`;
 }
 
+// Canonical fixes for names worldcup26.ir mangles via Persian transliteration,
+// which drops/garbles vowels (e.g. "Harry Kane" → "Hri Kin"). Keyed by
+// scorerKey(rawName, teamCode) → canonical display name. Mapping BOTH the garbled
+// form and any proper-but-abbreviated form to the same canonical name also merges
+// their goal tallies — otherwise they key apart on different surnames (e.g. the
+// garbled "kin" vs the real "kane") and the player is split across two rows.
+const NAME_FIXES = {
+  "ENG|h|kin": "Harry Kane",
+  "ENG|h|kane": "Harry Kane",
+  "SUI|j|mnzambi": "Johan Manzambi",
+  "NED|k|khakpv": "Cody Gakpo",
+  "GER|d|avndav": "Deniz Undav",
+  "JPN|a|ivida": "Ayase Ueda",
+  "MEX|j|kviinvnz": "Julián Quiñones",
+  "COL|d|mvnvz": "Daniel Muñoz",
+};
+
 function addScorers(raw, teamCode, tally) {
   if (!raw || String(raw).toLowerCase() === "null") return;
   const re = /["“”]([^"“”]+)["“”]/g;
@@ -447,14 +464,17 @@ function addScorers(raw, teamCode, tally) {
       .replace(/['’`]+$/, "")
       .trim();
     if (!name) continue;
-    const key = scorerKey(name, teamCode);
+    // Canonicalize before keying so both the display name and the dedup key use
+    // the corrected spelling.
+    const fixed = NAME_FIXES[scorerKey(name, teamCode)] ?? name;
+    const key = scorerKey(fixed, teamCode);
     if (!key) continue;
     const cur = tally.get(key);
     if (cur) {
       cur.goals += 1;
-      if (name.length > cur.name.length) cur.name = name; // prefer fuller name
+      if (fixed.length > cur.name.length) cur.name = fixed; // prefer fuller name
     } else {
-      tally.set(key, { name, goals: 1, team: teamCode ?? null });
+      tally.set(key, { name: fixed, goals: 1, team: teamCode ?? null });
     }
   }
 }

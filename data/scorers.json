@@ -15,6 +15,11 @@
     "team": "NOR"
   },
   {
+    "name": "Harry Kane",
+    "goals": 5,
+    "team": "ENG"
+  },
+  {
     "name": "Ousmane Dembélé",
     "goals": 4,
     "team": "FRA"
@@ -30,9 +35,9 @@
     "team": "NED"
   },
   {
-    "name": "Hri Kin",
+    "name": "Cody Gakpo",
     "goals": 3,
-    "team": "ENG"
+    "team": "NED"
   },
   {
     "name": "Ismaïla Sarr",
@@ -40,14 +45,14 @@
     "team": "SEN"
   },
   {
+    "name": "Johan Manzambi",
+    "goals": 3,
+    "team": "SUI"
+  },
+  {
     "name": "Jonathan David",
     "goals": 3,
     "team": "CAN"
-  },
-  {
-    "name": "Jvhan Mnzambi",
-    "goals": 3,
-    "team": "SUI"
   },
   {
     "name": "Kai Havertz",
@@ -55,19 +60,9 @@
     "team": "GER"
   },
   {
-    "name": "Kvdi Khakpv",
-    "goals": 3,
-    "team": "NED"
-  },
-  {
     "name": "Matheus Cunha",
     "goals": 3,
     "team": "BRA"
-  },
-  {
-    "name": "Aiash Ivida",
-    "goals": 2,
-    "team": "JPN"
   },
   {
     "name": "Amad Diallo",
@@ -90,6 +85,11 @@
     "team": "MAR"
   },
   {
+    "name": "Ayase Ueda",
+    "goals": 2,
+    "team": "JPN"
+  },
+  {
     "name": "Bradley Barcola",
     "goals": 2,
     "team": "FRA"
@@ -105,12 +105,12 @@
     "team": "NED"
   },
   {
-    "name": "Dnil Mvnvz",
+    "name": "Daniel Muñoz",
     "goals": 2,
     "team": "COL"
   },
   {
-    "name": "Dniz Avndav",
+    "name": "Deniz Undav",
     "goals": 2,
     "team": "GER"
   },
@@ -125,12 +125,7 @@
     "team": "USA"
   },
   {
-    "name": "H. Kane",
-    "goals": 2,
-    "team": "ENG"
-  },
-  {
-    "name": "Jvlian Kviinvnz",
+    "name": "Julián Quiñones",
     "goals": 2,
     "team": "MEX"
   },
