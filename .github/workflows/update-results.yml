@@ -1,19 +1,22 @@
 name: Update World Cup results
 
 # Hybrid schedule:
-#  - Frequent polling during the daily match window (UTC), but the script only
-#    calls the API when a match is actually in progress (MATCH_WINDOW_ONLY=1).
+#  - Hourly polling during the daily match window (10:00–24:00 Mexico time), but
+#    the script only calls the API when a match is in progress (MATCH_WINDOW_ONLY=1).
 #  - One full daily sync to pick up any schedule/fixture changes.
 #  - Manual trigger available any time.
+#  - Every run retries on transient upstream failure (see the job below).
 # A commit (and therefore a Vercel redeploy) only happens when data changes.
 
 on:
   schedule:
-    # Every 30 min (at :07 and :37 to dodge top-of-hour congestion), during the
-    # daily match window. The script no-ops when no match is live, so non-match
-    # days/hours cost nothing.
-    - cron: "2,32 16-23 * * *" # afternoon/evening matches (Americas), UTC
-    - cron: "2,32 0-7 * * *" # late games incl. extra time/penalties, UTC
+    # Hourly (at :02, to dodge top-of-hour congestion) across the daily match
+    # window: 10:00–24:00 Mexico time (UTC−6) == 16:00–06:00 UTC. GitHub delays/
+    # drops scheduled runs under load, but the per-run retry (see the job below)
+    # means each firing that DOES land refreshes reliably. The script no-ops when
+    # no match is live, so empty hours cost nothing.
+    - cron: "2 16-23 * * *" # 10:00–17:00 Mexico (afternoon/evening, Americas)
+    - cron: "2 0-6 * * *"   # 18:00–00:00 Mexico (evening into midnight)
     # Daily full sync at 12:07 UTC (catches schedule/fixture changes)
     - cron: "7 12 * * *"
   workflow_dispatch: {}
@@ -28,6 +31,7 @@ permissions:
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v5
 
@@ -35,13 +39,34 @@ jobs:
         with:
           node-version: 22
 
-      - name: Sync data from football-data.org
+      - name: Sync World Cup data (retry on failure)
         env:
           FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
           # Windowed only for the frequent polling crons; the daily 12:00 UTC
           # run and manual dispatches do a full sync.
           MATCH_WINDOW_ONLY: ${{ github.event_name == 'schedule' && github.event.schedule != '7 12 * * *' && '1' || '0' }}
-        run: node scripts/sync-data.mjs
+        # sync-data.mjs exits non-zero when the live source (worldcup26) can't be
+        # refreshed even after its own in-process retries. Retry the whole run a
+        # few times (60s apart) so a transient upstream blip no longer requires
+        # firing the workflow manually a second time. A no-op (no live match) or a
+        # clean success returns 0 on the first attempt and skips the wait.
+        run: |
+          for attempt in 1 2 3; do
+            echo "::group::Sync attempt $attempt"
+            if node scripts/sync-data.mjs; then
+              echo "::endgroup::"
+              echo "Sync succeeded on attempt $attempt."
+              exit 0
+            fi
+            echo "::endgroup::"
+            echo "Attempt $attempt failed."
+            if [ "$attempt" -lt 3 ]; then
+              echo "Waiting 60s before retry…"
+              sleep 60
+            fi
+          done
+          echo "All 3 sync attempts failed."
+          exit 1
 
       - name: Commit & push if data changed
         run: |

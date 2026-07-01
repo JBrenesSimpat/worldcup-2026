@@ -301,12 +301,14 @@ async function main() {
   }
 
   // Fetch worldcup26 ONCE and reuse it for both scores and top scorers.
+  let liveRefreshed = false;
   try {
     const wc = await fetchWorldcup();
     const overlaid = overlayScores(matches, wc);
     console.log(`Overlaid scores from worldcup26 on ${overlaid} matches.`);
     const n = buildTopScorers(wc);
     console.log(`Top scorers parsed: ${n} players.`);
+    liveRefreshed = true;
   } catch (e) {
     console.log(`worldcup26 unavailable (${e.message}); keeping existing scores.`);
   }
@@ -330,6 +332,18 @@ async function main() {
   console.log(`Synced ${teams.length} teams, ${matches.length} matches.`);
   console.log("By stage:", byStage);
   console.log(`Finished matches: ${decided}`);
+
+  // If the live source (worldcup26) couldn't be refreshed even after its own
+  // in-process retries, exit non-zero so the workflow retries the whole run
+  // instead of leaving stale data behind a green check — that silent no-op is
+  // exactly what used to force a manual "run it twice". The committed structure
+  // was already written above, so nothing good is lost. (When MATCH_WINDOW_ONLY
+  // skipped the fetch because no match is live, we returned much earlier and
+  // never reach this line.)
+  if (!liveRefreshed) {
+    console.error("Live scores/scorers not refreshed from worldcup26 — failing so the run is retried.");
+    process.exit(1);
+  }
 }
 
 // football-data uses "URY" for Uruguay; worldcup26 uses "URU".
@@ -356,17 +370,29 @@ function wcScore(wc) {
 }
 
 // Fetch worldcup26 teams + games ONCE; reused for scores and scorers.
-// An empty (but HTTP 200) payload is treated as a failure: returning it would
-// otherwise wipe good scores/scorers, so we throw and let the caller keep the
-// committed data instead.
-async function fetchWorldcup() {
-  const wcTeams = (await fetchJSON("https://worldcup26.ir/get/teams")).teams ?? [];
-  const wcGames = (await fetchJSON("https://worldcup26.ir/get/games")).games ?? [];
-  if (wcTeams.length === 0 || wcGames.length === 0) {
-    throw new Error("empty worldcup26 payload");
+// An empty (but HTTP 200) payload is a transient worldcup26 quirk that fetchJSON
+// can't catch (the request itself "succeeded") — and it was the main reason a
+// manual run had to be fired twice: the first run swallowed the empty response
+// and left the data stale. So retry the WHOLE fetch here, treating an empty
+// payload as a retryable error, and only give up (throwing, so the caller keeps
+// the committed data) after several attempts.
+async function fetchWorldcup({ tries = 4, backoffMs = 1500 } = {}) {
+  let lastErr;
+  for (let attempt = 1; attempt <= tries; attempt++) {
+    try {
+      const wcTeams = (await fetchJSON("https://worldcup26.ir/get/teams")).teams ?? [];
+      const wcGames = (await fetchJSON("https://worldcup26.ir/get/games")).games ?? [];
+      if (wcTeams.length === 0 || wcGames.length === 0) {
+        throw new Error("empty worldcup26 payload");
+      }
+      const codeByWcId = new Map(wcTeams.map((t) => [t.id, normCode(t.fifa_code)]));
+      return { codeByWcId, wcGames };
+    } catch (e) {
+      lastErr = e;
+      if (attempt < tries) await sleep(backoffMs * attempt);
+    }
   }
-  const codeByWcId = new Map(wcTeams.map((t) => [t.id, normCode(t.fifa_code)]));
-  return { codeByWcId, wcGames };
+  throw lastErr;
 }
 
 function overlayScores(matches, { codeByWcId, wcGames }) {
