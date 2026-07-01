@@ -1463,11 +1463,11 @@
     "home": "BEL",
     "away": "SEN",
     "score": {
-      "home": 2,
+      "home": 3,
       "away": 2
     },
-    "winner": null,
-    "status": "live",
+    "winner": "home",
+    "status": "finished",
     "venue": "Lumen Field",
     "city": "Seattle",
     "matchNumber": 82,
