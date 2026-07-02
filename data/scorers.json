@@ -75,6 +75,11 @@
     "team": "BRA"
   },
   {
+    "name": "Mikel Oyarzabal",
+    "goals": 3,
+    "team": "ESP"
+  },
+  {
     "name": "Amad Diallo",
     "goals": 2,
     "team": "CIV"
@@ -143,10 +148,5 @@
     "name": "Maximiliano Araújo",
     "goals": 2,
     "team": "URY"
-  },
-  {
-    "name": "Mikel Oyarzabal",
-    "goals": 2,
-    "team": "ESP"
   }
 ]
