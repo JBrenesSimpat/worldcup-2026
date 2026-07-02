@@ -25,6 +25,11 @@
     "team": "SEN"
   },
   {
+    "name": "Mikel Oyarzabal",
+    "goals": 4,
+    "team": "ESP"
+  },
+  {
     "name": "Ousmane Dembélé",
     "goals": 4,
     "team": "FRA"
@@ -73,11 +78,6 @@
     "name": "Matheus Cunha",
     "goals": 3,
     "team": "BRA"
-  },
-  {
-    "name": "Mikel Oyarzabal",
-    "goals": 3,
-    "team": "ESP"
   },
   {
     "name": "Amad Diallo",
