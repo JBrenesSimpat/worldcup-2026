@@ -1482,11 +1482,11 @@
     "home": "USA",
     "away": "BIH",
     "score": {
-      "home": null,
-      "away": null
+      "home": 1,
+      "away": 0
     },
-    "winner": null,
-    "status": "scheduled",
+    "winner": "home",
+    "status": "live",
     "venue": "Levi's Stadium",
     "city": "San Francisco Bay Area",
     "matchNumber": 81,
