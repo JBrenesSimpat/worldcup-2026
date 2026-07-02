@@ -1501,11 +1501,11 @@
     "home": "ESP",
     "away": "AUT",
     "score": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
     },
     "winner": null,
-    "status": "scheduled",
+    "status": "live",
     "venue": "SoFi Stadium",
     "city": "Los Angeles",
     "matchNumber": 84,
