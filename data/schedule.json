@@ -1520,11 +1520,11 @@
     "home": "POR",
     "away": "CRO",
     "score": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
     },
     "winner": null,
-    "status": "scheduled",
+    "status": "live",
     "venue": "BMO Field",
     "city": "Toronto",
     "matchNumber": 83,
