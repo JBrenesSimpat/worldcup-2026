@@ -1539,11 +1539,11 @@
     "home": "SUI",
     "away": "ALG",
     "score": {
-      "home": 1,
+      "home": 2,
       "away": 0
     },
     "winner": "home",
-    "status": "live",
+    "status": "finished",
     "venue": "BC Place",
     "city": "Vancouver",
     "matchNumber": 85,
@@ -1745,7 +1745,7 @@
     "apiId": 537382,
     "stage": "r16",
     "datetime": "2026-07-07T20:00:00Z",
-    "home": null,
+    "home": "SUI",
     "away": null,
     "score": {
       "home": null,
