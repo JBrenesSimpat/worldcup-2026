@@ -1520,10 +1520,10 @@
     "home": "POR",
     "away": "CRO",
     "score": {
-      "home": 1,
+      "home": 2,
       "away": 1
     },
-    "winner": null,
+    "winner": "home",
     "status": "live",
     "venue": "BMO Field",
     "city": "Toronto",
