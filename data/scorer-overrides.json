@@ -1,0 +1,6 @@
+{
+  "_README": "Manual corrections for the worldcup26.ir top-scorer feed, which sometimes reports a match's SCORE correctly but lists fewer scorer names than goals (a goal with no named scorer) — or mangles a name beyond what NAME_FIXES can repair. Keyed by worldcup26 game id (see https://worldcup26.ir/get/games). For each side you include (home_scorers / away_scorers), the array REPLACES the feed's scorer list for THAT side when building the Golden Boot tally; the match score itself still comes from the feed. Use the full, correctly-spelled name; a trailing minute like \"90+4'\" is optional and ignored. Only override a side the feed gets wrong, and remove the entry if the feed later backfills it correctly. sync-data.mjs logs a ⚠ warning for every finished game whose listed-scorer count still doesn't match its score, so gaps stay visible.",
+  "83": {
+    "home_scorers": ["Cristiano Ronaldo", "Gonçalo Ramos 90+4'"]
+  }
+}

@@ -50,6 +50,11 @@
     "team": "NED"
   },
   {
+    "name": "Cristiano Ronaldo",
+    "goals": 3,
+    "team": "POR"
+  },
+  {
     "name": "Deniz Undav",
     "goals": 3,
     "team": "GER"
@@ -108,11 +113,6 @@
     "name": "Bradley Barcola",
     "goals": 2,
     "team": "FRA"
-  },
-  {
-    "name": "Cristiano Ronaldo",
-    "goals": 2,
-    "team": "POR"
   },
   {
     "name": "Crysencio Summerville",

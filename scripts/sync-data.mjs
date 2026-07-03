@@ -505,11 +505,69 @@ function addScorers(raw, teamCode, tally) {
   }
 }
 
+// Manual corrections for the worldcup26.ir feed, keyed by game id. worldcup26
+// sometimes reports a match SCORE correctly but lists fewer scorer names than
+// goals (a goal with no named scorer — e.g. game 83 read POR 2-1 with only
+// Gonçalo Ramos listed, dropping Cristiano Ronaldo). We can only tally scorers
+// the feed names, so this file lets us supply the missing/corrected names.
+function loadScorerOverrides() {
+  const p = join(dataDir, "scorer-overrides.json");
+  if (!existsSync(p)) return {};
+  try {
+    return JSON.parse(readFileSync(p, "utf8"));
+  } catch (e) {
+    console.warn(`Could not read scorer-overrides.json (${e.message}); ignoring.`);
+    return {};
+  }
+}
+
+// Turn an override array (["Cristiano Ronaldo", "Gonçalo Ramos 90+4'"]) into the
+// braced, quoted string the feed uses, so addScorers can parse it unchanged.
+const toScorerRaw = (v) =>
+  Array.isArray(v) ? "{" + v.map((s) => `"${String(s)}"`).join(",") + "}" : v;
+
+// Count every quoted scorer entry (own goals included — they still represent a
+// goal for the side they're listed under), for reconciling against the score.
+function countScorerEntries(raw) {
+  if (!raw || String(raw).toLowerCase() === "null") return 0;
+  const re = /["“”]([^"“”]+)["“”]/g;
+  let n = 0;
+  while (re.exec(raw) !== null) n += 1;
+  return n;
+}
+
+// Surface the recurring worldcup26 gap (finished match whose listed-scorer count
+// doesn't match its score) so it shows up in the workflow log instead of silently
+// undercounting a player. Uses the post-override strings so resolved gaps go quiet.
+function warnScorerGaps(wcGames, overrides) {
+  for (const g of wcGames) {
+    if (String(g.finished).toUpperCase() !== "TRUE") continue;
+    const ov = overrides[g.id] ?? {};
+    const homeRaw = ov.home_scorers != null ? toScorerRaw(ov.home_scorers) : g.home_scorers;
+    const awayRaw = ov.away_scorers != null ? toScorerRaw(ov.away_scorers) : g.away_scorers;
+    const hs = Number(g.home_score);
+    const as = Number(g.away_score);
+    const hn = countScorerEntries(homeRaw);
+    const an = countScorerEntries(awayRaw);
+    if ((Number.isInteger(hs) && hn !== hs) || (Number.isInteger(as) && an !== as)) {
+      console.warn(
+        `⚠ scorer gap: game ${g.id} score ${g.home_score}-${g.away_score} but ` +
+          `${hn}/${an} scorers named — add a data/scorer-overrides.json entry.`,
+      );
+    }
+  }
+}
+
 function buildTopScorers({ codeByWcId, wcGames }) {
+  const overrides = loadScorerOverrides();
+  warnScorerGaps(wcGames, overrides);
   const tally = new Map();
   for (const g of wcGames) {
-    addScorers(g.home_scorers, codeByWcId.get(g.home_team_id), tally);
-    addScorers(g.away_scorers, codeByWcId.get(g.away_team_id), tally);
+    const ov = overrides[g.id] ?? {};
+    const homeRaw = ov.home_scorers != null ? toScorerRaw(ov.home_scorers) : g.home_scorers;
+    const awayRaw = ov.away_scorers != null ? toScorerRaw(ov.away_scorers) : g.away_scorers;
+    addScorers(homeRaw, codeByWcId.get(g.home_team_id), tally);
+    addScorers(awayRaw, codeByWcId.get(g.away_team_id), tally);
   }
   const list = [...tally.values()]
     .sort((a, b) => b.goals - a.goals || a.name.localeCompare(b.name))
