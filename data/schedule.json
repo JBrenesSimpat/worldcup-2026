@@ -1520,8 +1520,8 @@
     "home": "POR",
     "away": "CRO",
     "score": {
-      "home": 0,
-      "away": 0
+      "home": 1,
+      "away": 1
     },
     "winner": null,
     "status": "live",
