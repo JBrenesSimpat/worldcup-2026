@@ -1558,11 +1558,11 @@
     "home": "AUS",
     "away": "EGY",
     "score": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 1
     },
-    "winner": null,
-    "status": "scheduled",
+    "winner": "away",
+    "status": "live",
     "venue": "AT&T Stadium",
     "city": "Dallas",
     "matchNumber": 88,
@@ -1745,7 +1745,7 @@
     "apiId": 537382,
     "stage": "r16",
     "datetime": "2026-07-07T20:00:00Z",
-    "home": "SUI",
+    "home": null,
     "away": null,
     "score": {
       "home": null,

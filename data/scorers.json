@@ -135,6 +135,11 @@
     "team": "NZL"
   },
   {
+    "name": "Emam Ashour",
+    "goals": 2,
+    "team": "EGY"
+  },
+  {
     "name": "F. Balogun",
     "goals": 2,
     "team": "USA"
@@ -143,10 +148,5 @@
     "name": "Habib Diarra",
     "goals": 2,
     "team": "SEN"
-  },
-  {
-    "name": "Leandro Trossard",
-    "goals": 2,
-    "team": "BEL"
   }
 ]
