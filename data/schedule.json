@@ -1539,11 +1539,11 @@
     "home": "SUI",
     "away": "ALG",
     "score": {
-      "home": null,
-      "away": null
+      "home": 1,
+      "away": 0
     },
-    "winner": null,
-    "status": "scheduled",
+    "winner": "home",
+    "status": "live",
     "venue": "BC Place",
     "city": "Vancouver",
     "matchNumber": 85,

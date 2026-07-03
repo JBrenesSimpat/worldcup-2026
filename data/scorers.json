@@ -115,6 +115,11 @@
     "team": "FRA"
   },
   {
+    "name": "Breel Embolo",
+    "goals": 2,
+    "team": "SUI"
+  },
+  {
     "name": "Crysencio Summerville",
     "goals": 2,
     "team": "NED"
@@ -143,10 +148,5 @@
     "name": "Leandro Trossard",
     "goals": 2,
     "team": "BEL"
-  },
-  {
-    "name": "Maximiliano Araújo",
-    "goals": 2,
-    "team": "URY"
   }
 ]
