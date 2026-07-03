@@ -1561,8 +1561,12 @@
       "home": 1,
       "away": 1
     },
-    "winner": null,
+    "winner": "away",
     "status": "finished",
+    "penalties": {
+      "home": 2,
+      "away": 4
+    },
     "venue": "AT&T Stadium",
     "city": "Dallas",
     "matchNumber": 88,
