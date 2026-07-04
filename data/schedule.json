@@ -1600,11 +1600,11 @@
     "home": "COL",
     "away": "GHA",
     "score": {
-      "home": null,
-      "away": null
+      "home": 1,
+      "away": 0
     },
-    "winner": null,
-    "status": "scheduled",
+    "winner": "home",
+    "status": "live",
     "venue": "Arrowhead Stadium",
     "city": "Kansas City",
     "matchNumber": 87,
