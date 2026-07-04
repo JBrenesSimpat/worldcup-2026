@@ -1581,11 +1581,11 @@
     "home": "ARG",
     "away": "CPV",
     "score": {
-      "home": 2,
+      "home": 3,
       "away": 2
     },
-    "winner": null,
-    "status": "live",
+    "winner": "home",
+    "status": "finished",
     "venue": "Hard Rock Stadium",
     "city": "Miami",
     "matchNumber": 86,
