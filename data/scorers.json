@@ -110,6 +110,11 @@
     "team": "JPN"
   },
   {
+    "name": "Azdin Avnahi",
+    "goals": 2,
+    "team": "MAR"
+  },
+  {
     "name": "Bradley Barcola",
     "goals": 2,
     "team": "FRA"
@@ -143,10 +148,5 @@
     "name": "F. Balogun",
     "goals": 2,
     "team": "USA"
-  },
-  {
-    "name": "Habib Diarra",
-    "goals": 2,
-    "team": "SEN"
   }
 ]

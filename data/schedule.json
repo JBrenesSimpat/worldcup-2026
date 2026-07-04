@@ -1620,9 +1620,9 @@
     "away": "MAR",
     "score": {
       "home": 0,
-      "away": 0
+      "away": 2
     },
-    "winner": null,
+    "winner": "away",
     "status": "live",
     "venue": "NRG Stadium",
     "city": "Houston",
