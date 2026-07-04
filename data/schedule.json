@@ -1582,9 +1582,9 @@
     "away": "CPV",
     "score": {
       "home": 2,
-      "away": 1
+      "away": 2
     },
-    "winner": "home",
+    "winner": null,
     "status": "live",
     "venue": "Hard Rock Stadium",
     "city": "Miami",
