@@ -1619,11 +1619,11 @@
     "home": "CAN",
     "away": "MAR",
     "score": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
     },
     "winner": null,
-    "status": "scheduled",
+    "status": "live",
     "venue": "NRG Stadium",
     "city": "Houston",
     "matchNumber": 90,
