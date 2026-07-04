@@ -1638,11 +1638,11 @@
     "home": "PAR",
     "away": "FRA",
     "score": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
     },
     "winner": null,
-    "status": "scheduled",
+    "status": "live",
     "venue": "Lincoln Financial Field",
     "city": "Philadelphia",
     "matchNumber": 89,
