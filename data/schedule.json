@@ -1692,8 +1692,8 @@
     "apiId": 537379,
     "stage": "r16",
     "datetime": "2026-07-06T19:00:00Z",
-    "home": null,
-    "away": null,
+    "home": "POR",
+    "away": "ESP",
     "score": {
       "home": null,
       "away": null
@@ -1730,8 +1730,8 @@
     "apiId": 537381,
     "stage": "r16",
     "datetime": "2026-07-07T16:00:00Z",
-    "home": null,
-    "away": null,
+    "home": "ARG",
+    "away": "EGY",
     "score": {
       "home": null,
       "away": null
@@ -1749,8 +1749,8 @@
     "apiId": 537382,
     "stage": "r16",
     "datetime": "2026-07-07T20:00:00Z",
-    "home": null,
-    "away": null,
+    "home": "SUI",
+    "away": "COL",
     "score": {
       "home": null,
       "away": null
