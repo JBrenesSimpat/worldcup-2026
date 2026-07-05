@@ -1,13 +1,13 @@
 [
   {
+    "name": "Kylian Mbappé",
+    "goals": 7,
+    "team": "FRA"
+  },
+  {
     "name": "Lionel Messi",
     "goals": 7,
     "team": "ARG"
-  },
-  {
-    "name": "Kylian Mbappé",
-    "goals": 6,
-    "team": "FRA"
   },
   {
     "name": "Erling Haaland",
