@@ -1657,11 +1657,11 @@
     "home": "BRA",
     "away": "NOR",
     "score": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
     },
     "winner": null,
-    "status": "scheduled",
+    "status": "live",
     "venue": "MetLife Stadium",
     "city": "New York/New Jersey",
     "matchNumber": 91,
