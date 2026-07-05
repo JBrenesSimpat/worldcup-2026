@@ -1657,7 +1657,7 @@
     "home": "BRA",
     "away": "NOR",
     "score": {
-      "home": 0,
+      "home": 1,
       "away": 2
     },
     "winner": "away",
