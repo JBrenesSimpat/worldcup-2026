@@ -90,6 +90,11 @@
     "team": "BRA"
   },
   {
+    "name": "Raúl Jiménez",
+    "goals": 3,
+    "team": "MEX"
+  },
+  {
     "name": "Amad Diallo",
     "goals": 2,
     "team": "CIV"
@@ -143,10 +148,5 @@
     "name": "Elijah Just",
     "goals": 2,
     "team": "NZL"
-  },
-  {
-    "name": "Emam Ashour",
-    "goals": 2,
-    "team": "EGY"
   }
 ]
