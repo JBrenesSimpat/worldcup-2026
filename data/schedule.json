@@ -1676,11 +1676,11 @@
     "home": "MEX",
     "away": "ENG",
     "score": {
-      "home": 1,
-      "away": 2
+      "home": 2,
+      "away": 3
     },
     "winner": "away",
-    "status": "live",
+    "status": "finished",
     "venue": "Estadio Azteca",
     "city": "Mexico City",
     "matchNumber": 92,
