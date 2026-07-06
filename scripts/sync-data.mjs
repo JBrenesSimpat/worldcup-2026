@@ -470,6 +470,8 @@ function scorerKey(name, teamCode) {
 const NAME_FIXES = {
   "ENG|h|kin": "Harry Kane",
   "ENG|h|kane": "Harry Kane",
+  "ENG|j|blingham": "Jude Bellingham",
+  "ENG|j|bellingham": "Jude Bellingham",
   "SUI|j|mnzambi": "Johan Manzambi",
   "NED|k|khakpv": "Cody Gakpo",
   "GER|d|avndav": "Deniz Undav",

@@ -16,13 +16,18 @@
   },
   {
     "name": "Harry Kane",
-    "goals": 5,
+    "goals": 6,
     "team": "ENG"
   },
   {
     "name": "Ismaïla Sarr",
     "goals": 4,
     "team": "SEN"
+  },
+  {
+    "name": "Jude Bellingham",
+    "goals": 4,
+    "team": "ENG"
   },
   {
     "name": "Julián Quiñones",
@@ -73,11 +78,6 @@
     "name": "Jonathan David",
     "goals": 3,
     "team": "CAN"
-  },
-  {
-    "name": "Jvd Blingham",
-    "goals": 3,
-    "team": "ENG"
   },
   {
     "name": "Kai Havertz",
