@@ -25,6 +25,11 @@
     "team": "SEN"
   },
   {
+    "name": "Julián Quiñones",
+    "goals": 4,
+    "team": "MEX"
+  },
+  {
     "name": "Mikel Oyarzabal",
     "goals": 4,
     "team": "ESP"
@@ -70,9 +75,9 @@
     "team": "CAN"
   },
   {
-    "name": "Julián Quiñones",
+    "name": "Jvd Blingham",
     "goals": 3,
-    "team": "MEX"
+    "team": "ENG"
   },
   {
     "name": "Kai Havertz",
@@ -143,10 +148,5 @@
     "name": "Emam Ashour",
     "goals": 2,
     "team": "EGY"
-  },
-  {
-    "name": "F. Balogun",
-    "goals": 2,
-    "team": "USA"
   }
 ]
