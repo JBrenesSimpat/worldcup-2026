@@ -1733,11 +1733,11 @@
     "home": "ARG",
     "away": "EGY",
     "score": {
-      "home": 2,
+      "home": 3,
       "away": 2
     },
-    "winner": null,
-    "status": "live",
+    "winner": "home",
+    "status": "finished",
     "venue": "Mercedes-Benz Stadium",
     "city": "Atlanta",
     "matchNumber": 95,
