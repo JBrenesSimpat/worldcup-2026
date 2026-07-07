@@ -1787,8 +1787,8 @@
     "apiId": 537384,
     "stage": "qf",
     "datetime": "2026-07-10T19:00:00Z",
-    "home": null,
-    "away": null,
+    "home": "ESP",
+    "away": "BEL",
     "score": {
       "home": null,
       "away": null
