@@ -1752,11 +1752,11 @@
     "home": "SUI",
     "away": "COL",
     "score": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
     },
     "winner": null,
-    "status": "scheduled",
+    "status": "live",
     "venue": "BC Place",
     "city": "Vancouver",
     "matchNumber": 96,
