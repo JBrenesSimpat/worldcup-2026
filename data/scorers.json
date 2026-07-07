@@ -95,6 +95,11 @@
     "team": "MEX"
   },
   {
+    "name": "Romelu Lukaku",
+    "goals": 3,
+    "team": "BEL"
+  },
+  {
     "name": "Amad Diallo",
     "goals": 2,
     "team": "CIV"
@@ -143,10 +148,5 @@
     "name": "Daniel Muñoz",
     "goals": 2,
     "team": "COL"
-  },
-  {
-    "name": "Elijah Just",
-    "goals": 2,
-    "team": "NZL"
   }
 ]

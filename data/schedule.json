@@ -1714,11 +1714,11 @@
     "home": "USA",
     "away": "BEL",
     "score": {
-      "home": null,
-      "away": null
+      "home": 1,
+      "away": 4
     },
-    "winner": null,
-    "status": "scheduled",
+    "winner": "away",
+    "status": "finished",
     "venue": "Lumen Field",
     "city": "Seattle",
     "matchNumber": 94,
