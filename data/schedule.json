@@ -1758,8 +1758,8 @@
     "winner": "home",
     "status": "finished",
     "penalties": {
-      "home": 3,
-      "away": 2
+      "home": 4,
+      "away": 3
     },
     "venue": "BC Place",
     "city": "Vancouver",
@@ -1829,8 +1829,8 @@
     "apiId": 537386,
     "stage": "qf",
     "datetime": "2026-07-12T01:00:00Z",
-    "home": null,
-    "away": null,
+    "home": "ARG",
+    "away": "SUI",
     "score": {
       "home": null,
       "away": null
