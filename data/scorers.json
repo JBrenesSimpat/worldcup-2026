@@ -20,6 +20,11 @@
     "team": "ENG"
   },
   {
+    "name": "Ousmane Dembélé",
+    "goals": 5,
+    "team": "FRA"
+  },
+  {
     "name": "Ismaïla Sarr",
     "goals": 4,
     "team": "SEN"
@@ -38,11 +43,6 @@
     "name": "Mikel Oyarzabal",
     "goals": 4,
     "team": "ESP"
-  },
-  {
-    "name": "Ousmane Dembélé",
-    "goals": 4,
-    "team": "FRA"
   },
   {
     "name": "Vinícius Júnior",
