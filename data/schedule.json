@@ -1775,11 +1775,11 @@
     "home": "FRA",
     "away": "MAR",
     "score": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
     },
     "winner": null,
-    "status": "scheduled",
+    "status": "live",
     "venue": "Gillette Stadium",
     "city": "Boston",
     "matchNumber": 97,
