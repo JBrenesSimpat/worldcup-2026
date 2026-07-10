@@ -1795,9 +1795,9 @@
     "away": "BEL",
     "score": {
       "home": 1,
-      "away": 0
+      "away": 1
     },
-    "winner": "home",
+    "winner": null,
     "status": "live",
     "venue": "SoFi Stadium",
     "city": "Los Angeles",
