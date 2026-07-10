@@ -1794,10 +1794,10 @@
     "home": "ESP",
     "away": "BEL",
     "score": {
-      "home": 0,
+      "home": 1,
       "away": 0
     },
-    "winner": null,
+    "winner": "home",
     "status": "live",
     "venue": "SoFi Stadium",
     "city": "Los Angeles",
