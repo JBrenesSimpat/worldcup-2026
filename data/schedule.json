@@ -1813,11 +1813,11 @@
     "home": "NOR",
     "away": "ENG",
     "score": {
-      "home": 0,
-      "away": 0
+      "home": null,
+      "away": null
     },
     "winner": null,
-    "status": "live",
+    "status": "scheduled",
     "venue": "Hard Rock Stadium",
     "city": "Miami",
     "matchNumber": 99,
