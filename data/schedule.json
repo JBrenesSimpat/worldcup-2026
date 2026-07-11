@@ -1813,11 +1813,11 @@
     "home": "NOR",
     "away": "ENG",
     "score": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
     },
     "winner": null,
-    "status": "scheduled",
+    "status": "live",
     "venue": "Hard Rock Stadium",
     "city": "Miami",
     "matchNumber": 99,
@@ -1849,7 +1849,7 @@
     "stage": "sf",
     "datetime": "2026-07-14T19:00:00Z",
     "home": "FRA",
-    "away": null,
+    "away": "ESP",
     "score": {
       "home": null,
       "away": null
