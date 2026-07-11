@@ -20,6 +20,11 @@
     "team": "ENG"
   },
   {
+    "name": "Jude Bellingham",
+    "goals": 5,
+    "team": "ENG"
+  },
+  {
     "name": "Ousmane Dembélé",
     "goals": 5,
     "team": "FRA"
@@ -28,11 +33,6 @@
     "name": "Ismaïla Sarr",
     "goals": 4,
     "team": "SEN"
-  },
-  {
-    "name": "Jude Bellingham",
-    "goals": 4,
-    "team": "ENG"
   },
   {
     "name": "Julián Quiñones",
