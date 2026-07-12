@@ -85,6 +85,11 @@
     "team": "GER"
   },
   {
+    "name": "Lisandro Martínez",
+    "goals": 3,
+    "team": "ARG"
+  },
+  {
     "name": "Matheus Cunha",
     "goals": 3,
     "team": "BRA"
@@ -143,10 +148,5 @@
     "name": "Breel Embolo",
     "goals": 2,
     "team": "SUI"
-  },
-  {
-    "name": "Crysencio Summerville",
-    "goals": 2,
-    "team": "NED"
   }
 ]

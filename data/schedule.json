@@ -1867,8 +1867,8 @@
     "apiId": 537388,
     "stage": "sf",
     "datetime": "2026-07-15T19:00:00Z",
-    "home": null,
-    "away": null,
+    "home": "ENG",
+    "away": "ARG",
     "score": {
       "home": null,
       "away": null
