@@ -1832,11 +1832,11 @@
     "home": "ARG",
     "away": "SUI",
     "score": {
-      "home": 1,
+      "home": 3,
       "away": 1
     },
-    "winner": null,
-    "status": "live",
+    "winner": "home",
+    "status": "finished",
     "venue": "Arrowhead Stadium",
     "city": "Kansas City",
     "matchNumber": 100,
