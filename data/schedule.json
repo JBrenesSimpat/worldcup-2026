@@ -1851,11 +1851,11 @@
     "home": "FRA",
     "away": "ESP",
     "score": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
     },
     "winner": null,
-    "status": "scheduled",
+    "status": "live",
     "venue": "AT&T Stadium",
     "city": "Dallas",
     "matchNumber": 101,
