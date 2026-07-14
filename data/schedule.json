@@ -1852,9 +1852,9 @@
     "away": "ESP",
     "score": {
       "home": 0,
-      "away": 0
+      "away": 1
     },
-    "winner": null,
+    "winner": "away",
     "status": "live",
     "venue": "AT&T Stadium",
     "city": "Dallas",
