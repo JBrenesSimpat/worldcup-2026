@@ -1886,7 +1886,7 @@
     "apiId": 537389,
     "stage": "third",
     "datetime": "2026-07-18T21:00:00Z",
-    "home": null,
+    "home": "FRA",
     "away": null,
     "score": {
       "home": null,
@@ -1905,7 +1905,7 @@
     "apiId": 537390,
     "stage": "final",
     "datetime": "2026-07-19T19:00:00Z",
-    "home": null,
+    "home": "ESP",
     "away": null,
     "score": {
       "home": null,
