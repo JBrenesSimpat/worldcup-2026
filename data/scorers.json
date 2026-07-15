@@ -40,6 +40,11 @@
     "team": "MEX"
   },
   {
+    "name": "Lisandro Martínez",
+    "goals": 4,
+    "team": "ARG"
+  },
+  {
     "name": "Mikel Oyarzabal",
     "goals": 4,
     "team": "ESP"
@@ -83,11 +88,6 @@
     "name": "Kai Havertz",
     "goals": 3,
     "team": "GER"
-  },
-  {
-    "name": "Lisandro Martínez",
-    "goals": 3,
-    "team": "ARG"
   },
   {
     "name": "Matheus Cunha",
