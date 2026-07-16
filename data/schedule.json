@@ -1887,7 +1887,7 @@
     "stage": "third",
     "datetime": "2026-07-18T21:00:00Z",
     "home": "FRA",
-    "away": null,
+    "away": "ENG",
     "score": {
       "home": null,
       "away": null
@@ -1906,7 +1906,7 @@
     "stage": "final",
     "datetime": "2026-07-19T19:00:00Z",
     "home": "ESP",
-    "away": null,
+    "away": "ARG",
     "score": {
       "home": null,
       "away": null
