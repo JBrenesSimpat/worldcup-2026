@@ -1889,11 +1889,11 @@
     "home": "FRA",
     "away": "ENG",
     "score": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 1
     },
-    "winner": null,
-    "status": "scheduled",
+    "winner": "away",
+    "status": "live",
     "venue": "Hard Rock Stadium",
     "city": "Miami",
     "matchNumber": 103,
