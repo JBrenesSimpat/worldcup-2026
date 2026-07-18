@@ -1,7 +1,7 @@
 [
   {
     "name": "Kylian Mbappé",
-    "goals": 8,
+    "goals": 10,
     "team": "FRA"
   },
   {
@@ -53,6 +53,11 @@
     "name": "Vinícius Júnior",
     "goals": 4,
     "team": "BRA"
+  },
+  {
+    "name": "Bradley Barcola",
+    "goals": 3,
+    "team": "FRA"
   },
   {
     "name": "Brian Brobbey",
@@ -138,11 +143,6 @@
     "name": "Azdin Avnahi",
     "goals": 2,
     "team": "MAR"
-  },
-  {
-    "name": "Bradley Barcola",
-    "goals": 2,
-    "team": "FRA"
   },
   {
     "name": "Breel Embolo",
